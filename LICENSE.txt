@@ -23,4 +23,4 @@ Open source 3rd party components included in the repository and the binary distr
 
 Commercial 3rd party components NOT included in the repository, but included in the binary distribution
 * IconExperience O-Collection Icons, License: https://www.iconexperience.com/o_collection/license
-* Files for Java by yWorks. Commercial License: https://www.yworks.com/products/yfiles-for-java/sla
+* yFiles for Java by yWorks. Commercial License: https://www.yworks.com/products/yfiles-for-java/sla
