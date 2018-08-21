@@ -38,6 +38,9 @@ Material| Dark | System (OS default)
 :------:|:------:|:------:|
 ![](web/images/laf-material.png)|![](web/images/laf-dark.png)|![UI Styles](web/images/laf-system.png)
 
+### Watch on YouTube
+* [Diagram Creation](https://youtu.be/LDuiwdEo0s8)
+
 ## Source Code Installations:
 
 Setting up your IDEA project:krayon-icons.jar
