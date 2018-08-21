@@ -43,7 +43,7 @@ Material| Dark | System (OS default)
 
 ## Source Code Installations:
 
-Setting up your IDEA project:krayon-icons.jar
+Setting up your IDEA project:
 
 1. Open as Project or as Project from Version Control
 2. Set Java 8 as project SDK
