@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sbgn xmlns="http://sbgn.org/libsbgn/0.2">
+  <map language="process description">
+    <glyph class="macromolecule" id="id1">
+      <label text="kinase">
+        <bbox h="18.71" w="41.0" x="437.91504" y="260.80832"/>
+      </label>
+      <bbox h="60.0" w="100.0" x="408.41504" y="240.16331"/>
+      <port id="id2" x="458.41504" y="270.16333"/>
+    </glyph>
+    <glyph class="simple chemical" id="id3">
+      <label text="P1">
+        <bbox h="18.71" w="19.0" x="544.91504" y="346.80832"/>
+      </label>
+      <bbox h="60.0" w="60.0" x="524.41504" y="326.16333"/>
+      <port id="id4" x="554.41504" y="356.16333"/>
+    </glyph>
+    <glyph class="simple chemical" id="id5">
+      <label text="ADP">
+        <bbox h="18.71" w="28.0" x="509.59506" y="416.80832"/>
+      </label>
+      <bbox h="60.0" w="60.0" x="493.59506" y="396.16333"/>
+      <port id="id6" x="523.59503" y="426.16333"/>
+    </glyph>
+    <glyph class="simple chemical" id="id7">
+      <label text="S1">
+        <bbox h="18.71" w="19.0" x="352.91504" y="346.80832"/>
+      </label>
+      <bbox h="60.0" w="60.0" x="332.41504" y="326.16333"/>
+      <port id="id8" x="362.41504" y="356.16333"/>
+    </glyph>
+    <glyph class="simple chemical" id="id9">
+      <label text="ATP">
+        <bbox h="18.71" w="26.0" x="380.23505" y="416.80832"/>
+      </label>
+      <bbox h="60.0" w="60.0" x="363.23505" y="396.16333"/>
+      <port id="id10" x="393.23505" y="426.16333"/>
+    </glyph>
+    <glyph class="process" id="id11">
+      <bbox h="20.0" w="40.0" x="438.41504" y="346.16333"/>
+      <port id="id12" x="478.41504" y="356.16333"/>
+      <port id="id13" x="438.41504" y="356.16333"/>
+      <port id="id14" x="458.41504" y="356.16333"/>
+    </glyph>
+    <arc class="catalysis" id="id15" source="id2" target="id14">
+      <start x="458.41504" y="300.16333"/>
+      <end x="458.41504" y="334.16333"/>
+    </arc>
+    <arc class="production" id="id16" source="id12" target="id4">
+      <start x="478.41504" y="356.16333"/>
+      <end x="511.41504" y="356.16333"/>
+    </arc>
+    <arc class="production" id="id17" source="id12" target="id6">
+      <start x="478.41504" y="356.16333"/>
+      <end x="500.30325" y="390.076"/>
+    </arc>
+    <arc class="consumption" id="id18" source="id8" target="id13">
+      <start x="392.41504" y="356.16333"/>
+      <end x="438.41504" y="356.16333"/>
+    </arc>
+    <arc class="consumption" id="id19" source="id10" target="id13">
+      <start x="409.47714" y="400.99854"/>
+      <end x="438.41504" y="356.16333"/>
+    </arc>
+  </map>
+</sbgn>

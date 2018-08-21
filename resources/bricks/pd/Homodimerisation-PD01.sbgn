@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sbgn xmlns="http://sbgn.org/libsbgn/0.2">
+    <map language="process description">
+        <glyph id="glyph2" class="macromolecule multimer">
+            <label text="X"/>
+            <bbox y="25.0" x="205.0" h="40.0" w="80.0"/>
+            <glyph id="glyph2a" class="unit of information">
+                <label text="N:2"/>
+                <bbox y="17.0" x="229.5" h="16.0" w="31.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph1" class="macromolecule">
+            <label text="X"/>
+            <bbox y="25.0" x="15.0" h="40.0" w="80.0"/>
+        </glyph>
+        <glyph id="glyph3" class="association">
+            <bbox y="33.0" x="138.0" h="24.0" w="24.0"/>
+            <port y="45.0" x="174.0" id="glyph3.2"/>
+            <port y="45.0" x="126.0" id="glyph3.1"/>
+        </glyph>
+        <arc target="glyph2" source="glyph3.2" id="arc1" class="production">
+            <start y="45.0" x="174.0"/>
+            <end y="45.0" x="205.0"/>
+        </arc>
+        <arc target="glyph3.1" source="glyph1" id="arc2" class="consumption">
+            <glyph id="glyph5" class="cardinality">
+                <label text="2"/>
+                <bbox y="27.0" x="97.0" h="17.5" w="22.5"/>
+            </glyph>
+            <start y="45.0" x="95.0"/>
+            <end y="45.0" x="126.0"/>
+        </arc>
+    </map>
+</sbgn>

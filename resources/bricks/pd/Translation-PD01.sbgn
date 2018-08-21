@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sbgn xmlns="http://sbgn.org/libsbgn/0.2">
+    <map language="process description">
+        <glyph id="glyph3" class="source and sink">
+            <bbox y="95.666664" x="8.0" h="30.0" w="30.0"/>
+        </glyph>
+        <glyph id="glyph1" class="macromolecule">
+            <label text="X"/>
+            <bbox y="90.666664" x="129.0" h="40.0" w="80.0"/>
+            <glyph id="glyph1a" class="unit of information">
+                <label text="ct:mRNA"/>
+                <bbox y="82.666664" x="140.5" h="16.0" w="57.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph2" class="macromolecule">
+            <label text="X"/>
+            <bbox y="17.0" x="33.0" h="40.0" w="80.0"/>
+            <glyph id="glyph2a" class="unit of information">
+                <label text="ct:gene"/>
+                <bbox y="9.0" x="47.5" h="16.0" w="51.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph4" class="process">
+            <bbox y="98.666664" x="61.0" h="24.0" w="24.0"/>
+            <port y="110.666664" x="49.0" id="glyph4.1"/>
+            <port y="110.666664" x="97.0" id="glyph4.2"/>
+        </glyph>
+        <arc target="glyph4.1" source="glyph3" id="arc1" class="consumption">
+            <start y="110.666664" x="38.0"/>
+            <end y="110.666664" x="49.0"/>
+        </arc>
+        <arc target="glyph1" source="glyph4.2" id="arc2" class="production">
+            <start y="110.666664" x="97.0"/>
+            <end y="110.666664" x="129.0"/>
+        </arc>
+        <arc target="glyph4" source="glyph2" id="arc3" class="necessary stimulation">
+            <start y="57.0" x="73.0"/>
+            <end y="98.666664" x="73.0"/>
+        </arc>
+    </map>
+</sbgn>

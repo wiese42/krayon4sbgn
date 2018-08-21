@@ -1,0 +1,7 @@
+<component name="CopyrightManager">
+  <settings default="krayon-apache">
+    <module2copyright>
+      <element module="krayon-kotlin-scope" copyright="krayon-apache" />
+    </module2copyright>
+  </settings>
+</component>

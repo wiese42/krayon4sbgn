@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sbgn xmlns="http://sbgn.org/libsbgn/0.2">
+    <map language="process description">
+        <glyph class="macromolecule" id="id1">
+            <label text="RAS">
+                <bbox w="28.0" h="18.71" x="731.5" y="329.645"/>
+            </label>
+            <bbox w="100.0" h="60.0" x="695.5" y="309.0"/>
+            <glyph class="state variable" id="id2">
+                <state value="active"/>
+                <bbox w="46.0" h="25.26" x="716.5" y="356.37"/>
+            </glyph>
+            <port id="id3" x="745.5" y="339.0"/>
+        </glyph>
+        <glyph class="annotation" id="id5">
+            <label text="Terminals are visual ports belonging to submaps. &#xA;They correspond to entities tagged in a diagram.&#xA;Terminals can be added by dragging them from&#xA;the palette onto a submap."/>
+            <callout target="id4">
+                <point x="864.5" y="328.0"/>
+            </callout>
+            <bbox w="298.0" h="73.71" x="696.5" y="139.29001"/>
+        </glyph>
+        <glyph class="annotation" id="id6">
+            <label text="A submap represents a potentially&#xA;complex pathway. Terminals provide&#xA;an interface to that pathway."/>
+            <callout target="id4">
+                <point x="1040.5" y="291.0"/>
+            </callout>
+            <bbox w="225.0" h="70.71" x="1023.5" y="142.29001"/>
+        </glyph>
+        <glyph class="annotation" id="id7">
+            <label text="Terminals can be selected by clicking onto them. &#xA;Selected terminals can be moved along the border&#xA;of the submap by dragging their center handle."/>
+            <callout target="id4">
+                <point x="1026.5" y="354.0"/>
+            </callout>
+            <bbox w="301.0" h="64.71" x="950.5" y="431.0"/>
+        </glyph>
+        <glyph class="submap" id="id4">
+            <label text="MAPK&#xA;cascade">
+                <bbox w="51.0" h="33.41" x="930.0" y="322.29498"/>
+            </label>
+            <bbox w="220.0" h="120.0" x="845.5" y="279.0"/>
+            <glyph class="terminal" orientation="right" id="id8">
+                <label text="RAS"/>
+                <bbox w="80.0" h="45.0" x="845.5" y="316.0"/>
+            </glyph>
+            <glyph class="terminal" orientation="left" id="id9">
+                <label text="ERK"/>
+                <bbox w="80.0" h="45.0" x="985.5" y="316.0"/>
+            </glyph>
+        </glyph>
+        <glyph class="macromolecule" id="id10">
+            <label text="ERK">
+                <bbox w="29.0" h="18.71" x="1181.0" y="329.645"/>
+            </label>
+            <bbox w="100.0" h="60.0" x="1145.5" y="309.0"/>
+            <glyph class="state variable" id="id11">
+                <state value="2P"/>
+                <bbox w="30.0" h="25.26" x="1155.5" y="356.37"/>
+            </glyph>
+            <port id="id12" x="1195.5" y="339.0"/>
+        </glyph>
+        <glyph class="macromolecule" id="id13">
+            <label text="ERK">
+                <bbox w="29.0" h="18.71" x="1038.0" y="-29.354996"/>
+            </label>
+            <bbox w="100.0" h="60.0" x="1002.5" y="-50.0"/>
+            <glyph class="state variable" id="id14">
+                <state value="2P"/>
+                <bbox w="30.0" h="25.26" x="1037.5" y="-2.63"/>
+            </glyph>
+            <port id="id15" x="1052.5" y="-20.0"/>
+        </glyph>
+        <glyph class="macromolecule" id="id16">
+            <label text="RAS">
+                <bbox w="28.0" h="18.71" x="888.5" y="-124.355"/>
+            </label>
+            <bbox w="100.0" h="60.0" x="852.5" y="-145.0"/>
+            <glyph class="state variable" id="id17">
+                <state value="active"/>
+                <bbox w="46.0" h="25.26" x="879.5" y="-157.63"/>
+            </glyph>
+            <port id="id18" x="902.5" y="-115.0"/>
+        </glyph>
+        <glyph class="omitted process" id="id19">
+            <bbox w="40.0" h="20.0" x="882.5" y="-30.0"/>
+            <port id="id20" x="922.5" y="-20.0"/>
+            <port id="id21" x="882.5" y="-20.0"/>
+            <port id="id22" x="902.5" y="-20.0"/>
+        </glyph>
+        <glyph class="tag" orientation="right" id="id23">
+            <label text="RAS">
+                <bbox w="28.0" h="18.71" x="727.89343" y="-124.355"/>
+            </label>
+            <bbox w="100.0" h="60.0" x="702.5" y="-145.0"/>
+            <port id="id24" x="752.5" y="-115.0"/>
+        </glyph>
+        <glyph class="source and sink" id="id25">
+            <bbox w="60.0" h="60.0" x="742.5" y="-50.0"/>
+            <port id="id26" x="772.5" y="-20.0"/>
+        </glyph>
+        <glyph class="annotation" id="id28">
+            <label text="Tags mark entities within a pathway."/>
+            <callout target="id27">
+                <point x="1181.5" y="-37.33"/>
+            </callout>
+            <bbox w="172.0" h="69.71" x="1073.5" y="-160.71"/>
+        </glyph>
+        <glyph class="annotation" id="id29">
+            <label text="The orientation of tags can&#xA;be changed by &quot;Rotate&quot;, and &quot;Mirror&quot;&#xA;actions (see Help)"/>
+            <callout target="id27">
+                <point x="1178.5" y="-5.3300004"/>
+            </callout>
+            <bbox w="219.0" h="83.71" x="1028.5" y="38.0"/>
+        </glyph>
+        <glyph class="tag" orientation="left" id="id27">
+            <label text="ERK">
+                <bbox w="29.0" h="18.71" x="1191.6067" y="-29.35498"/>
+            </label>
+            <bbox w="100.0" h="60.0" x="1145.5" y="-50.0"/>
+            <port id="id30" x="1195.5" y="-20.0"/>
+        </glyph>
+        <glyph class="annotation" id="id31">
+            <label text="Simplified MAPK cascade">
+                <bbox w="144.0" h="18.71" x="902.0" y="-227.685"/>
+            </label>
+            <bbox w="543.0" h="34.0" x="702.5" y="-235.33"/>
+        </glyph>
+        <arc class="equivalence arc" id="id32" source="id3" target="id8">
+            <start x="795.5" y="338.75"/>
+            <end x="845.5" y="338.5"/>
+        </arc>
+        <arc class="equivalence arc" id="id33" source="id12" target="id9">
+            <start x="1145.5" y="338.80768"/>
+            <end x="1065.5" y="338.5"/>
+        </arc>
+        <arc class="production" id="id34" source="id20" target="id15">
+            <start x="922.5" y="-20.0"/>
+            <end x="989.5" y="-20.0"/>
+        </arc>
+        <arc class="catalysis" id="id35" source="id18" target="id22">
+            <start x="902.5" y="-85.0"/>
+            <end x="902.5" y="-42.0"/>
+        </arc>
+        <arc class="equivalence arc" id="id36" source="id24" target="id18">
+            <start x="802.5" y="-115.0"/>
+            <end x="852.5" y="-115.0"/>
+        </arc>
+        <arc class="consumption" id="id37" source="id26" target="id21">
+            <start x="802.5" y="-20.0"/>
+            <end x="882.5" y="-20.0"/>
+        </arc>
+        <arc class="equivalence arc" id="id38" source="id30" target="id15">
+            <start x="1145.5" y="-20.0"/>
+            <end x="1102.5" y="-20.0"/>
+        </arc>
+    </map>
+</sbgn>

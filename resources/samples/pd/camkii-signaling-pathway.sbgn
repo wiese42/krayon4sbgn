@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sbgn xmlns="http://sbgn.org/libsbgn/0.2">
+    <map language="process description">
+        <glyph class="simple chemical" id="id2" compartmentRef="id1">
+            <label text="Ca++">
+                <bbox w="34.0" h="18.71" x="1081.1172" y="254.5236"/>
+            </label>
+            <bbox w="40.0" h="40.0" x="1078.1172" y="243.8786"/>
+            <port id="id3" x="1098.1172" y="263.8786"/>
+            <port id="id4" x="1098.1172" y="263.8786"/>
+        </glyph>
+        <glyph class="macromolecule" id="id5" compartmentRef="id1">
+            <label text="CaM">
+                <bbox w="29.0" h="18.71" x="1233.6172" y="254.5236"/>
+            </label>
+            <bbox w="80.0" h="60.0" x="1208.1172" y="233.8786"/>
+            <port id="id6" x="1248.1172" y="263.8786"/>
+        </glyph>
+        <glyph class="macromolecule" id="id7" compartmentRef="id1">
+            <label text="γCaMKII">
+                <bbox w="48.0" h="18.71" x="1139.1172" y="588.19916"/>
+            </label>
+            <bbox w="120.0" h="60.0" x="1103.1172" y="567.55414"/>
+            <glyph class="state variable" id="id8">
+                <state value="P" variable="S334"/>
+                <bbox w="59.0" h="25.26" x="1133.6172" y="614.92413"/>
+            </glyph>
+            <port id="id9" x="1163.1172" y="597.55414"/>
+        </glyph>
+        <glyph class="complex" id="id10" compartmentRef="id1">
+            <label text="Ca/CaM complex">
+                <bbox w="97.0" h="18.71" x="1130.1172" y="492.03876"/>
+            </label>
+            <bbox w="150.0" h="89.52643" x="1103.1172" y="421.22232"/>
+            <glyph class="macromolecule" id="id12">
+                <label text="CaM">
+                    <bbox w="29.0" h="18.71" x="1191.6172" y="447.99222"/>
+                </label>
+                <bbox w="80.0" h="60.0" x="1166.1172" y="427.34723"/>
+            </glyph>
+            <glyph class="simple chemical" id="id13">
+                <label text="Ca++">
+                    <bbox w="34.0" h="18.71" x="1120.6328" y="447.99222"/>
+                </label>
+                <bbox w="40.0" h="40.0" x="1117.6328" y="437.34723"/>
+            </glyph>
+            <port id="id11" x="1178.1172" y="465.98553"/>
+        </glyph>
+        <glyph class="complex" id="id14" compartmentRef="id1">
+            <label text="Ca/Cam/gCaMKII complex">
+                <bbox w="148.0" h="18.71" x="276.0" y="625.43646"/>
+            </label>
+            <bbox w="210.0" h="213.39772" x="245.0" y="430.74875"/>
+            <glyph class="macromolecule" id="id16">
+                <label text="γCaMKII">
+                    <bbox w="48.0" h="18.71" x="326.0" y="471.39374"/>
+                </label>
+                <bbox w="120.0" h="60.0" x="290.0" y="450.74875"/>
+            </glyph>
+            <glyph class="complex" id="id17">
+                <label text="Ca/CaM complex">
+                    <bbox w="97.0" h="18.71" x="302.0" y="601.5652"/>
+                </label>
+                <bbox w="150.0" h="89.52643" x="275.0" y="530.7488"/>
+                <glyph class="macromolecule" id="id18">
+                    <label text="CaM">
+                        <bbox w="29.0" h="18.71" x="365.5" y="556.1624"/>
+                    </label>
+                    <bbox w="80.0" h="60.0" x="340.0" y="535.5174"/>
+                </glyph>
+                <glyph class="simple chemical" id="id19">
+                    <label text="Ca++">
+                        <bbox w="34.0" h="18.71" x="283.0" y="556.1624"/>
+                    </label>
+                    <bbox w="40.0" h="40.0" x="280.0" y="545.5174"/>
+                </glyph>
+            </glyph>
+            <port id="id15" x="350.0" y="537.44763"/>
+        </glyph>
+        <glyph class="macromolecule" id="id20" compartmentRef="id1">
+            <label text="α/βCaMKII">
+                <bbox w="60.0" h="18.71" x="569.0" y="224.57834"/>
+            </label>
+            <bbox w="108.0" h="60.0" x="545.0" y="203.93335"/>
+            <port id="id21" x="599.0" y="233.93335"/>
+        </glyph>
+        <glyph class="association" id="id22" compartmentRef="id1">
+            <bbox w="24.0" h="48.0" x="1166.1172" y="309.8786"/>
+            <port id="id23" x="1178.1172" y="309.8786"/>
+            <port id="id24" x="1178.1172" y="357.8786"/>
+        </glyph>
+        <glyph class="process" id="id25" compartmentRef="id1">
+            <bbox w="48.0" h="24.0" x="575.0" y="525.44763"/>
+            <port id="id26" x="623.0" y="537.44763"/>
+            <port id="id27" x="575.0" y="537.44763"/>
+            <port id="id28" x="599.0" y="537.44763"/>
+        </glyph>
+        <glyph class="macromolecule" id="id29" compartmentRef="id1">
+            <label text="CaN">
+                <bbox w="29.0" h="18.71" x="584.5" y="448.65622"/>
+            </label>
+            <bbox w="108.0" h="60.0" x="545.0" y="428.01123"/>
+            <port id="id30" x="599.0" y="458.01123"/>
+        </glyph>
+        <glyph class="complex" id="id31" compartmentRef="id1">
+            <label text="Ca/Cam/gCaMKII complex">
+                <bbox w="148.0" h="18.71" x="730.7594" y="625.43646"/>
+            </label>
+            <bbox w="210.0" h="213.39772" x="699.7594" y="430.74875"/>
+            <glyph class="macromolecule" id="id33">
+                <label text="γCaMKII">
+                    <bbox w="48.0" h="18.71" x="780.7594" y="471.39374"/>
+                </label>
+                <bbox w="120.0" h="60.0" x="744.7594" y="450.74875"/>
+                <glyph class="state variable" id="id34">
+                    <state value="P" variable="S334"/>
+                    <bbox w="59.0" h="25.26" x="775.2594" y="498.11874"/>
+                </glyph>
+            </glyph>
+            <glyph class="complex" id="id35">
+                <label text="Ca/CaM complex">
+                    <bbox w="97.0" h="18.71" x="756.7594" y="601.5652"/>
+                </label>
+                <bbox w="150.0" h="89.52643" x="729.7594" y="530.7488"/>
+                <glyph class="macromolecule" id="id36">
+                    <label text="CaM">
+                        <bbox w="29.0" h="18.71" x="820.2594" y="556.1624"/>
+                    </label>
+                    <bbox w="80.0" h="60.0" x="794.7594" y="535.5174"/>
+                </glyph>
+                <glyph class="simple chemical" id="id37">
+                    <label text="Ca++">
+                        <bbox w="34.0" h="18.71" x="737.7594" y="556.1624"/>
+                    </label>
+                    <bbox w="40.0" h="40.0" x="734.7594" y="545.5174"/>
+                </glyph>
+            </glyph>
+            <port id="id32" x="804.7594" y="537.44763"/>
+        </glyph>
+        <glyph class="association" id="id38" compartmentRef="id1">
+            <bbox w="48.0" h="24.0" x="998.4681" y="525.44763"/>
+            <port id="id39" x="998.4681" y="537.44763"/>
+            <port id="id40" x="1046.4681" y="537.44763"/>
+        </glyph>
+        <glyph class="complex" id="id41" compartmentRef="id1">
+            <label text="Ca/Cam/gCaMKII complex">
+                <bbox w="148.0" h="18.71" x="276.0" y="392.03873"/>
+            </label>
+            <bbox w="210.0" h="213.39772" x="245.0" y="197.35103"/>
+            <glyph class="macromolecule" id="id43">
+                <label text="γCaMKII">
+                    <bbox w="48.0" h="18.71" x="326.0" y="237.99602"/>
+                </label>
+                <bbox w="120.0" h="60.0" x="290.0" y="217.35103"/>
+                <glyph class="state variable" id="id44">
+                    <state value="P" variable="T287"/>
+                    <bbox w="59.0" h="25.26" x="299.20456" y="204.72104"/>
+                </glyph>
+                <glyph class="state variable" id="id45">
+                    <state value="P" variable="S334"/>
+                    <bbox w="59.0" h="25.26" x="320.5" y="264.72104"/>
+                </glyph>
+            </glyph>
+            <glyph class="complex" id="id46">
+                <label text="Ca/CaM complex">
+                    <bbox w="97.0" h="18.71" x="302.0" y="368.16745"/>
+                </label>
+                <bbox w="150.0" h="89.52643" x="275.0" y="297.35104"/>
+                <glyph class="macromolecule" id="id47">
+                    <label text="CaM">
+                        <bbox w="29.0" h="18.71" x="365.5" y="322.76468"/>
+                    </label>
+                    <bbox w="80.0" h="60.0" x="340.0" y="302.11966"/>
+                </glyph>
+                <glyph class="simple chemical" id="id48">
+                    <label text="Ca++">
+                        <bbox w="34.0" h="18.71" x="283.0" y="322.76468"/>
+                    </label>
+                    <bbox w="40.0" h="40.0" x="280.0" y="312.11966"/>
+                </glyph>
+            </glyph>
+            <port id="id42" x="350.0" y="304.0499"/>
+        </glyph>
+        <glyph class="process" id="id49" compartmentRef="id1">
+            <bbox w="48.0" h="24.0" x="575.0" y="292.0499"/>
+            <port id="id50" x="575.0" y="304.0499"/>
+            <port id="id51" x="623.0" y="304.0499"/>
+            <port id="id52" x="599.0" y="304.0499"/>
+        </glyph>
+        <glyph class="compartment" id="id1" compartmentOrder="1.0">
+            <label text="neuron">
+                <bbox w="51.0" h="23.61" x="1347.6816" y="288.23795"/>
+            </label>
+            <bbox w="1519.3981" h="1236.1389" x="97.2252" y="180.0"/>
+        </glyph>
+        <glyph class="complex" id="id54" compartmentRef="id53">
+            <label text="Ca/Cam/gCaMKII complex">
+                <bbox w="148.0" h="18.71" x="276.0" y="976.63605"/>
+            </label>
+            <bbox w="210.0" h="213.39772" x="245.0" y="781.94836"/>
+            <glyph class="macromolecule" id="id57">
+                <label text="γCaMKII">
+                    <bbox w="48.0" h="18.71" x="326.0" y="822.5934"/>
+                </label>
+                <bbox w="120.0" h="60.0" x="290.0" y="801.94836"/>
+            </glyph>
+            <glyph class="complex" id="id58">
+                <label text="Ca/CaM complex">
+                    <bbox w="97.0" h="18.71" x="301.0" y="952.7648"/>
+                </label>
+                <bbox w="150.0" h="89.52643" x="275.0" y="881.94836"/>
+                <glyph class="simple chemical" id="id59">
+                    <label text="Ca++">
+                        <bbox w="34.0" h="18.71" x="284.93756" y="905.81195"/>
+                    </label>
+                    <bbox w="40.0" h="40.0" x="281.93756" y="895.16693"/>
+                </glyph>
+                <glyph class="macromolecule" id="id60">
+                    <label text="CaM">
+                        <bbox w="29.0" h="18.71" x="355.5" y="905.81195"/>
+                    </label>
+                    <bbox w="80.0" h="60.0" x="330.0" y="885.16693"/>
+                </glyph>
+            </glyph>
+            <port id="id55" x="350.0" y="888.6472"/>
+            <port id="id56" x="350.0" y="888.6472"/>
+        </glyph>
+        <glyph class="macromolecule" id="id61" compartmentRef="id53">
+            <label text="γCaMKII">
+                <bbox w="48.0" h="18.71" x="646.0" y="760.645"/>
+            </label>
+            <bbox w="120.0" h="60.0" x="610.0" y="740.0"/>
+            <port id="id62" x="610.0" y="796.25"/>
+        </glyph>
+        <glyph class="macromolecule" id="id63" compartmentRef="id53">
+            <label text="CaMKK">
+                <bbox w="45.0" h="18.71" x="798.2594" y="760.645"/>
+            </label>
+            <bbox w="108.0" h="60.0" x="766.7594" y="740.0"/>
+            <port id="id64" x="820.7594" y="770.0"/>
+        </glyph>
+        <glyph class="complex" id="id65" compartmentRef="id53">
+            <label text="Ca/Cam/gCaMKK complex">
+                <bbox w="150.0" h="18.71" x="1042.6328" y="970.94977"/>
+            </label>
+            <bbox w="210.0" h="208.03864" x="1012.6328" y="781.6212"/>
+            <glyph class="complex" id="id67">
+                <label text="Ca/CaM complex">
+                    <bbox w="97.0" h="18.71" x="1069.1328" y="872.4376"/>
+                </label>
+                <bbox w="150.0" h="89.52643" x="1042.6328" y="801.6212"/>
+                <glyph class="macromolecule" id="id68">
+                    <label text="CaM">
+                        <bbox w="29.0" h="18.71" x="1123.1328" y="827.03485"/>
+                    </label>
+                    <bbox w="80.0" h="60.0" x="1097.6328" y="806.38983"/>
+                </glyph>
+                <glyph class="simple chemical" id="id69">
+                    <label text="Ca++">
+                        <bbox w="34.0" h="18.71" x="1050.0515" y="827.03485"/>
+                    </label>
+                    <bbox w="40.0" h="40.0" x="1047.0515" y="816.38983"/>
+                </glyph>
+            </glyph>
+            <port id="id66" x="1117.6328" y="885.6405"/>
+        </glyph>
+        <glyph class="complex" id="id70" compartmentRef="id53">
+            <label text="Ca/CaM complex">
+                <bbox w="97.0" h="18.71" x="631.0" y="911.69366"/>
+            </label>
+            <bbox w="150.0" h="89.52643" x="605.0" y="840.8773"/>
+            <glyph class="simple chemical" id="id72">
+                <label text="Ca++">
+                    <bbox w="34.0" h="18.71" x="613.0" y="867.1628"/>
+                </label>
+                <bbox w="40.0" h="40.0" x="610.0" y="856.5178"/>
+            </glyph>
+            <glyph class="macromolecule" id="id73">
+                <label text="CaM">
+                    <bbox w="29.0" h="18.71" x="685.9844" y="867.1628"/>
+                </label>
+                <bbox w="80.0" h="60.0" x="660.4844" y="846.5178"/>
+            </glyph>
+            <port id="id71" x="680.0" y="885.6405"/>
+        </glyph>
+        <glyph class="macromolecule" id="id74" compartmentRef="id53">
+            <label text="CaMKIV">
+                <bbox w="47.0" h="18.71" x="524.53864" y="1039.4163"/>
+            </label>
+            <bbox w="108.0" h="60.0" x="494.03864" y="1018.77124"/>
+            <port id="id75" x="548.03864" y="1048.7712"/>
+        </glyph>
+        <glyph class="macromolecule" id="id76" compartmentRef="id53">
+            <label text="CREB">
+                <bbox w="38.0" h="18.71" x="1454.1328" y="1209.4163"/>
+            </label>
+            <bbox w="108.0" h="60.0" x="1419.1328" y="1188.7712"/>
+            <glyph class="state variable" id="id77">
+                <state value="P"/>
+                <bbox w="24.0" h="25.26" x="1434.1328" y="1176.1412"/>
+            </glyph>
+            <port id="id78" x="1473.1328" y="1218.7712"/>
+        </glyph>
+        <glyph class="complex" id="id79" compartmentRef="id53">
+            <label text="Ca/Cam/gCaMKIV complex">
+                <bbox w="152.0" h="18.71" x="1271.6328" y="1134.0806"/>
+            </label>
+            <bbox w="210.0" h="208.03864" x="1242.6328" y="944.75195"/>
+            <glyph class="macromolecule" id="id81">
+                <label text="CaMKIV">
+                    <bbox w="47.0" h="18.71" x="1324.1328" y="1086.397"/>
+                </label>
+                <bbox w="108.0" h="60.0" x="1293.6328" y="1065.752"/>
+                <glyph class="state variable" id="id82">
+                    <state value="P" variable="T196"/>
+                    <bbox w="59.0" h="25.26" x="1291.1328" y="1053.122"/>
+                </glyph>
+            </glyph>
+            <glyph class="complex" id="id83">
+                <label text="Ca/CaM complex">
+                    <bbox w="97.0" h="18.71" x="1299.1328" y="1025.5684"/>
+                </label>
+                <bbox w="150.0" h="89.52643" x="1272.6328" y="954.75195"/>
+                <glyph class="simple chemical" id="id84">
+                    <label text="Ca++">
+                        <bbox w="34.0" h="18.71" x="1281.3303" y="979.8167"/>
+                    </label>
+                    <bbox w="40.0" h="40.0" x="1278.3303" y="969.17175"/>
+                </glyph>
+                <glyph class="macromolecule" id="id85">
+                    <label text="CaM">
+                        <bbox w="29.0" h="18.71" x="1354.5278" y="979.8167"/>
+                    </label>
+                    <bbox w="80.0" h="60.0" x="1329.0278" y="959.17175"/>
+                </glyph>
+            </glyph>
+            <port id="id80" x="1347.6328" y="1048.7712"/>
+        </glyph>
+        <glyph class="process" id="id86" compartmentRef="id53">
+            <bbox w="24.0" h="48.0" x="338.0" y="660.0"/>
+            <port id="id87" x="350.0" y="660.0"/>
+            <port id="id88" x="350.0" y="708.0"/>
+        </glyph>
+        <glyph class="dissociation" id="id89" compartmentRef="id53">
+            <bbox w="48.0" h="24.0" x="494.03864" y="876.6472"/>
+            <port id="id90" x="494.03864" y="888.6472"/>
+            <port id="id91" x="542.03864" y="888.6472"/>
+        </glyph>
+        <glyph class="association" id="id92" compartmentRef="id53">
+            <bbox w="48.0" h="24.0" x="843.65234" y="873.6405"/>
+            <port id="id93" x="843.65234" y="885.6405"/>
+            <port id="id94" x="891.65234" y="885.6405"/>
+        </glyph>
+        <glyph class="phenotype" id="id95" compartmentRef="id53">
+            <label text="Gene expression">
+                <bbox w="98.0" h="18.71" x="1424.1328" y="1320.4579"/>
+            </label>
+            <bbox w="200.0" h="60.0" x="1373.1328" y="1299.8129"/>
+            <port id="id96" x="1473.1328" y="1329.8129"/>
+        </glyph>
+        <glyph class="process" id="id97" compartmentRef="id53">
+            <bbox w="48.0" h="24.0" x="1093.6328" y="1036.7712"/>
+            <port id="id98" x="1093.6328" y="1048.7712"/>
+            <port id="id99" x="1141.6328" y="1048.7712"/>
+            <port id="id100" x="1117.6328" y="1048.7712"/>
+        </glyph>
+        <glyph class="process" id="id101" compartmentRef="id53">
+            <bbox w="48.0" h="24.0" x="1323.6328" y="1206.7712"/>
+            <port id="id102" x="1323.6328" y="1218.7712"/>
+            <port id="id103" x="1371.6328" y="1218.7712"/>
+            <port id="id104" x="1347.6328" y="1218.7712"/>
+        </glyph>
+        <glyph class="macromolecule" id="id105" compartmentRef="id53">
+            <label text="CREB">
+                <bbox w="38.0" h="18.71" x="1203.1328" y="1209.4163"/>
+            </label>
+            <bbox w="108.0" h="60.0" x="1168.1328" y="1188.7712"/>
+            <port id="id106" x="1222.1328" y="1218.7712"/>
+        </glyph>
+        <glyph class="macromolecule" id="id107" compartmentRef="id53">
+            <label text="CaMKK">
+                <bbox w="45.0" h="18.71" x="1095.1328" y="926.2855"/>
+            </label>
+            <bbox w="108.0" h="60.0" x="1063.6328" y="905.6405"/>
+            <port id="id108" x="1117.6328" y="935.6405"/>
+        </glyph>
+        <glyph class="complex" id="id109" compartmentRef="id53">
+            <label text="Ca/Cam/gCaMKIV complex">
+                <bbox w="152.0" h="18.71" x="811.6328" y="1134.0806"/>
+            </label>
+            <bbox w="210.0" h="208.03864" x="782.6328" y="944.75195"/>
+            <glyph class="macromolecule" id="id111">
+                <label text="CaMKIV">
+                    <bbox w="47.0" h="18.71" x="864.1328" y="1086.397"/>
+                </label>
+                <bbox w="108.0" h="60.0" x="833.6328" y="1065.752"/>
+            </glyph>
+            <glyph class="complex" id="id112">
+                <label text="Ca/CaM complex">
+                    <bbox w="97.0" h="18.71" x="839.1328" y="1025.5684"/>
+                </label>
+                <bbox w="150.0" h="89.52643" x="812.6328" y="954.75195"/>
+                <glyph class="simple chemical" id="id113">
+                    <label text="Ca++">
+                        <bbox w="34.0" h="18.71" x="821.3303" y="979.8167"/>
+                    </label>
+                    <bbox w="40.0" h="40.0" x="818.3303" y="969.17175"/>
+                </glyph>
+                <glyph class="macromolecule" id="id114">
+                    <label text="CaM">
+                        <bbox w="29.0" h="18.71" x="894.52783" y="979.8167"/>
+                    </label>
+                    <bbox w="80.0" h="60.0" x="869.02783" y="959.17175"/>
+                </glyph>
+            </glyph>
+            <port id="id110" x="887.6328" y="1048.7712"/>
+        </glyph>
+        <glyph class="association" id="id115" compartmentRef="id53">
+            <bbox w="48.0" h="24.0" x="715.81573" y="1036.7712"/>
+            <port id="id116" x="715.81573" y="1048.7712"/>
+            <port id="id117" x="763.81573" y="1048.7712"/>
+        </glyph>
+        <glyph class="compartment" id="id53" compartmentOrder="53.0">
+            <label text="nucleus">
+                <bbox w="56.0" h="23.61" x="1353.3138" y="711.0728"/>
+            </label>
+            <bbox w="1465.1091" h="708.42224" x="125.0" y="684.3595"/>
+        </glyph>
+        <glyph class="macromolecule" id="id118">
+            <label text="Cav1">
+                <bbox w="32.0" h="18.71" x="1459.6047" y="153.36107"/>
+            </label>
+            <bbox w="108.0" h="60.0" x="1421.6047" y="132.71606"/>
+            <glyph class="unit of information" id="id119">
+                <label text="close"/>
+                <bbox w="42.0" h="25.26" x="1427.6047" y="120.086075"/>
+            </glyph>
+            <port id="id120" x="1475.6047" y="162.71606"/>
+        </glyph>
+        <glyph class="perturbing agent" id="id121">
+            <label text="depolarization">
+                <bbox w="81.0" h="18.71" x="1328.3611" y="52.19855"/>
+            </label>
+            <bbox w="180.0" h="60.0" x="1278.8611" y="31.553549"/>
+            <port id="id122" x="1368.8611" y="61.55355"/>
+        </glyph>
+        <glyph class="process" id="id123">
+            <bbox w="48.0" h="24.0" x="1344.8611" y="150.71606"/>
+            <port id="id124" x="1392.8611" y="162.71606"/>
+            <port id="id125" x="1344.8611" y="162.71606"/>
+            <port id="id126" x="1368.8611" y="162.71606"/>
+        </glyph>
+        <glyph class="simple chemical" id="id127">
+            <label text="Ca++">
+                <bbox w="34.0" h="18.71" x="1081.1172" y="74.523605"/>
+            </label>
+            <bbox w="40.0" h="40.0" x="1078.1172" y="63.87861"/>
+            <port id="id128" x="1098.1172" y="83.87861"/>
+        </glyph>
+        <glyph class="macromolecule" id="id129">
+            <label text="Cav1">
+                <bbox w="32.0" h="18.71" x="1246.1172" y="153.36107"/>
+            </label>
+            <bbox w="108.0" h="60.0" x="1208.1172" y="132.71606"/>
+            <glyph class="unit of information" id="id130">
+                <label text="open"/>
+                <bbox w="41.0" h="25.26" x="1214.6172" y="120.086075"/>
+            </glyph>
+            <port id="id131" x="1262.1172" y="162.71606"/>
+            <port id="id132" x="1262.1172" y="162.71606"/>
+        </glyph>
+        <glyph class="process" id="id133">
+            <bbox w="24.0" h="48.0" x="1086.1172" y="138.71606"/>
+            <port id="id134" x="1098.1172" y="138.71606"/>
+            <port id="id135" x="1098.1172" y="186.71606"/>
+            <port id="id136" x="1098.1172" y="162.71606"/>
+        </glyph>
+        <glyph class="annotation" id="id137">
+            <label text="γCaMKII shuttles Ca²⁺/CaM to the nucleus to trigger CREB phosphorylation and gene expression">
+                <bbox w="529.0" h="18.71" x="149.41356" y="103.43499"/>
+            </label>
+            <bbox w="633.3767" h="72.18423" x="97.2252" y="76.697876"/>
+        </glyph>
+        <arc class="consumption" id="id138" source="id120" target="id124">
+            <start x="1421.6047" y="162.71606"/>
+            <end x="1392.8611" y="162.71606"/>
+        </arc>
+        <arc class="production" id="id139" source="id125" target="id131">
+            <start x="1344.8611" y="162.71606"/>
+            <end x="1329.1172" y="162.71606"/>
+        </arc>
+        <arc class="necessary stimulation" id="id140" source="id122" target="id126">
+            <start x="1368.8611" y="91.55355"/>
+            <end x="1368.8611" y="140.71606"/>
+        </arc>
+        <arc class="consumption" id="id141" source="id128" target="id134">
+            <start x="1098.1172" y="103.87861"/>
+            <end x="1098.1172" y="138.71606"/>
+        </arc>
+        <arc class="production" id="id142" source="id135" target="id3">
+            <start x="1098.1172" y="186.71606"/>
+            <end x="1098.1172" y="230.8786"/>
+        </arc>
+        <arc class="consumption" id="id143" source="id4" target="id23">
+            <start x="1115.3826" y="273.80615"/>
+            <end x="1178.1172" y="309.8786"/>
+        </arc>
+        <arc class="consumption" id="id144" source="id6" target="id23">
+            <start x="1208.1172" y="290.16434"/>
+            <end x="1178.1172" y="309.8786"/>
+        </arc>
+        <arc class="production" id="id145" source="id24" target="id11">
+            <start x="1178.1172" y="357.8786"/>
+            <end x="1178.1172" y="408.22232"/>
+        </arc>
+        <arc class="production" id="id146" source="id27" target="id15">
+            <start x="575.0" y="537.44763"/>
+            <end x="468.0" y="537.44763"/>
+        </arc>
+        <arc class="production" id="id147" source="id88" target="id55">
+            <start x="350.0" y="708.0"/>
+            <end x="350.0" y="768.94836"/>
+        </arc>
+        <arc class="consumption" id="id148" source="id56" target="id90">
+            <start x="455.0" y="888.6472"/>
+            <end x="494.03864" y="888.6472"/>
+        </arc>
+        <arc class="production" id="id149" source="id91" target="id62">
+            <start x="542.03864" y="888.6472"/>
+            <end x="602.2973" y="806.7223"/>
+        </arc>
+        <arc class="production" id="id150" source="id91" target="id71">
+            <start x="542.03864" y="888.6472"/>
+            <end x="592.0031" y="887.5583"/>
+        </arc>
+        <arc class="consumption" id="id151" source="id64" target="id93">
+            <start x="826.6984" y="800.0"/>
+            <end x="843.65234" y="885.6405"/>
+        </arc>
+        <arc class="consumption" id="id152" source="id71" target="id93">
+            <start x="755.0" y="885.6405"/>
+            <end x="843.65234" y="885.6405"/>
+        </arc>
+        <arc class="production" id="id153" source="id94" target="id66">
+            <start x="891.65234" y="885.6405"/>
+            <end x="999.6328" y="885.6405"/>
+        </arc>
+        <arc class="catalysis" id="id154" source="id108" target="id100">
+            <start x="1117.6328" y="965.6405"/>
+            <end x="1117.6328" y="1024.7712"/>
+        </arc>
+        <arc class="stimulation" id="id155" source="id78" target="id96">
+            <start x="1473.1328" y="1248.7712"/>
+            <end x="1473.1328" y="1287.8129"/>
+        </arc>
+        <arc class="production" id="id156" source="id99" target="id80">
+            <start x="1141.6328" y="1048.7712"/>
+            <end x="1229.6328" y="1048.7712"/>
+        </arc>
+        <arc class="stimulation" id="id157" source="id132" target="id136">
+            <start x="1208.1172" y="162.71606"/>
+            <end x="1122.1172" y="162.71606"/>
+        </arc>
+        <arc class="production" id="id158" source="id103" target="id78">
+            <start x="1371.6328" y="1218.7712"/>
+            <end x="1406.1328" y="1218.7712"/>
+        </arc>
+        <arc class="consumption" id="id159" source="id106" target="id102">
+            <start x="1276.1328" y="1218.7712"/>
+            <end x="1323.6328" y="1218.7712"/>
+        </arc>
+        <arc class="catalysis" id="id160" source="id80" target="id104">
+            <start x="1347.6328" y="1152.7905"/>
+            <end x="1347.6328" y="1194.7712"/>
+        </arc>
+        <arc class="consumption" id="id161" source="id15" target="id87">
+            <start x="350.0" y="644.1465"/>
+            <end x="350.0" y="660.0"/>
+        </arc>
+        <arc class="consumption" id="id162" source="id110" target="id98">
+            <start x="992.6328" y="1048.7712"/>
+            <end x="1093.6328" y="1048.7712"/>
+        </arc>
+        <arc class="consumption" id="id163" source="id71" target="id116">
+            <start x="689.8279" y="930.40375"/>
+            <end x="715.81573" y="1048.7712"/>
+        </arc>
+        <arc class="consumption" id="id164" source="id75" target="id116">
+            <start x="602.03864" y="1048.7712"/>
+            <end x="715.81573" y="1048.7712"/>
+        </arc>
+        <arc class="production" id="id165" source="id117" target="id110">
+            <start x="763.81573" y="1048.7712"/>
+            <end x="769.6328" y="1048.7712"/>
+        </arc>
+        <arc class="catalysis" id="id166" source="id30" target="id28">
+            <start x="599.0" y="488.01123"/>
+            <end x="599.0" y="513.44763"/>
+        </arc>
+        <arc class="consumption" id="id167" source="id11" target="id40">
+            <start x="1103.1172" y="506.6972"/>
+            <end x="1046.4681" y="537.44763"/>
+        </arc>
+        <arc class="consumption" id="id168" source="id9" target="id40">
+            <start x="1104.896" y="567.55414"/>
+            <end x="1046.4681" y="537.44763"/>
+        </arc>
+        <arc class="production" id="id169" source="id39" target="id32">
+            <start x="998.4681" y="537.44763"/>
+            <end x="922.7594" y="537.44763"/>
+        </arc>
+        <arc class="consumption" id="id170" source="id32" target="id26">
+            <start x="699.7594" y="537.44763"/>
+            <end x="623.0" y="537.44763"/>
+        </arc>
+        <arc class="consumption" id="id171" source="id32" target="id51">
+            <start x="804.7594" y="430.74875"/>
+            <next x="804.7594" y="304.0499"/>
+            <end x="623.0" y="304.0499"/>
+        </arc>
+        <arc class="production" id="id172" source="id50" target="id42">
+            <start x="575.0" y="304.0499"/>
+            <end x="468.0" y="304.0499"/>
+        </arc>
+        <arc class="catalysis" id="id173" source="id21" target="id52">
+            <start x="599.0" y="263.93335"/>
+            <end x="599.0" y="280.0499"/>
+        </arc>
+    </map>
+</sbgn>

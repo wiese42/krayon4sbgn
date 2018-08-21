@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="vectorgraphics">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/vectorgraphics/vectorgraphics.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

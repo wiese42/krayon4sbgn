@@ -1,0 +1,851 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sbgn xmlns="http://sbgn.org/libsbgn/0.2">
+    <map language="process description">
+        <glyph class="macromolecule multimer" id="id2" compartmentRef="id1">
+            <label text="STAT1α">
+                <bbox w="53.0" h="19.93" x="271.97885" y="1031.235"/>
+            </label>
+            <bbox w="100.0" h="60.0" x="248.47884" y="1011.2"/>
+            <glyph class="state variable" id="id3">
+                <state value="P"/>
+                <bbox w="24.0" h="25.26" x="322.47882" y="998.57"/>
+            </glyph>
+            <glyph class="unit of information" id="id4">
+                <label text="N:2"/>
+                <bbox w="33.0" h="25.26" x="256.08148" y="998.57"/>
+            </glyph>
+            <port id="id5" x="298.47885" y="1041.2"/>
+        </glyph>
+        <glyph class="nucleic acid feature" id="id6" compartmentRef="id1">
+            <label text="IRF1">
+                <bbox w="32.0" h="19.93" x="423.83743" y="1031.235"/>
+            </label>
+            <bbox w="100.0" h="60.0" x="389.83743" y="1011.2"/>
+            <glyph class="unit of information" id="id7">
+                <label text="ct:gene"/>
+                <bbox w="53.0" h="25.26" x="413.33743" y="998.57"/>
+            </glyph>
+            <port id="id8" x="439.83743" y="1041.2"/>
+        </glyph>
+        <glyph class="and" id="id9" compartmentRef="id1">
+            <bbox w="30.0" h="50.0" x="354.15814" y="1103.14"/>
+            <port id="id10" x="369.15814" y="1103.14"/>
+            <port id="id11" x="369.15814" y="1153.14"/>
+        </glyph>
+        <glyph class="process" id="id12" compartmentRef="id1">
+            <bbox w="40.0" h="20.0" x="349.15814" y="1197.14"/>
+            <port id="id13" x="369.15814" y="1217.14"/>
+            <port id="id14" x="369.15814" y="1197.14"/>
+            <port id="id15" x="349.15814" y="1207.14"/>
+            <port id="id16" x="389.15814" y="1207.14"/>
+        </glyph>
+        <glyph class="source and sink" id="id17" compartmentRef="id1">
+            <bbox w="43.628727" h="43.628727" x="258.8542" y="1185.3257"/>
+            <port id="id18" x="280.66855" y="1207.14"/>
+        </glyph>
+        <glyph class="nucleic acid feature" id="id19" compartmentRef="id1">
+            <label text="IRF1">
+                <bbox w="32.0" h="19.93" x="557.06744" y="1197.1749"/>
+            </label>
+            <bbox w="100.0" h="60.0" x="523.06744" y="1177.14"/>
+            <glyph class="unit of information" id="id20">
+                <label text="ct:mRNA"/>
+                <bbox w="59.0" h="25.26" x="505.06744" y="1164.51"/>
+            </glyph>
+            <port id="id21" x="573.06744" y="1207.14"/>
+        </glyph>
+        <glyph class="macromolecule" id="id22" compartmentRef="id1">
+            <label text="IRF1">
+                <bbox w="32.0" h="19.93" x="775.20337" y="1031.235"/>
+            </label>
+            <bbox w="100.0" h="60.0" x="741.20337" y="1011.2"/>
+            <port id="id23" x="791.20337" y="1041.2"/>
+        </glyph>
+        <glyph class="nucleic acid feature" id="id24" compartmentRef="id1">
+            <label text="iNOS">
+                <bbox w="36.0" h="19.93" x="1059.1814" y="1197.1749"/>
+            </label>
+            <bbox w="100.0" h="60.0" x="1027.1814" y="1177.14"/>
+            <glyph class="unit of information" id="id25">
+                <label text="ct:mRNA"/>
+                <bbox w="59.0" h="25.26" x="1010.1814" y="1164.51"/>
+            </glyph>
+            <port id="id26" x="1077.1814" y="1207.14"/>
+        </glyph>
+        <glyph class="nucleic acid feature" id="id27" compartmentRef="id1">
+            <label text="iNOS">
+                <bbox w="36.0" h="19.93" x="907.9814" y="1031.235"/>
+            </label>
+            <bbox w="100.0" h="60.0" x="875.9814" y="1011.2"/>
+            <glyph class="unit of information" id="id28">
+                <label text="ct:gene"/>
+                <bbox w="53.0" h="25.26" x="899.4814" y="998.57"/>
+            </glyph>
+            <port id="id29" x="925.9814" y="1041.2"/>
+        </glyph>
+        <glyph class="and" id="id30" compartmentRef="id1">
+            <bbox w="30.0" h="50.0" x="837.2336" y="1103.14"/>
+            <port id="id31" x="852.2336" y="1153.14"/>
+            <port id="id32" x="852.2336" y="1103.14"/>
+        </glyph>
+        <glyph class="process" id="id33" compartmentRef="id1">
+            <bbox w="40.0" h="20.0" x="832.2336" y="1197.14"/>
+            <port id="id34" x="852.2336" y="1217.14"/>
+            <port id="id35" x="852.2336" y="1197.14"/>
+            <port id="id36" x="832.2336" y="1207.14"/>
+            <port id="id37" x="872.2336" y="1207.14"/>
+        </glyph>
+        <glyph class="source and sink" id="id38" compartmentRef="id1">
+            <bbox w="43.628727" h="43.628727" x="749.389" y="1185.3257"/>
+            <port id="id39" x="771.20337" y="1207.14"/>
+        </glyph>
+        <glyph class="compartment" id="id1" compartmentOrder="1.0">
+            <label text="NUCLEUS">
+                <bbox w="98.0" h="28.51" x="1381.9927" y="1103.8258"/>
+            </label>
+            <bbox w="1598.0834" h="327.15308" x="210.90123" y="954.5043"/>
+        </glyph>
+        <glyph class="process" id="id41" compartmentRef="id40">
+            <bbox w="20.0" h="40.0" x="288.47885" y="904.7881"/>
+            <port id="id42" x="298.47885" y="944.7881"/>
+            <port id="id43" x="298.47885" y="904.7881"/>
+            <port id="id44" x="308.47885" y="924.7881"/>
+            <port id="id45" x="288.47885" y="924.7881"/>
+        </glyph>
+        <glyph class="macromolecule" id="id46" compartmentRef="id40">
+            <label text="6.3.4.5">
+                <bbox w="44.0" h="19.93" x="1716.3208" y="827.675"/>
+            </label>
+            <bbox w="100.0" h="60.0" x="1688.3208" y="807.63995"/>
+            <port id="id47" x="1738.3208" y="837.63995"/>
+        </glyph>
+        <glyph class="macromolecule" id="id48" compartmentRef="id40">
+            <label text="4.3.2.1">
+                <bbox w="44.0" h="19.93" x="1363.1995" y="826.898"/>
+            </label>
+            <bbox w="100.0" h="60.0" x="1335.1995" y="806.863"/>
+            <port id="id49" x="1385.1995" y="836.863"/>
+        </glyph>
+        <glyph class="simple chemical" id="id50" compartmentRef="id40">
+            <label text="fumarate">
+                <bbox w="61.0" h="19.93" x="1389.354" y="742.5644"/>
+            </label>
+            <bbox w="60.0" h="60.0" x="1389.854" y="722.5294"/>
+            <port id="id51" x="1419.854" y="752.5294"/>
+        </glyph>
+        <glyph class="process" id="id52" compartmentRef="id40">
+            <bbox w="20.0" h="40.0" x="1472.6646" y="817.63995"/>
+            <port id="id53" x="1482.6646" y="857.63995"/>
+            <port id="id54" x="1482.6646" y="817.63995"/>
+            <port id="id55" x="1492.6646" y="837.63995"/>
+            <port id="id56" x="1472.6646" y="837.63995"/>
+        </glyph>
+        <glyph class="simple chemical" id="id57" compartmentRef="id40">
+            <label text="arginino-succinate">
+                <bbox w="121.0" h="19.93" x="1527.7188" y="886.7035"/>
+            </label>
+            <bbox w="60.0" h="60.0" x="1558.2188" y="866.66846"/>
+            <port id="id58" x="1588.2188" y="896.66846"/>
+        </glyph>
+        <glyph class="simple chemical" id="id59" compartmentRef="id40">
+            <label text="aspartate">
+                <bbox w="63.0" h="19.93" x="1686.8208" y="752.30414"/>
+            </label>
+            <bbox w="60.0" h="60.0" x="1688.3208" y="732.2691"/>
+            <port id="id60" x="1718.3208" y="762.2691"/>
+        </glyph>
+        <glyph class="process" id="id61" compartmentRef="id40">
+            <bbox w="20.0" h="40.0" x="1641.1172" y="817.63995"/>
+            <port id="id62" x="1651.1172" y="857.63995"/>
+            <port id="id63" x="1651.1172" y="817.63995"/>
+            <port id="id64" x="1661.1172" y="837.63995"/>
+            <port id="id65" x="1641.1172" y="837.63995"/>
+        </glyph>
+        <glyph class="simple chemical" id="id66" compartmentRef="id40">
+            <label text="citrulline">
+                <bbox w="60.0" h="19.93" x="1621.1172" y="682.5644"/>
+            </label>
+            <bbox w="60.0" h="60.0" x="1621.1172" y="662.5294"/>
+            <port id="id67" x="1651.1172" y="692.5294"/>
+        </glyph>
+        <glyph class="simple chemical" id="id68" compartmentRef="id40">
+            <label text="NO">
+                <bbox w="23.0" h="19.93" x="1639.6172" y="594.6872"/>
+            </label>
+            <bbox w="60.0" h="60.0" x="1621.1172" y="574.65216"/>
+            <port id="id69" x="1651.1172" y="604.65216"/>
+        </glyph>
+        <glyph class="simple chemical" id="id70" compartmentRef="id40">
+            <label text="O₂">
+                <bbox w="20.0" h="19.93" x="1523.9417" y="594.6872"/>
+            </label>
+            <bbox w="60.0" h="60.0" x="1503.9417" y="574.65216"/>
+            <port id="id71" x="1533.9417" y="604.65216"/>
+        </glyph>
+        <glyph class="simple chemical" id="id72" compartmentRef="id40">
+            <label text="arginine">
+                <bbox w="57.0" h="19.93" x="1454.1646" y="682.5644"/>
+            </label>
+            <bbox w="60.0" h="60.0" x="1452.6646" y="662.5294"/>
+            <port id="id73" x="1482.6646" y="692.5294"/>
+        </glyph>
+        <glyph class="process" id="id74" compartmentRef="id40">
+            <bbox w="40.0" h="20.0" x="1568.2188" y="628.7842"/>
+            <port id="id75" x="1568.2188" y="638.7842"/>
+            <port id="id76" x="1608.2188" y="638.7842"/>
+            <port id="id77" x="1588.2188" y="648.7842"/>
+            <port id="id78" x="1588.2188" y="628.7842"/>
+        </glyph>
+        <glyph class="complex" id="id79" compartmentRef="id40">
+            <label text="1.14.13.39">
+                <bbox w="65.0" h="19.93" x="1281.8707" y="568.25085"/>
+            </label>
+            <bbox w="129.03339" h="186.99886" x="1249.854" y="562.64087"/>
+            <glyph class="macromolecule multimer" id="id82">
+                <label text="iNOS">
+                    <bbox w="36.0" h="19.93" x="1297.3224" y="697.6973"/>
+                </label>
+                <bbox w="100.0" h="60.0" x="1265.3224" y="677.66235"/>
+                <glyph class="unit of information" id="id83">
+                    <label text="N:2"/>
+                    <bbox w="33.0" h="25.26" x="1273.3224" y="665.03235"/>
+                </glyph>
+            </glyph>
+            <glyph class="macromolecule multimer" id="id84">
+                <label text="CaM">
+                    <bbox w="32.0" h="19.93" x="1299.3224" y="620.841"/>
+                </label>
+                <bbox w="100.0" h="60.0" x="1265.3224" y="600.80597"/>
+                <glyph class="unit of information" id="id85">
+                    <label text="N:2"/>
+                    <bbox w="33.0" h="25.26" x="1273.3224" y="588.17596"/>
+                </glyph>
+            </glyph>
+            <port id="id80" x="1314.3707" y="656.14026"/>
+            <port id="id81" x="1250.8015" y="649.53143"/>
+        </glyph>
+        <glyph class="process" id="id86" compartmentRef="id40">
+            <bbox w="40.0" h="20.0" x="1179.854" y="639.1611"/>
+            <port id="id87" x="1219.854" y="649.1611"/>
+            <port id="id88" x="1179.854" y="649.1611"/>
+            <port id="id89" x="1199.854" y="639.1611"/>
+            <port id="id90" x="1199.854" y="659.1611"/>
+        </glyph>
+        <glyph class="process" id="id91" compartmentRef="id40">
+            <bbox w="20.0" h="40.0" x="1067.1814" y="904.7881"/>
+            <port id="id92" x="1077.1814" y="944.7881"/>
+            <port id="id93" x="1077.1814" y="904.7881"/>
+            <port id="id94" x="1087.1814" y="924.7881"/>
+            <port id="id95" x="1067.1814" y="924.7881"/>
+        </glyph>
+        <glyph class="process" id="id96" compartmentRef="id40">
+            <bbox w="20.0" h="40.0" x="563.06744" y="904.7881"/>
+            <port id="id97" x="573.06744" y="944.7881"/>
+            <port id="id98" x="573.06744" y="904.7881"/>
+            <port id="id99" x="583.06744" y="924.7881"/>
+            <port id="id100" x="563.06744" y="924.7881"/>
+        </glyph>
+        <glyph class="source and sink" id="id101" compartmentRef="id40">
+            <bbox w="43.628727" h="43.628727" x="1238.0397" y="826.71423"/>
+            <port id="id102" x="1259.854" y="848.5286"/>
+        </glyph>
+        <glyph class="process" id="id103" compartmentRef="id40">
+            <bbox w="40.0" h="20.0" x="1159.854" y="838.5286"/>
+            <port id="id104" x="1199.854" y="848.5286"/>
+            <port id="id105" x="1159.854" y="848.5286"/>
+            <port id="id106" x="1179.854" y="838.5286"/>
+            <port id="id107" x="1179.854" y="858.5286"/>
+        </glyph>
+        <glyph class="nucleic acid feature" id="id108" compartmentRef="id40">
+            <label text="iNOS">
+                <bbox w="36.0" h="19.93" x="1059.1814" y="838.5636"/>
+            </label>
+            <bbox w="100.0" h="60.0" x="1027.1814" y="818.5286"/>
+            <glyph class="unit of information" id="id109">
+                <label text="ct:mRNA"/>
+                <bbox w="59.0" h="25.26" x="1013.5114" y="805.8986"/>
+            </glyph>
+            <port id="id110" x="1077.1814" y="848.5286"/>
+        </glyph>
+        <glyph class="process" id="id111" compartmentRef="id40">
+            <bbox w="40.0" h="20.0" x="1057.1814" y="752.2691"/>
+            <port id="id112" x="1097.1814" y="762.2691"/>
+            <port id="id113" x="1057.1814" y="762.2691"/>
+            <port id="id114" x="1077.1814" y="752.2691"/>
+            <port id="id115" x="1077.1814" y="772.2691"/>
+        </glyph>
+        <glyph class="source and sink" id="id116" compartmentRef="id40">
+            <bbox w="43.628727" h="43.628727" x="972.69434" y="740.4547"/>
+            <port id="id117" x="994.5087" y="762.2691"/>
+        </glyph>
+        <glyph class="macromolecule" id="id118" compartmentRef="id40">
+            <label text="iNOS">
+                <bbox w="36.0" h="19.93" x="1161.854" y="752.3041"/>
+            </label>
+            <bbox w="100.0" h="60.0" x="1129.854" y="732.2691"/>
+            <port id="id119" x="1179.854" y="762.2691"/>
+        </glyph>
+        <glyph class="macromolecule" id="id120" compartmentRef="id40">
+            <label text="CaM">
+                <bbox w="32.0" h="19.93" x="1050.8257" y="639.1961"/>
+            </label>
+            <bbox w="100.0" h="60.0" x="1016.82574" y="619.1611"/>
+            <port id="id121" x="1066.8257" y="649.1611"/>
+        </glyph>
+        <glyph class="process" id="id122" compartmentRef="id40">
+            <bbox w="20.0" h="40.0" x="781.20337" y="904.7881"/>
+            <port id="id123" x="791.20337" y="944.7881"/>
+            <port id="id124" x="791.20337" y="904.7881"/>
+            <port id="id125" x="801.20337" y="924.7881"/>
+            <port id="id126" x="781.20337" y="924.7881"/>
+        </glyph>
+        <glyph class="source and sink" id="id127" compartmentRef="id40">
+            <bbox w="43.628727" h="43.628727" x="716.889" y="826.71423"/>
+            <port id="id128" x="738.70337" y="848.5286"/>
+        </glyph>
+        <glyph class="process" id="id129" compartmentRef="id40">
+            <bbox w="40.0" h="20.0" x="643.06744" y="838.5286"/>
+            <port id="id130" x="683.06744" y="848.5286"/>
+            <port id="id131" x="643.06744" y="848.5286"/>
+            <port id="id132" x="663.06744" y="838.5286"/>
+            <port id="id133" x="663.06744" y="858.5286"/>
+        </glyph>
+        <glyph class="nucleic acid feature" id="id134" compartmentRef="id40">
+            <label text="IRF1">
+                <bbox w="32.0" h="19.93" x="557.06744" y="838.5636"/>
+            </label>
+            <bbox w="100.0" h="60.0" x="523.06744" y="818.5286"/>
+            <glyph class="unit of information" id="id135">
+                <label text="ct:mRNA"/>
+                <bbox w="59.0" h="25.26" x="508.33813" y="805.8986"/>
+            </glyph>
+            <port id="id136" x="573.06744" y="848.5286"/>
+        </glyph>
+        <glyph class="macromolecule" id="id137" compartmentRef="id40">
+            <label text="IRF1">
+                <bbox w="32.0" h="19.93" x="775.20337" y="752.3041"/>
+            </label>
+            <bbox w="100.0" h="60.0" x="741.20337" y="732.2691"/>
+            <port id="id138" x="791.20337" y="762.2691"/>
+        </glyph>
+        <glyph class="process" id="id139" compartmentRef="id40">
+            <bbox w="40.0" h="20.0" x="553.06744" y="752.2691"/>
+            <port id="id140" x="593.06744" y="762.2691"/>
+            <port id="id141" x="553.06744" y="762.2691"/>
+            <port id="id142" x="573.06744" y="752.2691"/>
+            <port id="id143" x="573.06744" y="772.2691"/>
+        </glyph>
+        <glyph class="source and sink" id="id144" compartmentRef="id40">
+            <bbox w="43.628727" h="43.628727" x="459.45865" y="740.4547"/>
+            <port id="id145" x="481.273" y="762.2691"/>
+        </glyph>
+        <glyph class="macromolecule multimer" id="id146" compartmentRef="id40">
+            <label text="STAT1α">
+                <bbox w="53.0" h="19.93" x="271.97885" y="752.3041"/>
+            </label>
+            <bbox w="100.0" h="60.0" x="248.47884" y="732.2691"/>
+            <glyph class="unit of information" id="id147">
+                <label text="N:2"/>
+                <bbox w="33.0" h="25.26" x="250.4741" y="719.6391"/>
+            </glyph>
+            <glyph class="state variable" id="id148">
+                <state value="P"/>
+                <bbox w="24.0" h="25.26" x="312.51685" y="719.6391"/>
+            </glyph>
+            <port id="id149" x="298.47885" y="762.2691"/>
+        </glyph>
+        <glyph class="process" id="id150" compartmentRef="id40">
+            <bbox w="20.0" h="40.0" x="288.47885" y="665.32263"/>
+            <port id="id151" x="298.47885" y="705.32263"/>
+            <port id="id152" x="298.47885" y="665.32263"/>
+            <port id="id153" x="308.47885" y="685.32263"/>
+            <port id="id154" x="288.47885" y="685.32263"/>
+        </glyph>
+        <glyph class="macromolecule" id="id155" compartmentRef="id40">
+            <label text="STAT1α">
+                <bbox w="53.0" h="19.93" x="554.69604" y="598.41125"/>
+            </label>
+            <bbox w="100.0" h="60.0" x="531.19604" y="578.3762"/>
+            <glyph class="state variable" id="id156">
+                <state value=""/>
+                <bbox w="25.250977" h="25.250977" x="596.5804" y="564.52563"/>
+            </glyph>
+            <port id="id157" x="581.19604" y="608.3762"/>
+        </glyph>
+        <glyph class="macromolecule" id="id158" compartmentRef="id40">
+            <label text="STAT1α">
+                <bbox w="53.0" h="19.93" x="271.97885" y="598.41125"/>
+            </label>
+            <bbox w="100.0" h="60.0" x="248.47884" y="578.3762"/>
+            <glyph class="state variable" id="id159">
+                <state value="P"/>
+                <bbox w="24.0" h="25.26" x="312.47885" y="565.7462"/>
+            </glyph>
+            <port id="id160" x="298.47885" y="608.3762"/>
+        </glyph>
+        <glyph class="process" id="id161" compartmentRef="id40">
+            <bbox w="40.0" h="20.0" x="419.83743" y="598.3762"/>
+            <port id="id162" x="459.83743" y="608.3762"/>
+            <port id="id163" x="419.83743" y="608.3762"/>
+            <port id="id164" x="439.83743" y="598.3762"/>
+            <port id="id165" x="439.83743" y="618.3762"/>
+        </glyph>
+        <glyph class="compartment" id="id40" compartmentOrder="40.0">
+            <label text="CYTOSOL">
+                <bbox w="101.0" h="28.51" x="924.44714" y="549.71313"/>
+            </label>
+            <bbox w="1598.0834" h="429.87076" x="210.90123" y="523.05566"/>
+        </glyph>
+        <glyph class="process" id="id167" compartmentRef="id166">
+            <bbox w="20.0" h="40.0" x="1641.1172" y="347.8796"/>
+            <port id="id168" x="1651.1172" y="387.8796"/>
+            <port id="id169" x="1651.1172" y="347.8796"/>
+            <port id="id170" x="1661.1172" y="367.8796"/>
+            <port id="id171" x="1641.1172" y="367.8796"/>
+        </glyph>
+        <glyph class="process" id="id172" compartmentRef="id166">
+            <bbox w="20.0" h="40.0" x="1472.6646" y="347.8796"/>
+            <port id="id173" x="1482.6646" y="387.8796"/>
+            <port id="id174" x="1482.6646" y="347.8796"/>
+            <port id="id175" x="1492.6646" y="367.8796"/>
+            <port id="id176" x="1472.6646" y="367.8796"/>
+        </glyph>
+        <glyph class="process" id="id177" compartmentRef="id166">
+            <bbox w="40.0" h="20.0" x="584.55206" y="353.7199"/>
+            <port id="id178" x="624.55206" y="363.7199"/>
+            <port id="id179" x="584.55206" y="363.7199"/>
+            <port id="id180" x="604.55206" y="353.7199"/>
+            <port id="id181" x="604.55206" y="373.7199"/>
+        </glyph>
+        <glyph class="complex" id="id182" compartmentRef="id166">
+            <bbox w="238.79173" h="279.26364" x="320.44156" y="224.08807"/>
+            <glyph class="macromolecule multimer" id="id184">
+                <label text="IFNγ">
+                    <bbox w="33.0" h="19.93" x="424.16888" y="282.9478"/>
+                </label>
+                <bbox w="100.0" h="60.0" x="390.66888" y="262.91278"/>
+                <glyph class="unit of information" id="id185">
+                    <label text="N:2"/>
+                    <bbox w="33.0" h="25.26" x="449.16888" y="250.28278"/>
+                </glyph>
+            </glyph>
+            <glyph class="macromolecule" id="id186">
+                <label text="JAK1">
+                    <bbox w="36.0" h="19.93" x="475.16888" y="442.94778"/>
+                </label>
+                <bbox w="100.0" h="60.0" x="443.16888" y="422.91278"/>
+            </glyph>
+            <glyph class="macromolecule" id="id187">
+                <label text="JAK1">
+                    <bbox w="36.0" h="19.93" x="370.16888" y="442.94778"/>
+                </label>
+                <bbox w="100.0" h="60.0" x="338.16888" y="422.91278"/>
+            </glyph>
+            <glyph class="macromolecule multimer" id="id188">
+                <label text="IFNγR1">
+                    <bbox w="49.0" h="19.93" x="363.66888" y="362.94778"/>
+                </label>
+                <bbox w="100.0" h="60.0" x="338.16888" y="342.91278"/>
+                <glyph class="state variable" id="id189">
+                    <state value="P"/>
+                    <bbox w="24.0" h="25.26" x="353.71634" y="330.28278"/>
+                </glyph>
+                <glyph class="unit of information" id="id190">
+                    <label text="N:2"/>
+                    <bbox w="33.0" h="25.26" x="396.6689" y="330.28278"/>
+                </glyph>
+            </glyph>
+            <glyph class="macromolecule multimer" id="id191">
+                <label text="IFNγR2">
+                    <bbox w="49.0" h="19.93" x="468.66888" y="362.94778"/>
+                </label>
+                <bbox w="100.0" h="60.0" x="443.16888" y="342.91278"/>
+                <glyph class="unit of information" id="id192">
+                    <label text="N:2"/>
+                    <bbox w="33.0" h="25.26" x="501.6689" y="330.28278"/>
+                </glyph>
+            </glyph>
+            <port id="id183" x="439.83743" y="363.7199"/>
+        </glyph>
+        <glyph class="complex" id="id193" compartmentRef="id166">
+            <bbox w="232.2146" h="279.26364" x="644.55206" y="224.08807"/>
+            <glyph class="macromolecule multimer" id="id195">
+                <label text="IFNγ">
+                    <bbox w="33.0" h="19.93" x="742.4569" y="282.9478"/>
+                </label>
+                <bbox w="100.0" h="60.0" x="708.9569" y="262.91278"/>
+                <glyph class="unit of information" id="id196">
+                    <label text="N:2"/>
+                    <bbox w="33.0" h="25.26" x="767.4569" y="250.28278"/>
+                </glyph>
+            </glyph>
+            <glyph class="macromolecule" id="id197">
+                <label text="JAK1">
+                    <bbox w="36.0" h="19.93" x="793.4569" y="442.94778"/>
+                </label>
+                <bbox w="100.0" h="60.0" x="761.4569" y="422.91278"/>
+            </glyph>
+            <glyph class="macromolecule" id="id198">
+                <label text="JAK1">
+                    <bbox w="36.0" h="19.93" x="688.4569" y="442.94778"/>
+                </label>
+                <bbox w="100.0" h="60.0" x="656.4569" y="422.91278"/>
+            </glyph>
+            <glyph class="macromolecule multimer" id="id199">
+                <label text="IFNγR1">
+                    <bbox w="49.0" h="19.93" x="681.9569" y="362.94778"/>
+                </label>
+                <bbox w="100.0" h="60.0" x="656.4569" y="342.91278"/>
+                <glyph class="state variable" id="id200">
+                    <state value=""/>
+                    <bbox w="25.250977" h="25.250977" x="671.2397" y="329.0622"/>
+                </glyph>
+                <glyph class="unit of information" id="id201">
+                    <label text="N:2"/>
+                    <bbox w="33.0" h="25.26" x="714.9569" y="330.28278"/>
+                </glyph>
+            </glyph>
+            <glyph class="macromolecule multimer" id="id202">
+                <label text="IFNγR2">
+                    <bbox w="49.0" h="19.93" x="786.9569" y="362.94778"/>
+                </label>
+                <bbox w="100.0" h="60.0" x="761.4569" y="342.91278"/>
+                <glyph class="unit of information" id="id203">
+                    <label text="N:2"/>
+                    <bbox w="33.0" h="25.26" x="819.9569" y="330.28278"/>
+                </glyph>
+            </glyph>
+            <port id="id194" x="760.65936" y="363.7199"/>
+        </glyph>
+        <glyph class="process" id="id204" compartmentRef="id166">
+            <bbox w="40.0" h="20.0" x="906.76666" y="353.69504"/>
+            <port id="id205" x="946.76666" y="363.69504"/>
+            <port id="id206" x="906.76666" y="363.69504"/>
+            <port id="id207" x="926.76666" y="353.69504"/>
+            <port id="id208" x="926.76666" y="373.69504"/>
+        </glyph>
+        <glyph class="complex" id="id209" compartmentRef="id166">
+            <bbox w="248.8688" h="192.23305" x="981.0958" y="310.82263"/>
+            <glyph class="macromolecule" id="id211">
+                <label text="JAK1">
+                    <bbox w="36.0" h="19.93" x="1142.6377" y="447.9146"/>
+                </label>
+                <bbox w="100.0" h="60.0" x="1110.6377" y="427.8796"/>
+            </glyph>
+            <glyph class="macromolecule" id="id212">
+                <label text="JAK1">
+                    <bbox w="36.0" h="19.93" x="1037.6377" y="447.9146"/>
+                </label>
+                <bbox w="100.0" h="60.0" x="1005.6377" y="427.8796"/>
+            </glyph>
+            <glyph class="macromolecule multimer" id="id213">
+                <label text="IFNγR1">
+                    <bbox w="49.0" h="19.93" x="1031.1377" y="367.9146"/>
+                </label>
+                <bbox w="100.0" h="60.0" x="1005.6377" y="347.8796"/>
+                <glyph class="state variable" id="id214">
+                    <state value=""/>
+                    <bbox w="25.250977" h="25.250977" x="1012.4126" y="334.02902"/>
+                </glyph>
+                <glyph class="unit of information" id="id215">
+                    <label text="N:2"/>
+                    <bbox w="33.0" h="25.26" x="1064.1377" y="335.2496"/>
+                </glyph>
+            </glyph>
+            <glyph class="macromolecule multimer" id="id216">
+                <label text="IFNγR2">
+                    <bbox w="49.0" h="19.93" x="1136.1377" y="367.9146"/>
+                </label>
+                <bbox w="100.0" h="60.0" x="1110.6377" y="347.8796"/>
+                <glyph class="unit of information" id="id217">
+                    <label text="N:2"/>
+                    <bbox w="33.0" h="25.26" x="1169.1377" y="335.2496"/>
+                </glyph>
+            </glyph>
+            <port id="id210" x="985.1132" y="363.67844"/>
+        </glyph>
+        <glyph class="compartment" id="id166" compartmentOrder="166.0">
+            <label text="PLASMA MEMBRANE">
+                <bbox w="206.0" h="28.51" x="981.2029" y="241.42229"/>
+            </label>
+            <bbox w="1598.0834" h="309.98337" x="210.90123" y="213.0723"/>
+        </glyph>
+        <glyph class="simple chemical" id="id219" compartmentRef="id218">
+            <label text="NO">
+                <bbox w="23.0" h="19.93" x="1639.6172" y="143.1073"/>
+            </label>
+            <bbox w="60.0" h="60.0" x="1621.1172" y="123.072296"/>
+            <port id="id220" x="1651.1172" y="153.0723"/>
+        </glyph>
+        <glyph class="simple chemical" id="id221" compartmentRef="id218">
+            <label text="arginine">
+                <bbox w="57.0" h="19.93" x="1454.1646" y="143.1073"/>
+            </label>
+            <bbox w="60.0" h="60.0" x="1452.6646" y="123.072296"/>
+            <port id="id222" x="1482.6646" y="153.0723"/>
+        </glyph>
+        <glyph class="macromolecule multimer" id="id223" compartmentRef="id218">
+            <label text="IFNγ">
+                <bbox w="33.0" h="19.93" x="930.26666" y="146.42493"/>
+            </label>
+            <bbox w="100.0" h="60.0" x="896.76666" y="126.38992"/>
+            <glyph class="unit of information" id="id224">
+                <label text="N:2"/>
+                <bbox w="33.0" h="25.26" x="955.26666" y="113.759926"/>
+            </glyph>
+            <port id="id225" x="946.76666" y="156.38992"/>
+        </glyph>
+        <glyph class="compartment" id="id218" compartmentOrder="218.0">
+            <label text="EXTRACELLULAR SPACE">
+                <bbox w="246.0" h="28.51" x="1045.8103" y="124.63375"/>
+            </label>
+            <bbox w="1598.0834" h="109.788536" x="210.90123" y="103.28376"/>
+        </glyph>
+        <arc class="production" id="id226" source="id54" target="id51">
+            <start x="1482.6646" y="817.63995"/>
+            <end x="1449.6757" y="783.44305"/>
+        </arc>
+        <arc class="catalysis" id="id227" source="id49" target="id56">
+            <start x="1435.1995" y="837.3071"/>
+            <end x="1460.665" y="837.5334"/>
+        </arc>
+        <arc class="consumption" id="id228" source="id58" target="id53">
+            <start x="1560.1067" y="886.2741"/>
+            <end x="1482.6646" y="857.63995"/>
+        </arc>
+        <arc class="production" id="id229" source="id62" target="id58">
+            <start x="1651.1172" y="857.63995"/>
+            <end x="1624.6846" y="874.04144"/>
+        </arc>
+        <arc class="consumption" id="id230" source="id60" target="id63">
+            <start x="1695.2731" y="781.2588"/>
+            <end x="1651.1172" y="817.63995"/>
+        </arc>
+        <arc class="catalysis" id="id231" source="id47" target="id64">
+            <start x="1688.3208" y="837.63995"/>
+            <end x="1673.1172" y="837.63995"/>
+        </arc>
+        <arc class="consumption" id="id232" source="id67" target="id63">
+            <start x="1651.1172" y="722.5294"/>
+            <end x="1651.1172" y="817.63995"/>
+        </arc>
+        <arc class="production" id="id233" source="id54" target="id73">
+            <start x="1482.6646" y="817.63995"/>
+            <end x="1482.6646" y="735.5294"/>
+        </arc>
+        <arc class="consumption" id="id234" source="id71" target="id75">
+            <start x="1555.1956" y="625.8161"/>
+            <end x="1568.2188" y="638.7842"/>
+        </arc>
+        <arc class="consumption" id="id235" source="id73" target="id75">
+            <start x="1508.0049" y="676.61066"/>
+            <end x="1568.2188" y="638.7842"/>
+        </arc>
+        <arc class="production" id="id236" source="id76" target="id67">
+            <start x="1608.2188" y="638.7842"/>
+            <end x="1624.3755" y="659.0261"/>
+        </arc>
+        <arc class="production" id="id237" source="id76" target="id69">
+            <start x="1608.2188" y="638.7842"/>
+            <end x="1617.5719" y="631.34235"/>
+        </arc>
+        <arc class="catalysis" id="id238" source="id80" target="id78">
+            <start x="1314.3707" y="562.64087"/>
+            <next x="1314.3707" y="542.84827"/>
+            <next x="1588.2188" y="542.84827"/>
+            <end x="1588.2188" y="616.7842"/>
+        </arc>
+        <arc class="production" id="id239" source="id87" target="id81">
+            <start x="1219.854" y="649.1611"/>
+            <end x="1236.855" y="649.3645"/>
+        </arc>
+        <arc class="production" id="id240" source="id104" target="id102">
+            <start x="1199.854" y="848.5286"/>
+            <end x="1225.0397" y="848.5286"/>
+        </arc>
+        <arc class="consumption" id="id241" source="id110" target="id105">
+            <start x="1127.1814" y="848.5286"/>
+            <end x="1159.854" y="848.5286"/>
+        </arc>
+        <arc class="production" id="id242" source="id93" target="id110">
+            <start x="1077.1814" y="904.7881"/>
+            <end x="1077.1814" y="891.5286"/>
+        </arc>
+        <arc class="necessary stimulation" id="id243" source="id110" target="id115">
+            <start x="1077.1814" y="818.5286"/>
+            <end x="1077.1814" y="789.2691"/>
+        </arc>
+        <arc class="consumption" id="id244" source="id117" target="id113">
+            <start x="1016.32306" y="762.2691"/>
+            <end x="1057.1814" y="762.2691"/>
+        </arc>
+        <arc class="consumption" id="id245" source="id119" target="id88">
+            <glyph class="cardinality" id="id246">
+                <label text="2"/>
+                <bbox w="14.0" h="14.26" x="1179.854" y="696.72644"/>
+            </glyph>
+            <start x="1179.854" y="732.2691"/>
+            <end x="1179.854" y="649.1611"/>
+        </arc>
+        <arc class="production" id="id247" source="id112" target="id119">
+            <start x="1097.1814" y="762.2691"/>
+            <end x="1116.854" y="762.2691"/>
+        </arc>
+        <arc class="consumption" id="id248" source="id121" target="id88">
+            <glyph class="cardinality" id="id249">
+                <label text="2"/>
+                <bbox w="14.0" h="14.26" x="1141.3398" y="634.90106"/>
+            </glyph>
+            <start x="1116.8257" y="649.1611"/>
+            <end x="1179.854" y="649.1611"/>
+        </arc>
+        <arc class="production" id="id250" source="id130" target="id128">
+            <start x="683.06744" y="848.5286"/>
+            <end x="703.889" y="848.5286"/>
+        </arc>
+        <arc class="consumption" id="id251" source="id136" target="id131">
+            <start x="623.06744" y="848.5286"/>
+            <end x="643.06744" y="848.5286"/>
+        </arc>
+        <arc class="production" id="id252" source="id98" target="id136">
+            <start x="573.06744" y="904.7881"/>
+            <end x="573.06744" y="891.5286"/>
+        </arc>
+        <arc class="consumption" id="id253" source="id138" target="id124">
+            <start x="791.20337" y="792.2691"/>
+            <end x="791.20337" y="904.7881"/>
+        </arc>
+        <arc class="production" id="id254" source="id140" target="id138">
+            <start x="593.06744" y="762.2691"/>
+            <end x="728.20337" y="762.2691"/>
+        </arc>
+        <arc class="necessary stimulation" id="id255" source="id136" target="id143">
+            <start x="573.06744" y="818.5286"/>
+            <end x="573.06744" y="789.2691"/>
+        </arc>
+        <arc class="consumption" id="id256" source="id145" target="id141">
+            <start x="503.08737" y="762.2691"/>
+            <end x="553.06744" y="762.2691"/>
+        </arc>
+        <arc class="consumption" id="id257" source="id149" target="id43">
+            <start x="298.47885" y="792.2691"/>
+            <end x="298.47885" y="904.7881"/>
+        </arc>
+        <arc class="production" id="id258" source="id151" target="id149">
+            <start x="298.47885" y="705.32263"/>
+            <end x="298.47885" y="719.2691"/>
+        </arc>
+        <arc class="consumption" id="id259" source="id160" target="id152">
+            <glyph class="cardinality" id="id260">
+                <label text="2"/>
+                <bbox w="14.0" h="14.26" x="298.47885" y="646.0624"/>
+            </glyph>
+            <start x="298.47885" y="638.3762"/>
+            <end x="298.47885" y="665.32263"/>
+        </arc>
+        <arc class="consumption" id="id261" source="id157" target="id162">
+            <start x="531.19604" y="608.3762"/>
+            <end x="459.83743" y="608.3762"/>
+        </arc>
+        <arc class="production" id="id262" source="id163" target="id160">
+            <start x="419.83743" y="608.3762"/>
+            <end x="361.47882" y="608.3762"/>
+        </arc>
+        <arc class="production" id="id263" source="id168" target="id69">
+            <start x="1651.1172" y="387.8796"/>
+            <end x="1651.1172" y="561.65216"/>
+        </arc>
+        <arc class="production" id="id264" source="id173" target="id73">
+            <start x="1482.6646" y="387.8796"/>
+            <end x="1482.6646" y="649.5294"/>
+        </arc>
+        <arc class="stimulation" id="id265" source="id183" target="id164">
+            <start x="439.83743" y="503.3517"/>
+            <end x="439.83743" y="577.3762"/>
+        </arc>
+        <arc class="production" id="id266" source="id179" target="id183">
+            <start x="584.55206" y="363.7199"/>
+            <end x="572.2333" y="363.7199"/>
+        </arc>
+        <arc class="consumption" id="id267" source="id194" target="id178">
+            <start x="644.55206" y="363.7199"/>
+            <end x="624.55206" y="363.7199"/>
+        </arc>
+        <arc class="production" id="id268" source="id206" target="id194">
+            <start x="906.76666" y="363.69504"/>
+            <end x="889.76666" y="363.69794"/>
+        </arc>
+        <arc class="consumption" id="id269" source="id210" target="id205">
+            <start x="981.0958" y="363.68018"/>
+            <end x="946.76666" y="363.69504"/>
+        </arc>
+        <arc class="consumption" id="id270" source="id220" target="id169">
+            <start x="1651.1172" y="183.0723"/>
+            <end x="1651.1172" y="347.8796"/>
+        </arc>
+        <arc class="consumption" id="id271" source="id222" target="id174">
+            <start x="1482.6646" y="183.0723"/>
+            <end x="1482.6646" y="347.8796"/>
+        </arc>
+        <arc class="consumption" id="id272" source="id225" target="id205">
+            <start x="946.76666" y="186.38992"/>
+            <end x="946.76666" y="363.69504"/>
+        </arc>
+        <arc class="production" id="id273" source="id42" target="id5">
+            <start x="298.47885" y="944.7881"/>
+            <end x="298.47885" y="998.2"/>
+        </arc>
+        <arc class="logic arc" id="id274" source="id5" target="id10">
+            <start x="332.71167" y="1071.2"/>
+            <end x="369.15814" y="1103.14"/>
+        </arc>
+        <arc class="logic arc" id="id275" source="id8" target="id10">
+            <start x="405.6046" y="1071.2"/>
+            <end x="369.15814" y="1103.14"/>
+        </arc>
+        <arc class="necessary stimulation" id="id276" source="id11" target="id14">
+            <start x="369.15814" y="1153.14"/>
+            <end x="369.15814" y="1180.14"/>
+        </arc>
+        <arc class="consumption" id="id277" source="id18" target="id15">
+            <start x="302.4829" y="1207.14"/>
+            <end x="349.15814" y="1207.14"/>
+        </arc>
+        <arc class="production" id="id278" source="id16" target="id21">
+            <start x="389.15814" y="1207.14"/>
+            <end x="510.06744" y="1207.14"/>
+        </arc>
+        <arc class="consumption" id="id279" source="id21" target="id97">
+            <start x="573.06744" y="1177.14"/>
+            <end x="573.06744" y="944.7881"/>
+        </arc>
+        <arc class="production" id="id280" source="id123" target="id23">
+            <start x="791.20337" y="944.7881"/>
+            <end x="791.20337" y="998.2"/>
+        </arc>
+        <arc class="consumption" id="id281" source="id26" target="id92">
+            <start x="1077.1814" y="1177.14"/>
+            <end x="1077.1814" y="944.7881"/>
+        </arc>
+        <arc class="logic arc" id="id282" source="id23" target="id32">
+            <start x="820.76276" y="1071.2"/>
+            <end x="852.2336" y="1103.14"/>
+        </arc>
+        <arc class="logic arc" id="id283" source="id29" target="id32">
+            <start x="890.2624" y="1071.2"/>
+            <end x="852.2336" y="1103.14"/>
+        </arc>
+        <arc class="necessary stimulation" id="id284" source="id31" target="id35">
+            <start x="852.2336" y="1153.14"/>
+            <end x="852.2336" y="1180.14"/>
+        </arc>
+        <arc class="consumption" id="id285" source="id39" target="id36">
+            <start x="793.0177" y="1207.14"/>
+            <end x="832.2336" y="1207.14"/>
+        </arc>
+        <arc class="production" id="id286" source="id37" target="id26">
+            <start x="872.2336" y="1207.14"/>
+            <end x="1014.1814" y="1207.14"/>
+        </arc>
+    </map>
+</sbgn>

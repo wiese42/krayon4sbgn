@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sbgn xmlns="http://sbgn.org/libsbgn/0.2">
+    <map language="process description">
+        <glyph id="glyph5" class="macromolecule">
+            <label text="TF"/>
+            <bbox y="12.0" x="8.0" h="40.0" w="80.0"/>
+            <glyph id="glyph5a" class="unit of information">
+                <label text="mt:prot"/>
+                <bbox y="4.0" x="24.0" h="16.0" w="48.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph6" class="nucleic acid feature">
+            <label text="X"/>
+            <bbox y="88.0" x="8.0" h="40.0" w="80.0"/>
+            <glyph id="glyph6a" class="unit of information">
+                <label text="ct:gene"/>
+                <bbox y="80.0" x="22.5" h="16.0" w="51.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph7" class="source and sink">
+            <bbox y="178.33322" x="131.0" h="30.0" w="30.0"/>
+        </glyph>
+        <glyph id="glyph3" class="nucleic acid feature">
+            <label text="X"/>
+            <bbox y="173.33322" x="274.0" h="40.0" w="80.0"/>
+            <glyph id="glyph3a" class="unit of information">
+                <label text="ct:mRNA"/>
+                <bbox y="165.33322" x="285.5" h="16.0" w="57.0"/>
+            </glyph>
+        </glyph>
+        <glyph id="glyph9" class="process">
+            <bbox y="181.33322" x="201.0" h="24.0" w="24.0"/>
+            <port y="193.33322" x="189.0" id="glyph9.1"/>
+            <port y="193.33322" x="237.0" id="glyph9.2"/>
+        </glyph>
+        <glyph id="glyph8" class="association">
+            <bbox y="60.0" x="110.0" h="24.0" w="24.0"/>
+            <port y="72.0" x="98.0" id="glyph8.1"/>
+            <port y="72.0" x="146.0" id="glyph8.2"/>
+        </glyph>
+        <glyph id="glyph1" class="complex">
+            <bbox y="16.0" x="165.0" h="116.0" w="98.0"/>
+            <glyph id="glyph2" class="macromolecule">
+                <label text="TF"/>
+                <bbox y="29.0" x="174.0" h="40.0" w="80.0"/>
+                <glyph id="glyph2a" class="unit of information">
+                    <label text="mt:prot"/>
+                    <bbox y="21.0" x="190.0" h="16.0" w="48.0"/>
+                </glyph>
+            </glyph>
+            <glyph id="glyph4" class="nucleic acid feature">
+                <label text="X"/>
+                <bbox y="77.0" x="175.0" h="40.0" w="80.0"/>
+                <glyph id="glyph4a" class="unit of information">
+                    <label text="ct:gene"/>
+                    <bbox y="109.0" x="189.5" h="16.0" w="51.0"/>
+                </glyph>
+            </glyph>
+        </glyph>
+        <arc target="glyph8.1" source="glyph5" id="arc1" class="consumption">
+            <start y="52.0" x="73.0"/>
+            <end y="72.0" x="98.0"/>
+        </arc>
+        <arc target="glyph8.1" source="glyph6" id="arc2" class="consumption">
+            <start y="88.0" x="75.77778"/>
+            <end y="72.0" x="98.0"/>
+        </arc>
+        <arc target="glyph9.1" source="glyph7" id="arc3" class="consumption">
+            <start y="193.33322" x="161.0"/>
+            <end y="193.33322" x="189.0"/>
+        </arc>
+        <arc target="glyph3" source="glyph9.2" id="arc4" class="production">
+            <start y="193.33322" x="237.0"/>
+            <end y="193.33322" x="274.0"/>
+        </arc>
+        <arc target="glyph9" source="glyph1" id="arc5" class="necessary stimulation">
+            <start y="132.0" x="213.51396"/>
+            <end y="181.33322" x="213.10056"/>
+        </arc>
+        <arc target="glyph1" source="glyph8.2" id="arc6" class="production">
+            <start y="72.0" x="146.0"/>
+            <end y="72.934784" x="165.0"/>
+        </arc>
+    </map>
+</sbgn>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="ph-css">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/ph-css/jsr305-3.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ph-css/ph-commons-9.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ph-css/ph-css-6.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ph-css/slf4j-api-1.7.25.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ph-css/slf4j-nop-1.7.7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

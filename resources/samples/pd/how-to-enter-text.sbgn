@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sbgn xmlns="http://sbgn.org/libsbgn/0.2">
+    <map language="process description">
+        <glyph class="simple chemical" id="id1">
+            <label text="(1,4-α-D-glucosyl)₍n₎">
+                <bbox w="115.0" h="18.71" x="172.5" y="292.645"/>
+            </label>
+            <bbox w="124.0" h="60.0" x="168.0" y="272.0"/>
+            <port id="id2" x="230.0" y="302.0"/>
+        </glyph>
+        <glyph class="annotation" id="id4">
+            <label text="To enter commonly-used&#xA;subscript symbols&#xA;press Ctrl-B before entering&#xA;the symbol.&#xA;On MacOS use Command-B instead."/>
+            <callout target="id3">
+                <point x="260.50903" y="407.57993"/>
+            </callout>
+            <bbox w="221.91667" h="85.37666" x="154.80556" y="455.19443"/>
+        </glyph>
+        <glyph class="simple chemical" id="id3">
+            <label text="H₂O">
+                <bbox w="27.0" h="18.71" x="248.5" y="384.31168"/>
+            </label>
+            <bbox w="60.0" h="60.0" x="232.0" y="363.66666"/>
+            <port id="id5" x="262.0" y="393.66666"/>
+        </glyph>
+        <glyph class="annotation" id="id7">
+            <label text="To enter commonly-used&#xA;greek letters such as α and β&#xA;press Ctrl-G befire entering the&#xA;corresponding latin letter.&#xA;On MacOS use Command-B instead."/>
+            <callout target="id6">
+                <point x="483.6111" y="292.53363"/>
+            </callout>
+            <bbox w="223.55556" h="88.90444" x="442.8611" y="131.4289"/>
+        </glyph>
+        <glyph class="annotation" id="id8">
+            <label text="Unfortunatelly subscript and&#xA; superscript letters are not&#xA; supported."/>
+            <callout target="id6">
+                <point x="560.4051" y="311.94907"/>
+            </callout>
+            <bbox w="113.12037" h="85.83963" x="576.0" y="341.37036"/>
+        </glyph>
+        <glyph class="simple chemical" id="id6">
+            <label text="(1,4-α-D-glucosyl)₍n₋₁₎">
+                <bbox w="125.0" h="18.71" x="451.5" y="292.645"/>
+            </label>
+            <bbox w="124.0" h="60.0" x="452.0" y="272.0"/>
+            <port id="id9" x="514.0" y="302.0"/>
+        </glyph>
+        <glyph class="simple chemical" id="id10">
+            <label text="D-glycopyranose">
+                <bbox w="96.0" h="18.71" x="458.16666" y="384.31168"/>
+            </label>
+            <bbox w="108.333336" h="60.0" x="452.0" y="363.66666"/>
+            <port id="id11" x="506.16666" y="393.66666"/>
+        </glyph>
+        <glyph class="process" id="id12">
+            <bbox w="40.0" h="20.0" x="331.9074" y="292.0"/>
+            <port id="id13" x="331.9074" y="302.0"/>
+            <port id="id14" x="371.9074" y="302.0"/>
+            <port id="id15" x="351.9074" y="302.0"/>
+        </glyph>
+        <glyph class="annotation" id="id17">
+            <label text="To insert line breaks&#xA;press Ctrl-ENTER."/>
+            <callout target="id16">
+                <point x="309.12015" y="204.10771"/>
+            </callout>
+            <bbox w="132.33333" h="62.46" x="145.96297" y="158.86407"/>
+        </glyph>
+        <glyph class="macromolecule" id="id16">
+            <label text="maltodextrin&#xA;glucosidase">
+                <bbox w="72.0" h="33.41" x="315.9074" y="187.61908"/>
+            </label>
+            <bbox w="100.0" h="60.0" x="301.9074" y="174.32408"/>
+            <port id="id18" x="351.9074" y="204.32408"/>
+        </glyph>
+        <glyph class="annotation" id="id20">
+            <label text="To enter commonly-used&#xA;superscript symbols&#xA;press Ctrl-P  before entering&#xA;the symbol.&#xA;On MacOS use Command-P instead."/>
+            <callout target="id19">
+                <point x="-8.935421" y="324.94104"/>
+            </callout>
+            <bbox w="209.41667" h="93.01556" x="-115.99537" y="193.66962"/>
+        </glyph>
+        <glyph class="simple chemical" id="id19">
+            <label text="H⁺">
+                <bbox w="18.0" h="18.71" x="-14.592592" y="327.4691"/>
+            </label>
+            <bbox w="60.0" h="60.0" x="-35.592594" y="306.82407"/>
+            <port id="id21" x="-5.5925927" y="336.82407"/>
+        </glyph>
+        <glyph class="simple chemical" id="id22">
+            <label text="OH⁻">
+                <bbox w="27.0" h="18.71" x="-19.092592" y="439.13574"/>
+            </label>
+            <bbox w="60.0" h="60.0" x="-35.592594" y="418.49075"/>
+            <port id="id23" x="-5.5925927" y="448.49075"/>
+        </glyph>
+        <glyph class="process" id="id24">
+            <bbox w="40.0" h="20.0" x="136.90741" y="383.66666"/>
+            <port id="id25" x="136.90741" y="393.66666"/>
+            <port id="id26" x="176.90741" y="393.66666"/>
+        </glyph>
+        <glyph class="annotation" id="id27">
+            <label text="To start text-editing double-click the label or &#xA;use F2 to edit the label of a selected item.">
+                <bbox w="243.0" h="33.41" x="156.61342" y="79.55888"/>
+            </label>
+            <bbox w="260.83334" h="60.0" x="147.69676" y="66.263885"/>
+        </glyph>
+        <arc class="consumption" id="id28" source="id2" target="id13">
+            <start x="292.0" y="302.0"/>
+            <end x="331.9074" y="302.0"/>
+        </arc>
+        <arc class="consumption" id="id29" source="id5" target="id13">
+            <start x="280.1225" y="369.90338"/>
+            <end x="331.9074" y="302.0"/>
+        </arc>
+        <arc class="production" id="id30" source="id14" target="id9">
+            <start x="371.9074" y="302.0"/>
+            <end x="439.0" y="302.0"/>
+        </arc>
+        <arc class="production" id="id31" source="id14" target="id11">
+            <start x="371.9074" y="302.0"/>
+            <end x="457.00006" y="360.09775"/>
+        </arc>
+        <arc class="catalysis" id="id32" source="id18" target="id15">
+            <start x="351.9074" y="234.32408"/>
+            <end x="351.9074" y="280.0"/>
+        </arc>
+        <arc class="consumption" id="id33" source="id21" target="id25">
+            <start x="22.257742" y="347.93344"/>
+            <end x="136.90741" y="393.66666"/>
+        </arc>
+        <arc class="consumption" id="id34" source="id23" target="id25">
+            <start x="22.384308" y="437.72717"/>
+            <end x="136.90741" y="393.66666"/>
+        </arc>
+        <arc class="production" id="id35" source="id26" target="id5">
+            <start x="176.90741" y="393.66666"/>
+            <end x="219.0" y="393.66666"/>
+        </arc>
+    </map>
+</sbgn>

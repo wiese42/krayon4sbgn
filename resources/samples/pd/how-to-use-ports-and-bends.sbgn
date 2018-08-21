@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sbgn xmlns="http://sbgn.org/libsbgn/0.2">
+    <map language="process description">
+        <glyph class="annotation" id="id2">
+            <label text="Process nodes have different kinds of ports.&#xA;The center port connects regulation edges,&#xA;the two side ports connect consumation and&#xA;production arcs."/>
+            <callout target="id1">
+                <point x="443.0838" y="397.35638"/>
+            </callout>
+            <bbox w="267.13593" h="78.32184" x="331.1853" y="273.2575"/>
+        </glyph>
+        <glyph class="annotation" id="id3">
+            <label text="Newly created arcs always connect to&#xA;port that is highlighted GREEN. An ORANGE&#xA;port will turn GREEN, if you move the mouse&#xA;closer to it. RED ports cannot be connected&#xA;with the current arc type."/>
+            <callout target="id1">
+                <point x="443.2069" y="412.3639"/>
+            </callout>
+            <bbox w="262.20773" h="108.2687" x="335.0711" y="436.3529"/>
+        </glyph>
+        <glyph class="process" id="id1">
+            <bbox w="48.0" h="24.0" x="427.32123" y="392.57935"/>
+            <port id="id4" x="427.32123" y="404.57935"/>
+            <port id="id5" x="475.32123" y="404.57935"/>
+        </glyph>
+        <glyph class="macromolecule" id="id6">
+            <label text="B">
+                <bbox w="12.0" h="18.71" x="773.4087" y="345.4933"/>
+            </label>
+            <bbox w="100.0" h="60.0" x="729.4087" y="324.84827"/>
+            <port id="id7" x="761.99396" y="384.3193"/>
+            <port id="id8" x="801.84686" y="382.6448"/>
+            <port id="id9" x="779.4087" y="354.84827"/>
+        </glyph>
+        <glyph class="process" id="id10">
+            <bbox w="24.0" h="48.0" x="749.99396" y="426.964"/>
+            <port id="id11" x="761.99396" y="426.964"/>
+            <port id="id12" x="761.99396" y="474.964"/>
+        </glyph>
+        <glyph class="process" id="id13">
+            <bbox w="24.0" h="48.0" x="790.18176" y="426.964"/>
+            <port id="id14" x="802.18176" y="426.964"/>
+            <port id="id15" x="802.18176" y="474.964"/>
+        </glyph>
+        <glyph class="annotation" id="id17">
+            <label text="Alternative port locations can&#xA;be assigned by CTRL-dragging&#xA;on a terminal node during interactive&#xA;edge creation, or by CTRL-dragging&#xA;the port of a SELECTED arc.&#xA;"/>
+            <callout target="id16">
+                <point x="810.86316" y="520.73334"/>
+            </callout>
+            <bbox w="214.24846" h="80.987305" x="852.0972" y="451.7465"/>
+        </glyph>
+        <glyph class="macromolecule" id="id16">
+            <label text="B">
+                <bbox w="12.0" h="18.71" x="778.0972" y="537.72473"/>
+            </label>
+            <bbox w="100.0" h="60.0" x="734.0972" y="517.0797"/>
+            <port id="id18" x="762.66376" y="519.6181"/>
+            <port id="id19" x="802.8515" y="521.96234"/>
+            <port id="id20" x="784.0972" y="547.0797"/>
+        </glyph>
+        <glyph class="annotation" id="id22">
+            <label text="Corners (aka bends) can be created by dragging the path&#xA;of an edge, or during interactive arc creation by SHIFT-clicking &#xA;at the desired bend location."/>
+            <callout target="id21">
+                <point x="658.2888" y="347.95923"/>
+            </callout>
+            <bbox w="346.91666" h="65.93222" x="642.00366" y="227.03177"/>
+        </glyph>
+        <glyph class="process" id="id21">
+            <bbox w="24.0" h="48.0" x="642.00366" y="426.964"/>
+            <port id="id23" x="654.00366" y="426.964"/>
+            <port id="id24" x="654.00366" y="474.964"/>
+        </glyph>
+        <arc class="production" id="id25" source="id11" target="id7">
+            <start x="761.99396" y="426.964"/>
+            <end x="761.99396" y="397.84827"/>
+        </arc>
+        <arc class="consumption" id="id26" source="id8" target="id14">
+            <start x="801.8635" y="384.84827"/>
+            <end x="802.18176" y="426.964"/>
+        </arc>
+        <arc class="consumption" id="id27" source="id18" target="id12">
+            <start x="762.6257" y="517.0797"/>
+            <end x="761.99396" y="474.964"/>
+        </arc>
+        <arc class="production" id="id28" source="id15" target="id19">
+            <start x="802.18176" y="474.964"/>
+            <end x="802.5967" y="504.08102"/>
+        </arc>
+        <arc class="consumption" id="id29" source="id9" target="id23">
+            <start x="729.4087" y="354.84827"/>
+            <next x="654.00366" y="354.84827"/>
+            <end x="654.00366" y="426.964"/>
+        </arc>
+        <arc class="production" id="id30" source="id24" target="id20">
+            <start x="654.00366" y="474.964"/>
+            <next x="654.00366" y="547.0797"/>
+            <end x="721.0972" y="547.0797"/>
+        </arc>
+    </map>
+</sbgn>

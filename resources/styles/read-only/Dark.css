@@ -1,0 +1,329 @@
+.simple-chemical {
+  outline-color: rgb(255,255,255);
+  outline-width: 2.0px;
+  font-size: 13.0px;
+  font-style: plain;
+  text-color: rgb(153,255,255);
+  label-outline-color: rgba(255,255,255, 0.0);
+  label-outline-width: 1.0px;
+  label-background-color: rgba(161,192,87, 0.0);
+  background: rgb(43,43,43);
+  drop-shadow: false;
+  shape-parameter: 10.0px;}
+.macromolecule {
+  outline-color: rgb(255,255,255);
+  outline-width: 2.0px;
+  font-size: 13.0px;
+  font-style: plain;
+  text-color: rgb(153,255,255);
+  label-outline-color: rgba(255,255,255, 0.0);
+  label-outline-width: 1.0px;
+  label-background-color: rgba(161,192,87, 0.0);
+  background: rgb(43,43,43);
+  drop-shadow: false;
+  clone-marker-background: rgb(128,128,128);
+  clone-marker-font-size: 10.0px;
+  clone-marker-text-color: rgb(255,255,255);
+  clone-marker-font-style: plain;
+  shape-parameter: 10.0px;}
+.nucleic-acid-feature {
+  outline-color: rgb(255,255,255);
+  outline-width: 2.0px;
+  font-size: 13.0px;
+  font-style: plain;
+  text-color: rgb(153,255,255);
+  label-outline-color: rgba(255,255,255, 0.0);
+  label-outline-width: 1.0px;
+  label-background-color: rgba(161,192,87, 0.0);
+  background: rgb(43,43,43);
+  drop-shadow: false;
+  clone-marker-background: rgb(128,128,128);
+  clone-marker-font-size: 10.0px;
+  clone-marker-text-color: rgb(255,255,255);
+  clone-marker-font-style: plain;
+  shape-parameter: 10.0px;}
+.complex {
+  outline-color: rgb(255,255,255);
+  outline-width: 2.0px;
+  font-size: 13.0px;
+  font-style: plain;
+  text-color: rgb(153,255,255);
+  label-outline-color: rgba(255,255,255, 0.0);
+  label-outline-width: 1.0px;
+  label-background-color: rgba(161,192,87, 0.0);
+  background: rgb(43,43,43);
+  drop-shadow: false;
+  clone-marker-background: rgb(128,128,128);
+  clone-marker-font-size: 10.0px;
+  clone-marker-text-color: rgb(255,255,255);
+  clone-marker-font-style: plain;
+  shape-parameter: 10.0px;}
+.unspecified-entity {
+  outline-color: rgb(255,255,255);
+  outline-width: 2.0px;
+  font-size: 13.0px;
+  font-style: plain;
+  text-color: rgb(153,255,255);
+  label-outline-color: rgba(255,255,255, 0.0);
+  label-outline-width: 1.0px;
+  label-background-color: rgba(161,192,87, 0.0);
+  background: rgb(43,43,43);
+  drop-shadow: false;
+  clone-marker-background: rgb(128,128,128);
+  clone-marker-font-size: 10.0px;
+  clone-marker-text-color: rgb(255,255,255);
+  clone-marker-font-style: plain;
+  shape-parameter: 10.0px;}
+.perturbing-agent {
+  outline-color: rgb(255,255,255);
+  outline-width: 2.0px;
+  font-size: 13.0px;
+  font-style: plain;
+  text-color: rgb(153,255,255);
+  label-outline-color: rgba(255,255,255, 0.0);
+  label-outline-width: 1.0px;
+  label-background-color: rgba(161,192,87, 0.0);
+  background: rgb(43,43,43);
+  drop-shadow: false;
+  clone-marker-background: rgb(128,128,128);
+  clone-marker-font-size: 10.0px;
+  clone-marker-text-color: rgb(255,255,255);
+  clone-marker-font-style: plain;
+  shape-parameter: 15.0px;}
+.source-and-sink {
+  outline-color: rgb(255,255,255);
+  outline-width: 2.0px;
+  background: rgb(43,43,43);
+  drop-shadow: false;}
+.process {
+  font-size: 13.0px;
+  font-style: plain;
+  text-color: rgb(153,255,255);
+  outline-color: rgb(255,255,255);
+  outline-width: 2.0px;
+  background: rgb(43,43,43);
+  port-color: rgb(255,255,255);
+  port-width: 1.5px;
+  drop-shadow: false;}
+.omitted-process {
+  font-size: 13.0px;
+  font-style: plain;
+  text-color: rgb(153,255,255);
+  outline-color: rgb(255,255,255);
+  outline-width: 2.0px;
+  background: rgb(43,43,43);
+  port-color: rgb(255,255,255);
+  port-width: 1.5px;
+  drop-shadow: false;}
+.uncertain-process {
+  font-size: 13.0px;
+  font-style: plain;
+  text-color: rgb(153,255,255);
+  outline-color: rgb(255,255,255);
+  outline-width: 2.0px;
+  background: rgb(43,43,43);
+  port-color: rgb(255,255,255);
+  port-width: 1.5px;
+  drop-shadow: false;}
+.association {
+  font-size: 13.0px;
+  font-style: plain;
+  text-color: rgb(153,255,255);
+  outline-color: rgb(255,255,255);
+  outline-width: 2.0px;
+  background: rgb(43,43,43);
+  port-color: rgb(255,255,255);
+  port-width: 1.5px;
+  drop-shadow: false;}
+.dissociation {
+  font-size: 13.0px;
+  font-style: plain;
+  text-color: rgb(153,255,255);
+  outline-color: rgb(255,255,255);
+  outline-width: 2.0px;
+  background: rgb(43,43,43);
+  port-color: rgb(255,255,255);
+  port-width: 1.5px;
+  drop-shadow: false;}
+.phenotype {
+  outline-color: rgb(255,255,255);
+  outline-width: 2.0px;
+  font-size: 13.0px;
+  font-style: plain;
+  text-color: rgb(153,255,255);
+  label-outline-color: rgba(255,255,255, 0.0);
+  label-outline-width: 1.0px;
+  label-background-color: rgba(161,192,87, 0.0);
+  background: rgb(43,43,43);
+  drop-shadow: false;
+  clone-marker-background: rgb(128,128,128);
+  clone-marker-font-size: 10.0px;
+  clone-marker-text-color: rgb(255,255,255);
+  clone-marker-font-style: plain;
+  shape-parameter: 15.0px;}
+.tag {
+  outline-color: rgb(255,255,255);
+  outline-width: 2.0px;
+  font-size: 13.0px;
+  font-style: plain;
+  text-color: rgb(153,255,255);
+  label-outline-color: rgba(255,255,255, 0.0);
+  label-outline-width: 1.0px;
+  label-background-color: rgba(161,192,87, 0.0);
+  background: rgb(43,43,43);
+  drop-shadow: false;}
+.equivalence-arc {
+  path-color: rgb(255,255,255);
+  path-width: 1.5px;
+  arrow-scale: 1.0px;
+  path-corner-radius: 0.0px;}
+.and {
+  font-size: 12.0px;
+  font-style: plain;
+  text-color: rgb(153,255,255);
+  outline-color: rgb(255,255,255);
+  outline-width: 2.0px;
+  background: rgb(43,43,43);
+  port-color: rgb(255,255,255);
+  port-width: 1.5px;
+  drop-shadow: false;}
+.or {
+  font-size: 12.0px;
+  font-style: plain;
+  text-color: rgb(153,255,255);
+  outline-color: rgb(255,255,255);
+  outline-width: 2.0px;
+  background: rgb(43,43,43);
+  port-color: rgb(255,255,255);
+  port-width: 1.5px;
+  drop-shadow: false;}
+.not {
+  font-size: 12.0px;
+  font-style: plain;
+  text-color: rgb(153,255,255);
+  outline-color: rgb(255,255,255);
+  outline-width: 2.0px;
+  background: rgb(43,43,43);
+  port-color: rgb(255,255,255);
+  port-width: 1.5px;
+  drop-shadow: false;}
+.logic-arc {
+  path-color: rgb(255,255,255);
+  path-width: 1.5px;
+  arrow-scale: 1.0px;
+  path-corner-radius: 0.0px;}
+.compartment {
+  outline-color: rgb(255,255,255);
+  outline-width: 2.0px;
+  font-size: 16.0px;
+  font-style: plain;
+  text-color: rgb(153,255,255);
+  label-outline-color: rgba(255,255,255, 0.0);
+  label-outline-width: 1.0px;
+  label-background-color: rgba(161,192,87, 0.0);
+  background: rgb(43,43,43);
+  drop-shadow: false;}
+.submap {
+  outline-color: rgb(255,255,255);
+  outline-width: 2.0px;
+  font-size: 13.0px;
+  font-style: plain;
+  text-color: rgb(153,255,255);
+  label-outline-color: rgba(255,255,255, 0.0);
+  label-outline-width: 1.0px;
+  label-background-color: rgba(161,192,87, 0.0);
+  background: rgb(43,43,43);
+  drop-shadow: false;}
+.terminal {
+  font-size: 10.0px;
+  font-style: plain;
+  text-color: rgb(153,255,255);
+  outline-color: rgb(255,255,255);
+  outline-width: 2.0px;
+  width: 20.0px;
+  height: 20.0px;
+  background: rgb(43,43,43);}
+.annotation {
+  outline-color: rgb(255,255,255);
+  outline-width: 2.0px;
+  font-size: 12.0px;
+  font-style: plain;
+  text-color: rgb(153,255,255);
+  label-outline-color: rgba(255,255,255, 0.0);
+  label-outline-width: 1.0px;
+  label-background-color: rgba(161,192,87, 0.0);
+  background: rgb(43,43,43);
+  drop-shadow: false;}
+.state-variable {
+  font-size: 10.0px;
+  font-style: bold;
+  text-color: rgb(153,255,255);
+  label-outline-color: rgb(255,255,255);
+  label-outline-width: 1.0px;
+  label-background-color: rgb(43,43,43);
+  state-variable-shape: capsule;}
+.unit-of-information {
+  font-size: 10.0px;
+  font-style: bold;
+  text-color: rgb(153,255,255);
+  label-outline-color: rgb(255,255,255);
+  label-outline-width: 1.0px;
+  label-background-color: rgb(43,43,43);}
+.callout-label {
+  font-size: 12.0px;
+  font-style: plain;
+  text-color: rgb(153,255,255);
+  label-outline-color: rgb(255,255,255);
+  label-outline-width: 1.0px;
+  label-background-color: rgb(43,43,43);
+  drop-shadow: false;}
+.consumption {
+  path-color: rgb(255,255,255);
+  path-width: 1.5px;
+  arrow-scale: 1.0px;
+  path-corner-radius: 0.0px;}
+.production {
+  path-color: rgb(255,255,255);
+  path-width: 1.5px;
+  arrow-scale: 1.0px;
+  path-corner-radius: 0.0px;}
+.modulation {
+  path-color: rgb(255,255,255);
+  path-width: 1.5px;
+  arrow-scale: 1.0px;
+  path-corner-radius: 0.0px;}
+.stimulation {
+  path-color: rgb(255,255,255);
+  path-width: 1.5px;
+  arrow-scale: 1.0px;
+  path-corner-radius: 0.0px;}
+.catalysis {
+  path-color: rgb(255,255,255);
+  path-width: 1.5px;
+  arrow-scale: 1.0px;
+  path-corner-radius: 0.0px;}
+.inhibition {
+  path-color: rgb(255,255,255);
+  path-width: 1.5px;
+  arrow-scale: 1.0px;
+  path-corner-radius: 0.0px;}
+.necessary-stimulation {
+  path-color: rgb(255,255,255);
+  path-width: 1.5px;
+  arrow-scale: 1.0px;
+  path-corner-radius: 0.0px;}
+.cardinality {
+  font-size: 10.0px;
+  font-style: bold;
+  text-color: rgb(153,255,255);
+  label-outline-color: rgb(255,255,255);
+  label-outline-width: 1.0px;
+  label-background-color: rgb(43,43,43);}
+.clone-marker {
+  clone-marker-background: rgb(128,128,128);
+  clone-marker-font-size: 10.0px;
+  clone-marker-font-style: plain;
+  clone-marker-text-color: rgb(255,255,255);}
+map {
+  background-color: rgb(43,43,43);
+  highlight-color: rgb(161,192,87);}

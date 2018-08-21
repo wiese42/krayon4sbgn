@@ -1,0 +1,252 @@
+[
+  { "id": "ACTIVATE_SBGN_STRICT_MODE",
+    "name": "Activate SBGN Strict Mode",
+    "description": "If active, usage of arc and node types is constrained to the rules as defined by the SBGN standard. As a consequence some pairs of nodes cannot be connected by any arc."
+  },
+  { "id": "ADD_STATE_VARIABLE",
+    "name": "Add State Variable",
+    "description": "A 'state variable' label will be added to the border of a single selected node that accepts labels of that type",
+    "mouse_gesture": "Left-drag a 'state variable' label from the palette onto a node."
+  },
+  { "id": "ADD_UNIT_OF_INFORMATION",
+    "name": "Add Unit of Information",
+    "description": "A 'unit of information' label will be added to the border of a single selected node that accepts labels of that type",
+    "mouse_gesture": "Left-drag a 'unit of information' label from the palette onto a node."
+  },
+  { "id": "APPLY_STYLE",
+    "name": "Apply Style",
+    "description": "Apply current style to selected diagram elements, or if none are selected, to the diagram itself.",
+    "mouse_gesture": "Left-drag an element from the palette onto an element in the diagram to adapt its style and type"
+  },
+  { "id": "AUTO-ASSIGN_CLONE_MARKERS",
+    "name": "Auto-Assign Clone Markers",
+    "description": "Automatically assign clone markers to identical nodes that reside within the same scope"
+  },
+  { "id": "BEGIN_EDGE_CREATION",
+    "name":"Begin Arc Creation",
+    "description": "Initiate arc creation starting at the node pointed to by the mouse cursor. More specifically, the new arc will start at the port that is closest to the mouse cursor of all valid ports. By default, the start port is colored green, invalid ports are colored red, and valid ports that are not closest to the mouse cursor are colored orange.",
+    "mouse_gesture": "Left-drag an unselected node"
+  },
+  { "id": "COPY",
+    "name": "Copy",
+    "description": "Copy all selected nodes and all arcs connecting these nodes to the clipboard."
+  },
+  { "id": "CONVERT_TO_COMPLEX",
+    "name":"Convert To Complex",
+    "description": "Convert selected nodes to a complex containing these nodes. The bounds of the newly created complex will be defined by the bounding box of the selected nodes. If SBGN strict mode is active, this operation is only available if the selected nodes selected nodes are valid complex members.",
+    "mouse_gesture": "Left-drag selected nodes onto a complex node."
+  },
+  { "id": "CREATE_NODE",
+    "name":"Create Node",
+    "description": "Add a new node to the diagram. The new node will be initially placed at the current mouse cursor position and can be freely moved with the mouse until a button gets pressed.",
+    "mouse_gesture": "Left-drag a node from the palette and drop it at the desired location."
+  },
+  { "id": "CUT",
+    "name": "Cut",
+    "description": "Remove all selected nodes and all arcs connecting these nodes from the diagram and places them in the clipboard."
+  },
+  { "id": "CYCLE_PERMITTED_NODES",
+    "name": "Cycle Permitted Nodes",
+    "description": "Consecutively apply all permitted SBGN node types to a single selected node.",
+    "mouse_gesture": "Left-drag a node of the desired type from the palette, and drop it onto a node to adapt its type."
+  },
+  { "id": "DELETE",
+    "name": "Delete",
+    "description": "Remove all selected elements and all elements that depend upon these elements (e.g. arcs connected to a selected node) from the diagram."
+  },
+  { "id": "DESELECT_ALL",
+    "name": "Deselect All",
+    "description": "Deselect all elements.",
+    "mouse_gesture": "Left-click the background of the diagram"
+  },
+  { "id": "DUMP_TYPE_INFO",
+    "name": "Dump Type Info",
+    "description": "Dump debugging information of a single selected element on the console. For debugging purposes only."
+  },
+  { "id": "EDIT_LABEL",
+    "name": "Edit Label...",
+    "description": "Open an inline label editor for a selected label or the name label of a selected node.",
+    "mouse_gesture": "double click on a label, a node, or a clone marker of a node"
+  },
+  { "id": "FIT_GRAPH_BOUNDS",
+    "name": "Fit Diagram to View",
+    "description": "Fit the entire diagram into the view by adjusting its zoom-level and viewport"
+  },
+  { "id": "GRAPHICS_EXPORT_PREVIEW",
+    "name": "Graphics Export Preview...",
+    "description": "Open a preview and settings dialog that allows to export the diagram to one of the graphics formats PNG, JPG, GIF, SVG, PDF, or EPS."
+  },
+  { "id": "INTERACTIVE_DUPLICATE",
+    "name": "Duplicate",
+    "description": "Duplicate selected nodes and the all arcs connecting these nodes. The duplicated elements will be initially placed at the current mouse cursor position and can be freely moved with the mouse until a button gets pressed."
+  },
+  { "id": "INTERACTIVE_PASTE",
+    "name": "Paste",
+    "description": "Duplicate the contents of the clipboard and adds the to the diagram. The duplicated elements will be initially placed at the current mouse cursor position and can be freely moved with the mouse until a button gets pressed.",
+    "mouse_gesture": "Drag an SBGN-ML file with file suffix .sbgn from the file system onto the application while pressing the CTRL / COMMAND key."
+  },
+  { "id": "MIRROR_HORIZONTALLY",
+    "name": "Mirror Horizontally",
+    "description": "Mirror selected nodes and arcs connecting these nodes on a horizontal axis, so that left and right sides get switched."
+  },
+  { "id": "MIRROR_VERTICALLY",
+    "name": "Mirror Vertically",
+    "description": "Mirror selected nodes and arcs connecting these nodes on a vertical axis, so that top and bottom sides get switched."
+  },
+  { "id": "NEXT_STYLE_IN_USE",
+    "name": "Next Style in Use",
+    "description": "Set the next style used in the current diagram as the current style."
+  },
+  { "id": "NODES_TO_BACK",
+    "name": "To Back",
+    "description": "Place selected nodes at the front of the rendering order, making the appear behind all other nodes. Nodes belonging to a compartment of complex group will always be rendered right after their group element, so changing the order of a group will effectively change the order of its members as well."
+  },
+  { "id": "NODES_TO_FRONT",
+    "name": "To Front",
+    "description": "Place selected nodes at the back of the rendering order, making the appear in front of all other nodes. Nodes belonging to a compartment of complex group will always be rendered right after their group element, so changing the order of a group will effectively change the order of its members as well."
+  },
+  { "id": "OPEN_SBGN",
+    "name": "Load from File...",
+    "description": "Load an SBGN-ML file replacing the currently displayed diagram. The SBGN-ML format is defined at https://github.com/sbgn/sbgn/wiki/LibSBGN",
+    "mouse_gesture": "Drag an SBGN-ML file with file suffix .sbgn from the file system onto the diagram canvas. If the CTRL / COMMAND key is pressed while dropping the file, the graph will be pasted into the existing diagram at the drop location."
+  },
+  { "id": "PRINT_PREVIEW",
+    "name": "Print Preview...",
+    "description": "Open a preview and settings dialog that allows to print the diagram."
+  },
+  { "id": "REDO",
+    "name": "Redo",
+    "description": "Redo what has been undone before."
+  },
+  { "id": "ROTATE_CLOCKWISE",
+    "name": "Rotate Clockwise",
+    "description": "Rotate selected nodes and arcs connecting these nodes by 90 degrees in clockwise direction. This operation will keep the relative distances of node centers. The widths and heights of nodes that have inherent directionality (processes, tags, logic) will be swapped."
+  },
+  { "id": "ROTATE_COUNTER_CLOCKWISE",
+    "name": "Rotate Counter-Clockwise",
+    "description": "Rotate selected nodes and arcs connecting these nodes by 90 degrees in counter-clockwise direction. This operation will keep the relative distances of node centers. The widths and heights of nodes that have inherent directionality (processes, tags, logic) will be swapped."
+  },
+  { "id": "SAVE_AND_RELOAD",
+    "name": "Save And Reload",
+    "description": "For debugging purposes only. Save the diagram to a temporary location and loads it right away again."
+  },
+  { "id": "SELECT_ALL",
+    "name": "Select All",
+    "description": "Select all elements",
+    "mouse_gesture": "Left drag on the diagram background to create a selection box that encompasses all elements."
+  },
+  { "id": "SELECT_ABOVE",
+    "name": "Select Node Above",
+    "description": "Select the closest node that is above the current selection and deselect the previous selection. Effectively this moves the 'selection cursor' to the top. If the Shift key is pressed the previous selection will not be deselected.",
+    "mouse_gesture": "Click the node above the current selection. If the Ctrl key is pressed while clicking, the previous selection will not be deselected."
+  },
+  { "id": "SELECT_BELOW",
+    "name": "Select Node Below",
+    "description": "Select the closest node that is below the current selection and deselect the previous selection. Effectively this moves the 'selection cursor' to the top. If the Shift key is pressed the previous selection will not be deselected.",
+    "mouse_gesture": "Click the node below the current selection. If the Ctrl key is pressed while clicking, the previous selection will not be deselected."
+  },
+  { "id": "SELECT_LEFT",
+    "name": "Select Node to Left",
+    "description": "Select the closest node that is to the left of the current selection and deselect the previous selection. Effectively this moves the 'selection cursor' to the top. If the Shift key is pressed the previous selection will not be deselected.",
+    "mouse_gesture": "Click the node to the left of the current selection. If the Ctrl key is pressed while clicking, the previous selection will not be deselected."
+  },
+  { "id": "SELECT_RIGHT",
+    "name": "Select Node to Right",
+    "description": "Select the closest node that is to the right of the current selection and deselect the previous selection. Effectively this moves the 'selection cursor' to the top. If the Shift key is pressed the previous selection will not be deselected.",
+    "mouse_gesture": "Click the node to the right of the current selection. If the Ctrl key is pressed while clicking, the previous selection will not be deselected."
+  },
+  { "id": "SHOW_HELP",
+    "name": "Help...",
+    "description": "Search for available commands and key-bindings."
+  },
+  { "id": "SHOW_SETTINGS",
+    "name": "Settings...",
+    "description": "Configure application settings."
+  },
+  { "id": "SPLIT_NODE",
+    "name": "Split Node",
+    "description": "Duplicate a single selected node and transfers selected arcs at the selected node to the duplicated node."
+  },
+  { "id": "TOGGLE_CLONE_MARKER",
+    "name": "Toggle Clone Marker",
+    "description": "Add or remove a clone marker form a node, depending on the current clone maker state of the node",
+    "mouse_gesture": "Left-drag a 'clone marker' feature from the palette onto a node."
+  },
+  { "id": "TOGGLE_COMPLEX_LOCK",
+    "name": "Toggle Complex Lock",
+    "description": "Lock or unlock the members of a complex node, depending on the locked state of the complex node. Members of a locked group cannot be selected or connected by arcs. A locked state will be visualized by a lock icon when hovering with the mouse over a node."
+  },
+  { "id": "TOGGLE_EVENT_MONITOR",
+    "name": "Toggle Event Monitor",
+    "description": "For presentation use. Toggle the on-screen display of what actions, mouse-operations, and keyboard-shortcuts have been used by the user."
+  },
+  { "id": "TOGGLE_FULLSCREEN_MODE",
+    "name": "Toggle Fullscreen Mode",
+    "description": "Puts the application in fullscreen mode and back again."
+  },
+  { "id": "TOGGLE_MULTIMER",
+    "name": "Toggle Multimer",
+    "description": "Add or remove a multimer marker form a node, depending on the current multimer state of the node. Note that strictly speaking a multimer is not a marker but a special SBGN type.",
+    "mouse_gesture": "Left-drag a 'multimer' feature from the palette onto a node."
+  },
+  { "id": "UNDO",
+    "name": "Undo",
+    "description": "Undo what has been done before."
+  },
+  { "id": "ZOOM_OUT",
+    "name": "Zoom Out",
+    "description": "Zoom out of the view, so that potentially more, albeit smaller elements come into view.",
+    "mouse_gesture": "Turn the mouse-wheel away from you"
+  },
+  { "id": "ZOOM_IN",
+    "name": "Zoom In",
+    "description": "Zoom into the view, so that potentially less, albeit larger elements come into view.",
+    "mouse_gesture": "Turn the mouse-wheel towards you"
+  },
+  { "id": "SAVE_PLAIN_SBGN",
+    "name": "Save as plain SBGN-ML...",
+    "description": "Export a diagram to plain SBGN-ML. Styling information such as individual colors will be lost."
+  },
+  { "id": "SAVE_SBGN",
+    "name": "Save as SBGN-ML...",
+    "description": "Save a diagram in SBGN-ML format to your computer. The SBGN-ML format is defined at https://github.com/sbgn/sbgn/wiki/LibSBGN."
+  },
+  { "id": "ZOOM_TO_NORMAL",
+    "name": "Zoom at 100%",
+    "description": "Set the zoom level to 100%, making all elements appear in their actual size."
+  },
+  { "id": "CREATE_EDGE.END_EDGE_CREATION",
+    "name":"End Arc Creation",
+    "description": "Finalize ongoing arc creation at a valid node the mouse cursor points to. More specifically, the new arc will end at the port that is closest to the mouse cursor of all valid ports. By default, the start port is colored green, invalid ports are colored red, and valid ports that are not closest to the mouse cursor are colored orange. If instead the mouse cursor does not point to a valid not, a new valid node will be created. The new arc will then be connect to a valid port of that new node.",
+    "mouse_gesture": "Either release the mouse button while left-dragging the end point of the arc, or click while moving the end-point of the arc"
+  },
+  { "id": "CREATE_EDGE.NEXT_TYPE",
+    "name": "Next Arc Type",
+    "description": "Consecutively apply all permitted SBGN arc types to the arc that is currently created.",
+    "mouse_gesture": "Left-drag an arc of the desired type from the palette, and drop it onto an arc to adapt its type."
+  },
+  { "id": "DRAG_ITEM.ROTATE_CLOCKWISE",
+    "name": "Rotate Clockwise",
+    "description": "Rotate the dragged item by 90 degrees in clockwise direction. This operation will keep the relative distances of node centers. The widths and heights of nodes that have inherent directionality (processes, tags, logic) will be swapped."
+  },
+  { "id": "DRAG_ITEM.MIRROR_HORIZONTALLY",
+    "name": "Mirror Horizontally",
+    "description": "Mirror the dragged item on a horizontal axis, so that left and right sides get switched."
+  },
+  { "id": "DRAG_ITEM.MIRROR_VERTICALLY",
+    "name": "Mirror Vertically",
+    "description": "Mirror the dragged item on a vertical axis, so that top and bottom sides get switched."
+  },
+  { "id": "ENTER_TEXT.CONVERT_TO_GREEK",
+    "name": "Convert To Greek Letter",
+    "description": "Convert next letter a, b, c, d, e, f, g, or h to its greek equivalent. Also works for upper case variants."
+  },
+  { "id": "ENTER_TEXT.CONVERT_TO_SUBSCRIPT",
+    "name": "Convert To Subscript",
+    "description": "Convert next digit, +, or - sign entered to its subscript equivalent."
+  },
+  { "id": "ENTER_TEXT.CONVERT_TO_SUPERSCRIPT",
+    "name": "Convert To Superscript",
+    "description": "Convert next digit, +, or - sign entered to its superscript equivalent."
+  }
+]

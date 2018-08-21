@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jh-filters">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/jh-filters/Filters.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

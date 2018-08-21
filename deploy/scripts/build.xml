@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="Deployment Script" default="help" basedir="..">
+
+    <target name="help">
+        <echo>
+            Deployment script that is used by the deploy artifact of this project.
+        </echo>
+    </target>
+    <!-- -->
+    <!-- define some properties that are used throughout the tasks -->
+    <target name="-init" description="Initializes properties that are used within this build file.">
+        <!-- the base directory of the yFiles installation -->
+        <property name="root"                 value="."/>
+        <property name="jar.dir"              value="${root}/jar"/>
+        <property name="main.jar"             value="main.jar"/>
+        <property name="app.name"             value="krayon4sbgn" />
+        <property name="app.title"            value="Krayon for SBGN" />
+        <property name="app.version"          value="0.9" />
+        <property name="app.version.strict"   value="0.9.0.0" />
+        <property name="author"               value="Roland Wiese" />
+        <property name="copyright"            value="2018" />
+        <property name="log.dir"              value="${root}/log"/>
+        <property name="jarlib.dir"           value="${root}/lib"/>
+
+        <!-- yguard stuff -->
+        <property name="yguard.dir"           value="yguard"/>
+        <property name="jdk.1.8.rt.jar"       value="${java.home}/lib/rt.jar"/>
+        <property name="yguard.jar"           value="yguard/yguard.jar"/>
+        <property name="yguard.download.link" value="http://www.yworks.com/products/yguard/yguard-2.5.3.zip"/>
+        <property name="yfiles.jar"           value="${jarlib.dir}/yfiles-for-java.jar"/>
+        <property name="yfiles.jar.obf"       value="${jarlib.dir}/yfiles-for-java-obf.jar"/>
+        <property name="client.jar"           value="${root}/${app.name}.jar"/>
+        <property name="client.jar.obf"       value="${root}/${app.name}-obf.jar"/>
+        <property name="mainClass"            value="krayon.editor.sbgn.KrayonForSbgn"/>
+        <property name="obfuscation-mappings" value="${log.dir}/yguard-mappings.xml"/>
+        <available file="yguard/yguard.jar" property="yguard.jar.exists"/>
+
+        <!-- launch4j stuff [ http://launch4j.sourceforge.net/ ] -->
+        <property name="launch4j.exe"         location="/Program Files (x86)/Launch4j/launch4jc.exe"/>
+        <property name="launch4j.xml"         value="launch4j.xml"/>
+        <property name="launch4j.template"    value="scripts/launch4j-template.xml"/>
+
+        <!-- inno setup stuff [ http://www.jrsoftware.org/isinfo.php ] -->
+        <property name="inno.exe"             location="/Program Files (x86)/Inno Setup 5/ISCC.exe"/>
+        <property name="inno.template"        value="scripts/inno-setup-template.iss"/>
+        <property name="inno.iss"             value="inno-setup.iss"/>
+        <!--<property name="inno.tmpname"         value="sbgn-diagrammer-setup.exe"/>-->
+
+    </target>
+
+    <target name="post-deploy" depends="create-dirs, copy-jars, obfuscate, create-zip, create-exe, create-installer"/>
+
+    <target name="create-dirs" depends="-init">
+        <mkdir dir="${log.dir}"/>
+        <mkdir dir="${jarlib.dir}"/>
+    </target>
+
+    <target name="copy-jars" depends="create-dirs">
+        <copy todir="${jarlib.dir}">
+            <fileset dir="${jar.dir}">
+                <exclude name="${main.jar}"/>
+            </fileset>
+        </copy>
+        <copy file="${jar.dir}/${main.jar}" tofile="${app.name}.jar" />
+    </target>
+
+    <target name="create-zip" depends="-init">
+        <zip destfile="${app.name}-${app.version}.zip">
+            <zipfileset dir="${root}" prefix="${app.name}-${app.version}">
+                <include name="*.jar"/>
+                <include name="lib/*.jar"/>
+                <include name="*.txt"/>
+            </zipfileset>
+        </zip>
+    </target>
+
+    <target name="prepare-scripts" depends="-init">
+        <copy file="${inno.template}" tofile="${inno.iss}"/>
+        <copy file="${launch4j.template}" tofile="${launch4j.xml}"/>
+        <replace dir="${root}">
+            <include name="${inno.iss}"/>
+            <include name="${launch4j.xml}"/>
+            <replacefilter token="@@@app.name@@@" value="${app.name}"/>
+            <replacefilter token="@@@app.title@@@" value="${app.title}"/>
+            <replacefilter token="@@@app.version@@@" value="${app.version}"/>
+            <replacefilter token="@@@app.version.strict@@@" value="${app.version.strict}"/>
+            <replacefilter token="@@@author@@@" value="${author}"/>
+            <replacefilter token="@@@copyright@@@" value="${copyright}"/>
+        </replace>
+    </target>
+
+    <target name="create-exe" depends="prepare-scripts">
+        <exec executable="${launch4j.exe}">
+            <arg value="${launch4j.xml}"/>
+        </exec>
+    </target>
+
+    <target name="create-installer" depends="prepare-scripts">
+        <exec executable="${inno.exe}">
+            <arg value="${inno.iss}"/>
+        </exec>
+    </target>
+
+    <target name="clean" depends="-init">
+        <delete>
+            <fileset dir="${root}" includes="*.jar"/>
+            <fileset dir="${root}" includes="*.exe"/>
+            <fileset dir="${root}" includes="*.txt"/>
+            <fileset dir="${root}" includes="*.iss"/>
+            <fileset dir="${root}" includes="*.xml"/>
+            <fileset dir="${root}" includes="*.zip"/>
+            <fileset dir="${jarlib.dir}"/>
+            <fileset dir="${jar.dir}"/>
+        </delete>
+    </target>
+
+    <!-- downloads yGuard from the yworks homepage and unzips the jar into the lib directory -->
+    <target name="download-yguard" unless="yguard.jar.exists" depends="-init" description="Downloads and unzips the yguard.jar into the lib directory.">
+        <get src="${yguard.download.link}" dest="${yguard.dir}/yGuard.zip" skipexisting="false" ignoreerrors="false" verbose="true"/>
+        <unzip src="${yguard.dir}/yGuard.zip" dest="yguard" >
+            <patternset>
+                <include name="**/yguard.jar"/>
+            </patternset>
+            <flattenmapper/>
+        </unzip>
+        <delete file="${yguard.dir}/yGuard.zip"/>
+    </target>
+
+    <!-- obfuscates yfiles-for-java.jar and adjusts the demo application jar accordingly. -->
+    <!-- this task does not obfuscate the demo application jar. -->
+    <target name="obfuscate" depends="create-dirs, copy-jars" description="Obfuscates the yFiles jar only and leaves the demo application jar untouched.">
+        <taskdef name="yguard" classname="com.yworks.yguard.YGuardTask" classpath="yguard/yguard.jar"/>
+        <yguard>
+            <!-- add both jars to the files yGuard should process -->
+            <!-- the specification of what should be obfuscated is contained in the rename task-->
+            <inoutpair in="${yfiles.jar}" out="${yfiles.jar.obf}"/>
+            <inoutpair in="${client.jar}" out="${client.jar.obf}"/>
+
+            <!-- specifies the obfuscation task and the obfuscation options -->
+            <rename logfile="${obfuscation-mappings}" replaceClassNameStrings="true" mainclass="${mainClass}"
+                    annotationclass="com.yworks.yfiles.utils.Obfuscation">
+
+                <!-- exclude the demo application items from obfuscation -->
+                <keep>
+                    <!-- Keep all method, field, and class names of the "application"             -->
+                    <!-- This could be adjusted to your needs if you don't want to let            -->
+                    <!-- your whole application unobfuscated.                                     -->
+                    <class classes="private" methods="private" fields="private">
+                        <patternset>
+                            <include name="*.**"/>
+                            <exclude name="com.yworks.**"/>
+                        </patternset>
+                    </class>
+                </keep>
+
+                <!--
+                  make sure that the .properties files are renamed according to their
+                  corresponding class files, yFiles needs this to function properly when obfuscated
+                -->
+                <adjust replaceName="true">
+                    <include name="**/*.properties"/>
+                </adjust>
+            </rename>
+        </yguard>
+        <!--replace original files with obfuscated ones -->
+        <move file="${yfiles.jar.obf}" tofile="${yfiles.jar}"/>
+        <move file="${client.jar.obf}" tofile="${app.name}.jar"/>
+    </target>
+</project>

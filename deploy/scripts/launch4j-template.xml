@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch4jConfig>
+  <dontWrapJar>true</dontWrapJar>
+  <headerType>gui</headerType>
+  <obj>w32api/crt2.o</obj>
+  <obj>head/guihead.o</obj>
+  <obj>head/head.o</obj>
+  <lib>w32api/libmingw32.a</lib>
+  <lib>w32api/libgcc.a</lib>
+  <lib>w32api/libmsvcrt.a</lib>
+  <lib>w32api/libkernel32.a</lib>
+  <lib>w32api/libuser32.a</lib>
+  <lib>w32api/libadvapi32.a</lib>
+  <lib>w32api/libshell32.a</lib>
+  <jar>@@@app.name@@@.jar</jar>
+  <outfile>@@@app.name@@@.exe</outfile>
+  <errTitle></errTitle>
+  <cmdLine></cmdLine>
+  <chdir>.</chdir>
+  <priority>normal</priority>
+  <downloadUrl>http://java.com/download</downloadUrl>
+  <supportUrl></supportUrl>
+  <stayAlive>false</stayAlive>
+  <restartOnCrash>false</restartOnCrash>
+  <manifest></manifest>
+  <icon>resources\k-plain.ico</icon>
+  <singleInstance>
+    <mutexName>@@@app.name@@@-mutex</mutexName>
+    <windowTitle>@@@app.title@@@ is already running</windowTitle>
+  </singleInstance>
+  <jre>
+    <path>jre</path>
+    <bundledJre64Bit>false</bundledJre64Bit>
+    <bundledJreAsFallback>false</bundledJreAsFallback>
+    <minVersion></minVersion>
+    <maxVersion></maxVersion>
+    <jdkPreference>jdkOnly</jdkPreference>
+    <runtimeBits>64/32</runtimeBits>
+    <initialHeapSize>256</initialHeapSize>
+    <maxHeapSize>1024</maxHeapSize>
+  </jre>
+  <versionInfo>
+    <fileVersion>@@@app.version.strict@@@</fileVersion>
+    <txtFileVersion>@@@app.version@@@</txtFileVersion>
+    <fileDescription>A tool for working with SBGN diagrams</fileDescription>
+    <copyright>@@@copyright@@@ - @@@author@@@</copyright>
+    <productVersion>@@@app.version.strict@@@</productVersion>
+    <txtProductVersion>@@@app.version@@@</txtProductVersion>
+    <productName>@@@app.title@@@</productName>
+    <companyName>@@@author@@@</companyName>
+    <internalName>@@@app.name@@@</internalName>
+    <originalFilename>@@@app.name@@@.exe</originalFilename>
+    <trademarks></trademarks>
+    <language>ENGLISH_US</language>
+  </versionInfo>
+</launch4jConfig>

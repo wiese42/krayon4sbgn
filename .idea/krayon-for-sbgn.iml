@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/kotlin" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/resources" type="java-resource" relativeOutputPath="resources" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="jh-filters" level="project" />
+    <orderEntry type="library" name="klaxon" level="project" />
+    <orderEntry type="library" name="material-ui-swing" level="project" />
+    <orderEntry type="library" name="ph-css" level="project" />
+    <orderEntry type="library" name="libsbgn" level="project" />
+    <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
+    <orderEntry type="library" name="batik" level="project" />
+    <orderEntry type="library" name="vectorgraphics" level="project" />
+    <orderEntry type="module" module-name="yfiles-lib-and-license" />
+    <orderEntry type="library" name="yfiles-for-java" level="project" />
+    <orderEntry type="library" name="krayon-icons" level="project" />
+  </component>
+</module>

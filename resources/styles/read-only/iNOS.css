@@ -1,0 +1,305 @@
+.simple-chemical {
+  outline-color: rgb(0,0,0);
+  outline-width: 2.0px;
+  background: rgb(228,248,228);
+  drop-shadow: false;
+  font-size: 13.0px;
+  font-style: bold;
+  text-color: rgb(0,0,0);
+  label-outline-color: rgba(0,0,0, 0.0);
+  label-outline-width: 1.0px;
+  label-background-color: rgba(0,0,0, 0.0);
+  shape-parameter: 10.0px;}
+.macromolecule {
+  outline-color: rgb(0,0,0);
+  outline-width: 2.0px;
+  background: rgb(217,229,242);
+  drop-shadow: false;
+  font-size: 13.0px;
+  font-style: bold;
+  text-color: rgb(0,0,0);
+  label-outline-color: rgba(0,0,0, 0.0);
+  label-outline-width: 1.0px;
+  label-background-color: rgba(0,0,0, 0.0);
+  shape-parameter: 15.0px;}
+.nucleic-acid-feature {
+  outline-color: rgb(0,0,0);
+  outline-width: 2.0px;
+  background: rgb(255,255,255);
+  drop-shadow: false;
+  font-size: 13.0px;
+  font-style: bold;
+  text-color: rgb(0,0,0);
+  label-outline-color: rgba(0,0,0, 0.0);
+  label-outline-width: 1.0px;
+  label-background-color: rgba(0,0,0, 0.0);
+  shape-parameter: 20.0px;}
+.complex {
+  outline-color: rgb(0,0,0);
+  outline-width: 2.0px;
+  background: rgb(231,237,243);
+  drop-shadow: false;
+  font-size: 13.0px;
+  font-style: bold;
+  text-color: rgb(0,0,0);
+  label-outline-color: rgba(0,0,0, 0.0);
+  label-outline-width: 1.0px;
+  label-background-color: rgba(0,0,0, 0.0);
+  shape-parameter: 10.0px;}
+.unspecified-entity {
+  outline-color: rgb(0,0,0);
+  outline-width: 2.0px;
+  background: rgb(255,255,255);
+  drop-shadow: false;
+  font-size: 13.0px;
+  font-style: bold;
+  text-color: rgb(0,0,0);
+  label-outline-color: rgba(0,0,0, 0.0);
+  label-outline-width: 1.0px;
+  label-background-color: rgba(0,0,0, 0.0);
+  shape-parameter: 10.0px;}
+.perturbing-agent {
+  outline-color: rgb(0,0,0);
+  outline-width: 2.0px;
+  background: rgb(255,255,255);
+  drop-shadow: false;
+  font-size: 13.0px;
+  font-style: bold;
+  text-color: rgb(0,0,0);
+  label-outline-color: rgba(0,0,0, 0.0);
+  label-outline-width: 1.0px;
+  label-background-color: rgba(0,0,0, 0.0);
+  shape-parameter: 15.0px;}
+.source-and-sink {
+  outline-color: rgb(0,0,0);
+  outline-width: 2.0px;
+  background: rgb(255,255,255);
+  drop-shadow: false;}
+.process {
+  font-size: 12.0px;
+  font-style: bold;
+  text-color: rgb(0,0,0);
+  outline-color: rgb(0,0,0);
+  outline-width: 2.0px;
+  background: rgb(255,255,255);
+  port-color: rgb(0,0,0);
+  port-width: 1.5px;
+  drop-shadow: false;}
+.omitted-process {
+  font-size: 12.0px;
+  font-style: bold;
+  text-color: rgb(0,0,0);
+  outline-color: rgb(0,0,0);
+  outline-width: 2.0px;
+  background: rgb(255,255,255);
+  port-color: rgb(0,0,0);
+  port-width: 1.5px;
+  drop-shadow: false;}
+.uncertain-process {
+  font-size: 12.0px;
+  font-style: bold;
+  text-color: rgb(0,0,0);
+  outline-color: rgb(0,0,0);
+  outline-width: 2.0px;
+  background: rgb(255,255,255);
+  port-color: rgb(0,0,0);
+  port-width: 1.5px;
+  drop-shadow: false;}
+.association {
+  font-size: 12.0px;
+  font-style: bold;
+  text-color: rgb(0,0,0);
+  outline-color: rgb(0,0,0);
+  outline-width: 2.0px;
+  background: rgb(0,0,0);
+  port-color: rgb(0,0,0);
+  port-width: 1.5px;
+  drop-shadow: false;}
+.dissociation {
+  font-size: 12.0px;
+  font-style: bold;
+  text-color: rgb(0,0,0);
+  outline-color: rgb(0,0,0);
+  outline-width: 2.0px;
+  background: rgb(255,255,255);
+  port-color: rgb(0,0,0);
+  port-width: 1.5px;
+  drop-shadow: false;}
+.phenotype {
+  outline-color: rgb(0,0,0);
+  outline-width: 2.0px;
+  background: rgb(255,255,255);
+  drop-shadow: false;
+  font-size: 13.0px;
+  font-style: bold;
+  text-color: rgb(0,0,0);
+  label-outline-color: rgba(0,0,0, 0.0);
+  label-outline-width: 1.0px;
+  label-background-color: rgba(0,0,0, 0.0);
+  shape-parameter: 15.0px;}
+.tag {
+  outline-color: rgb(0,0,0);
+  outline-width: 2.0px;
+  background: rgb(255,255,255);
+  drop-shadow: false;
+  font-size: 13.0px;
+  font-style: bold;
+  text-color: rgb(0,0,0);
+  label-outline-color: rgba(0,0,0, 0.0);
+  label-outline-width: 1.0px;
+  label-background-color: rgba(0,0,0, 0.0);}
+.equivalence-arc {
+  path-color: rgb(0,0,0);
+  path-width: 1.5px;
+  arrow-scale: 1.0px;
+  path-corner-radius: 0.0px;}
+.and {
+  font-size: 12.0px;
+  font-style: bold;
+  text-color: rgb(0,0,0);
+  outline-color: rgb(0,0,0);
+  outline-width: 2.0px;
+  background: rgb(255,255,255);
+  port-color: rgb(0,0,0);
+  port-width: 1.5px;
+  drop-shadow: false;}
+.or {
+  font-size: 12.0px;
+  font-style: bold;
+  text-color: rgb(0,0,0);
+  outline-color: rgb(0,0,0);
+  outline-width: 2.0px;
+  background: rgb(255,255,255);
+  port-color: rgb(0,0,0);
+  port-width: 1.5px;
+  drop-shadow: false;}
+.not {
+  font-size: 12.0px;
+  font-style: bold;
+  text-color: rgb(0,0,0);
+  outline-color: rgb(0,0,0);
+  outline-width: 2.0px;
+  background: rgb(255,255,255);
+  port-color: rgb(0,0,0);
+  port-width: 1.5px;
+  drop-shadow: false;}
+.logic-arc {
+  path-color: rgb(0,0,0);
+  path-width: 1.5px;
+  arrow-scale: 1.0px;
+  path-corner-radius: 0.0px;}
+.compartment {
+  outline-color: rgb(0,0,0);
+  outline-width: 6.0px;
+  background: rgb(238,234,228);
+  drop-shadow: false;
+  font-size: 20.0px;
+  font-style: bold;
+  text-color: rgb(0,0,0);
+  label-outline-color: rgba(0,0,0, 0.0);
+  label-outline-width: 1.0px;
+  label-background-color: rgba(0,0,0, 0.0);}
+.submap {
+  outline-color: rgb(0,0,0);
+  outline-width: 1.0px;
+  background: rgb(255,255,255);
+  drop-shadow: false;
+  font-size: 13.0px;
+  font-style: bold;
+  text-color: rgb(0,0,0);
+  label-outline-color: rgba(0,0,0, 0.0);
+  label-outline-width: 1.0px;
+  label-background-color: rgba(0,0,0, 0.0);}
+.terminal {
+  font-size: 10.0px;
+  font-style: plain;
+  text-color: rgb(0,0,0);
+  outline-color: rgb(0,0,0);
+  outline-width: 1.0px;
+  background: rgb(255,255,255);
+  width: 20.0px;
+  height: 20.0px;}
+.annotation {
+  outline-color: rgb(0,0,0);
+  outline-width: 1.0px;
+  background: rgb(255,255,255);
+  drop-shadow: false;
+  font-size: 13.0px;
+  font-style: bold;
+  text-color: rgb(0,0,0);
+  label-outline-color: rgba(0,0,0, 0.0);
+  label-outline-width: 1.0px;
+  label-background-color: rgba(0,0,0, 0.0);}
+.state-variable {
+  font-size: 10.0px;
+  font-style: plain;
+  text-color: rgb(0,0,0);
+  label-outline-color: rgb(0,0,0);
+  label-outline-width: 2.0px;
+  label-background-color: rgb(255,255,255);
+  state-variable-shape: ellipse;}
+.unit-of-information {
+  font-size: 10.0px;
+  font-style: plain;
+  text-color: rgb(0,0,0);
+  label-outline-color: rgb(0,0,0);
+  label-outline-width: 2.0px;
+  label-background-color: rgb(255,255,255);}
+.callout-label {
+  font-size: 12.0px;
+  font-style: plain;
+  text-color: rgb(0,0,0);
+  label-outline-color: rgb(0,0,0);
+  label-outline-width: 1.0px;
+  label-background-color: rgb(255,255,255);
+  drop-shadow: false;}
+.consumption {
+  path-color: rgb(0,0,0);
+  path-width: 1.5px;
+  arrow-scale: 1.0px;
+  path-corner-radius: 0.0px;}
+.production {
+  path-color: rgb(0,0,0);
+  path-width: 1.5px;
+  arrow-scale: 1.0px;
+  path-corner-radius: 0.0px;}
+.modulation {
+  path-color: rgb(0,0,0);
+  path-width: 1.5px;
+  arrow-scale: 1.0px;
+  path-corner-radius: 0.0px;}
+.stimulation {
+  path-color: rgb(0,0,0);
+  path-width: 1.5px;
+  arrow-scale: 2.0px;
+  path-corner-radius: 0.0px;}
+.catalysis {
+  path-color: rgb(0,0,0);
+  path-width: 1.5px;
+  arrow-scale: 1.0px;
+  path-corner-radius: 0.0px;}
+.inhibition {
+  path-color: rgb(0,0,0);
+  path-width: 1.5px;
+  arrow-scale: 1.0px;
+  path-corner-radius: 0.0px;}
+.necessary-stimulation {
+  path-color: rgb(0,0,0);
+  path-width: 1.5px;
+  arrow-scale: 2.0px;
+  path-corner-radius: 0.0px;}
+.cardinality {
+  font-size: 10.0px;
+  font-style: plain;
+  text-color: rgb(0,0,0);
+  label-outline-color: rgb(0,0,0);
+  label-outline-width: 1.5px;
+  label-background-color: rgb(255,255,255);}
+.clone-marker {
+  clone-marker-background: rgb(128,128,128);
+  clone-marker-font-size: 10.0px;
+  clone-marker-font-style: plain;
+  clone-marker-text-color: rgb(255,255,255);}
+map {
+  background-color: rgb(255,255,255);
+  highlight-color: rgb(161,192,87);}

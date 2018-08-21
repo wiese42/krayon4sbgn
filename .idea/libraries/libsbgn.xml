@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="libsbgn">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/sbgn/org.sbgn.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

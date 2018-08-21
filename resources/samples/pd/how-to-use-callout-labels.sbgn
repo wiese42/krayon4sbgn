@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sbgn xmlns="http://sbgn.org/libsbgn/0.2">
+    <map language="process description">
+        <glyph class="annotation" id="id2">
+            <label text="1. Callout labels are annotations that are bound to a node."/>
+            <callout target="id1">
+                <point x="369.8421" y="190.70952"/>
+            </callout>
+            <bbox w="220.0" h="96.0" x="157.0" y="0.0"/>
+        </glyph>
+        <glyph class="annotation" id="id3">
+            <label text="2. To add a callout to an entity drag the callout symbol from the palette and drop it on the node."/>
+            <callout target="id1">
+                <point x="483.92105" y="164.49286"/>
+            </callout>
+            <bbox w="148.0" h="114.71" x="492.0" y="-18.71"/>
+        </glyph>
+        <glyph class="annotation" id="id4">
+            <label text="4. To enter text,  double click the label. Text will automatically&#xA;line-wrap to fit in the label box."/>
+            <callout target="id1">
+                <point x="595.31696" y="234.73975"/>
+            </callout>
+            <bbox w="146.0" h="105.71" x="701.0" y="213.645"/>
+        </glyph>
+        <glyph class="annotation" id="id5">
+            <label text="3. When selected, callout labels can be resized and moved."/>
+            <callout target="id1">
+                <point x="606.50684" y="170.54488"/>
+            </callout>
+            <bbox w="172.0" h="101.71" x="701.0" y="74.64499"/>
+        </glyph>
+        <glyph class="annotation" id="id6">
+            <label text="5. To change to tip of the callout-anchor select the callout and move the tip handle."/>
+            <callout target="id1">
+                <point x="465.2254" y="257.1024"/>
+            </callout>
+            <bbox w="160.0" h="88.71" x="415.0" y="319.0"/>
+        </glyph>
+        <glyph class="annotation" id="id7">
+            <label text="6. Callout labels move along with the node they belong to. Also they cleverly adjust position when the node gets resized."/>
+            <callout target="id1">
+                <point x="345.3913" y="256.5"/>
+            </callout>
+            <bbox w="152.0" h="127.71" x="103.0" y="208.0"/>
+        </glyph>
+        <glyph class="macromolecule" id="id1">
+            <label text="Owning node of the these callout labels.">
+                <bbox w="223.0" h="18.71" x="366.5" y="203.145"/>
+            </label>
+            <bbox w="300.0" h="143.0" x="328.0" y="141.0"/>
+        </glyph>
+    </map>
+</sbgn>

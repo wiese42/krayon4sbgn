@@ -1,0 +1,66 @@
+[
+  { "key-stroke": "DELETE",       "id": "DELETE" },
+  { "key-stroke": "DOWN",         "id": "SELECT_BELOW"},
+  { "key-stroke": "ESCAPE",       "id": "DESELECT_ALL" },
+  { "key-stroke": "F1",           "id": "SHOW_HELP" },
+  { "key-stroke": "F2",           "id": "EDIT_LABEL" },
+  { "key-stroke": "F3",           "id": "SHOW_SETTINGS" },
+  { "key-stroke": "F5",           "id": "FIT_GRAPH_BOUNDS" },
+  { "key-stroke": "F11",          "id": "TOGGLE_FULLSCREEN_MODE" },
+  { "key-stroke": "LEFT",         "id": "SELECT_LEFT"},
+  { "key-stroke": "RIGHT",        "id": "SELECT_RIGHT"},
+  { "key-stroke": "UP",           "id": "SELECT_ABOVE"},
+
+  { "key-stroke": "ctrl A",       "id": "SELECT_ALL" },
+
+  { "key-stroke": "ctrl B",       "id": "NODES_TO_BACK" },
+  { "key-stroke": "ctrl C",       "id": "COPY" },
+  { "key-stroke": "ctrl D",       "id": "INTERACTIVE_DUPLICATE" },
+  { "key-stroke": "ctrl E",       "id": "GRAPHICS_EXPORT_PREVIEW" },
+  { "key-stroke": "ctrl F",       "id": "NODES_TO_FRONT" },
+  { "key-stroke": "ctrl MINUS",   "id": "ZOOM_OUT" },
+  { "key-stroke": "ctrl N",       "id": "CREATE_NODE" },
+  { "key-stroke": "ctrl O",       "id": "OPEN_SBGN" },
+  { "key-stroke": "ctrl P",       "id": "PRINT_PREVIEW" },
+  { "key-stroke": "ctrl PLUS",    "id": "ZOOM_IN" },
+  { "key-stroke": "ctrl S",       "id": "SAVE_SBGN" },
+  { "key-stroke": "ctrl SPACE",   "id": "CYCLE_PERMITTED_NODES" },
+  { "key-stroke": "ctrl V",       "id": "INTERACTIVE_PASTE" },
+  { "key-stroke": "ctrl X",       "id": "CUT" },
+  { "key-stroke": "ctrl Z",       "id": "UNDO" },
+  { "key-stroke": "ctrl shift Z", "id": "REDO" },
+  { "key-stroke": "ctrl 0",       "id": "ZOOM_TO_NORMAL" },
+  { "key-stroke": "ctrl T",       "id": "TOGGLE_EVENT_MONITOR" },
+  { "key-stroke": "ctrl shift E", "id": "BEGIN_EDGE_CREATION" },
+  { "key-stroke": "ctrl Y",        "id": "APPLY_STYLE" },
+  { "key-stroke": "ctrl shift Y",  "id": "NEXT_STYLE_IN_USE" },
+
+  { "key-stroke": "ctrl alt A",         "id": "AUTO-ASSIGN_CLONE_MARKERS" },
+  { "key-stroke": "ctrl alt C",         "id": "TOGGLE_CLONE_MARKER" },
+  { "key-stroke": "ctrl alt D",         "id": "DUMP_TYPE_INFO" },
+  { "key-stroke": "ctrl alt F1",        "id": "ACTIVATE_SBGN_STRICT_MODE" },
+  { "key-stroke": "ctrl alt H",         "id": "MIRROR_HORIZONTALLY" },
+  { "key-stroke": "ctrl alt shift H",   "id": "MIRROR_VERTICALLY" },
+  { "key-stroke": "ctrl alt L",         "id": "TOGGLE_COMPLEX_LOCK" },
+  { "key-stroke": "ctrl alt M",         "id": "TOGGLE_MULTIMER" },
+  { "key-stroke": "ctrl alt R",         "id": "ROTATE_CLOCKWISE"},
+  { "key-stroke": "ctrl alt shift R",   "id": "ROTATE_COUNTER_CLOCKWISE"},
+  { "key-stroke": "ctrl alt S",         "id": "SPLIT_NODE" },
+  { "key-stroke": "ctrl alt U",         "id": "ADD_UNIT_OF_INFORMATION" },
+  { "key-stroke": "ctrl alt V",         "id": "ADD_STATE_VARIABLE" },
+  { "key-stroke": "ctrl alt X",         "id": "CONVERT_TO_COMPLEX" },
+
+
+
+  { "key-stroke": "SPACE",        "id": "CREATE_EDGE.NEXT_TYPE" },
+  { "key-stroke": "Z",            "id": "CREATE_EDGE.END_EDGE_CREATION" },
+
+  { "key-stroke": "SPACE",        "id": "DRAG_ITEM.ROTATE_CLOCKWISE" },
+  { "key-stroke": "H",            "id": "DRAG_ITEM.MIRROR_HORIZONTALLY" },
+  { "key-stroke": "V",            "id": "DRAG_ITEM.MIRROR_VERTICALLY" },
+
+  { "key-stroke": "ctrl G",       "id": "ENTER_TEXT.CONVERT_TO_GREEK" },
+  { "key-stroke": "ctrl B",       "id": "ENTER_TEXT.CONVERT_TO_SUBSCRIPT" },
+  { "key-stroke": "ctrl P",       "id": "ENTER_TEXT.CONVERT_TO_SUPERSCRIPT" }
+
+]

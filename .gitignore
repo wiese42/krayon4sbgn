@@ -1,0 +1,16 @@
+/.idea/misc.xml
+/.idea/workspace.xml
+/.idea/vcs.xml
+/yfiles-lib-and-license/lib/yfiles-for-java.jar
+/yfiles-lib-and-license/license/com.yworks.yfiles.java.license.xml
+/out/production/
+/deploy/jar/
+/deploy/jre/
+/deploy/lib/
+/deploy/log/
+/deploy/*.exe
+/deploy/*.jar
+/deploy/*.zip
+/deploy/inno-setup.iss
+/deploy/launch4j.xml
+/lib/krayon-icons/krayon-icons.jar

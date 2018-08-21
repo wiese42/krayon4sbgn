@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="klaxon">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/klaxon/klaxon-3.0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

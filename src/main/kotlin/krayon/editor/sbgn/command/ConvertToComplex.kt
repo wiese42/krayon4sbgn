@@ -1,0 +1,35 @@
+/*
+ * Copyright (c) 2018 Roland Wiese
+ * This software is licensed under the Apache License, Version 2.0 (the "License"); you may not use this software except
+ * in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0.
+ * Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on
+ *  an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and limitations under the License.
+ */
+
+package krayon.editor.sbgn.command
+
+import com.yworks.yfiles.view.input.ICommand
+import krayon.editor.base.util.beginEdit
+import krayon.editor.sbgn.model.SbgnType
+import krayon.editor.sbgn.model.type
+import krayon.editor.sbgn.style.SbgnBuilder
+import krayon.editor.sbgn.ui.SbgnGroupingSupport
+
+object ConvertToComplex : SbgnCommand("CONVERT_TO_COMPLEX") {
+    override fun execute(param: Any?) {
+        graph.beginEdit(id).use {
+            ICommand.GROUP_SELECTION.execute(null, graphComponent)
+            val complexNode = graphComponent.selection.selectedNodes.first()
+            graph.beginEdit(id, listOf(complexNode, complexNode.tag)).use {
+                complexNode.type = SbgnType.COMPLEX
+                val bounds = SbgnGroupingSupport.calculatePreferredGroupBounds(graph, complexNode)
+                SbgnBuilder.configure(graph, complexNode, bounds)
+            }
+        }
+    }
+
+    override fun canExecute(param: Any?): Boolean {
+        return selectedNodes.any() && selectedNodes.all { it.type.canBeContainedInComplex() && graph.contains(it) && graph.degree(it) == 0 }
+    }
+}

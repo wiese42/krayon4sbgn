@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sbgn xmlns="http://sbgn.org/libsbgn/0.2">
+    <map language="process description">
+        <glyph compartmentOrder="-5.0" id="glyph0" class="compartment">
+            <label text="CYTOSOL">
+                <bbox y="24.0" x="120.0" h="18.0" w="76.0"/>
+            </label>
+            <bbox y="16.0" x="9.0" h="138.0" w="298.0"/>
+        </glyph>
+        <glyph compartmentOrder="-4.0" id="glyph1" class="compartment">
+            <label text="NUCLEUS">
+                <bbox y="61.0" x="187.0" h="18.0" w="72.0"/>
+            </label>
+            <bbox y="53.0" x="154.0" h="88.0" w="138.0"/>
+        </glyph>
+        <glyph compartmentRef="glyph1" id="glyph2" class="macromolecule">
+            <label text="X"/>
+            <bbox y="88.333336" x="188.0" h="40.0" w="80.0"/>
+        </glyph>
+        <glyph compartmentRef="glyph0" id="glyph3" class="macromolecule">
+            <label text="X"/>
+            <bbox y="88.333336" x="19.0" h="40.0" w="80.0"/>
+        </glyph>
+        <glyph id="glyph4" class="process" compartmentRef="glyph0">
+            <bbox y="96.333336" x="116.0" h="24.0" w="24.0"/>
+            <port y="108.333336" x="152.0" id="glyph4.2"/>
+            <port y="108.333336" x="104.0" id="glyph4.1"/>
+        </glyph>
+        <arc target="glyph2" source="glyph4.2" id="arc0" class="production">
+            <start y="108.333336" x="152.0"/>
+            <end y="108.333336" x="188.0"/>
+        </arc>
+        <arc target="glyph4.1" source="glyph3" id="arc1" class="consumption">
+            <start y="108.333336" x="99.0"/>
+            <end y="108.333336" x="104.0"/>
+        </arc>
+    </map>
+</sbgn>

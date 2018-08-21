@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="krayon-kotlin-scope" pattern="file[krayon-for-sbgn]:src/main/kotlin/*.kt" />
+</component>

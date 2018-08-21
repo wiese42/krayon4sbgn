@@ -1,0 +1,317 @@
+.simple-chemical {
+  outline-color: rgb(204,204,204);
+  outline-width: 1.0px;
+  background: rgb(255,255,255);
+  font-size: 12.0px;
+  font-style: plain;
+  text-color: rgb(0,0,0);
+  label-outline-color: rgba(50,50,50, 0.0);
+  label-outline-width: 1.0px;
+  label-background-color: rgba(255,255,255, 0.0);
+  drop-shadow: true;
+  shape-parameter: 10.0px;}
+.macromolecule {
+  outline-color: rgb(204,204,204);
+  outline-width: 1.0px;
+  background: rgb(255,255,255);
+  font-size: 12.0px;
+  font-style: plain;
+  text-color: rgb(0,0,0);
+  label-outline-color: rgba(0,0,0, 0.0);
+  label-outline-width: 1.0px;
+  label-background-color: rgba(0,0,0, 0.0);
+  drop-shadow: true;
+  shape-parameter: 10.0px;}
+.nucleic-acid-feature {
+  outline-color: rgb(204,204,204);
+  outline-width: 1.0px;
+  background: rgb(255,255,255);
+  font-size: 12.0px;
+  font-style: plain;
+  text-color: rgb(0,0,0);
+  label-outline-color: rgba(0,0,0, 0.0);
+  label-outline-width: 1.0px;
+  label-background-color: rgba(0,0,0, 0.0);
+  drop-shadow: true;
+  shape-parameter: 10.0px;}
+.complex {
+  outline-color: rgb(204,204,204);
+  outline-width: 1.0px;
+  background: rgb(255,255,255);
+  font-size: 12.0px;
+  font-style: plain;
+  text-color: rgb(0,0,0);
+  label-outline-color: rgba(0,0,0, 0.0);
+  label-outline-width: 1.0px;
+  label-background-color: rgba(0,0,0, 0.0);
+  drop-shadow: true;
+  shape-parameter: 10.0px;}
+.complex-multimer {
+  outline-color: rgb(204,204,204);
+  outline-width: 1.0px;
+  background: rgb(255,255,255);
+  font-size: 12.0px;
+  font-style: plain;
+  text-color: rgb(0,0,0);
+  label-outline-color: rgba(0,0,0, 0.0);
+  label-outline-width: 1.0px;
+  label-background-color: rgba(0,0,0, 0.0);
+  drop-shadow: true;
+  shape-parameter: 10.0px;}
+.unspecified-entity {
+  outline-color: rgb(204,204,204);
+  outline-width: 1.0px;
+  background: rgb(255,255,255);
+  font-size: 12.0px;
+  font-style: plain;
+  text-color: rgb(0,0,0);
+  label-outline-color: rgba(0,0,0, 0.0);
+  label-outline-width: 1.0px;
+  label-background-color: rgba(0,0,0, 0.0);
+  drop-shadow: true;
+  shape-parameter: 10.0px;}
+.perturbing-agent {
+  outline-color: rgb(204,204,204);
+  outline-width: 1.0px;
+  background: rgb(255,255,255);
+  font-size: 12.0px;
+  font-style: plain;
+  text-color: rgb(0,0,0);
+  label-outline-color: rgba(0,0,0, 0.0);
+  label-outline-width: 1.0px;
+  label-background-color: rgba(0,0,0, 0.0);
+  drop-shadow: true;
+  shape-parameter: 15.0px;}
+.source-and-sink {
+  outline-color: rgb(104,104,104);
+  outline-width: 1.0px;
+  background: rgb(255,255,255);
+  drop-shadow: true;}
+.process {
+  font-size: 12.0px;
+  font-style: bold;
+  text-color: rgb(0,0,0);
+  outline-color: rgb(204,204,204);
+  outline-width: 1.0px;
+  background: rgb(255,255,255);
+  port-color: rgb(0,0,0);
+  port-width: 1.0px;
+  drop-shadow: true;}
+.omitted-process {
+  font-size: 12.0px;
+  font-style: bold;
+  text-color: rgb(0,0,0);
+  outline-color: rgb(204,204,204);
+  outline-width: 1.0px;
+  background: rgb(255,255,255);
+  port-color: rgb(0,0,0);
+  port-width: 1.0px;
+  drop-shadow: true;}
+.uncertain-process {
+  font-size: 12.0px;
+  font-style: bold;
+  text-color: rgb(0,0,0);
+  outline-color: rgb(204,204,204);
+  outline-width: 1.0px;
+  background: rgb(255,255,255);
+  port-color: rgb(0,0,0);
+  port-width: 1.0px;
+  drop-shadow: true;}
+.association {
+  font-size: 12.0px;
+  font-style: bold;
+  text-color: rgb(0,0,0);
+  outline-color: rgb(0,0,0);
+  outline-width: 1.0px;
+  background: rgb(0,0,0);
+  port-color: rgb(0,0,0);
+  port-width: 1.0px;
+  drop-shadow: true;}
+.dissociation {
+  font-size: 12.0px;
+  font-style: bold;
+  text-color: rgb(0,0,0);
+  outline-color: rgb(204,204,204);
+  outline-width: 1.0px;
+  background: rgb(255,255,255);
+  port-color: rgb(0,0,0);
+  port-width: 1.0px;
+  drop-shadow: true;}
+.phenotype {
+  outline-color: rgb(204,204,204);
+  outline-width: 1.0px;
+  background: rgb(255,255,255);
+  font-size: 12.0px;
+  font-style: plain;
+  text-color: rgb(0,0,0);
+  label-outline-color: rgba(0,0,0, 0.0);
+  label-outline-width: 1.0px;
+  label-background-color: rgba(0,0,0, 0.0);
+  drop-shadow: true;
+  shape-parameter: 15.0px;}
+.tag {
+  outline-color: rgb(204,204,204);
+  outline-width: 1.0px;
+  background: rgb(255,255,255);
+  font-size: 12.0px;
+  font-style: plain;
+  text-color: rgb(0,0,0);
+  label-outline-color: rgba(0,0,0, 0.0);
+  label-outline-width: 1.0px;
+  label-background-color: rgba(0,0,0, 0.0);
+  drop-shadow: true;}
+.equivalence-arc {
+  path-color: rgb(0,0,0);
+  path-width: 1.0px;
+  arrow-scale: 1.0px;
+  path-corner-radius: 0.0px;}
+.and {
+  font-size: 12.0px;
+  font-style: bold;
+  text-color: rgb(0,0,0);
+  outline-color: rgb(204,204,204);
+  outline-width: 1.0px;
+  background: rgb(255,255,255);
+  port-color: rgb(0,0,0);
+  port-width: 1.0px;
+  drop-shadow: true;}
+.or {
+  font-size: 12.0px;
+  font-style: bold;
+  text-color: rgb(0,0,0);
+  outline-color: rgb(204,204,204);
+  outline-width: 1.0px;
+  background: rgb(255,255,255);
+  port-color: rgb(0,0,0);
+  port-width: 1.0px;
+  drop-shadow: true;}
+.not {
+  font-size: 12.0px;
+  font-style: bold;
+  text-color: rgb(0,0,0);
+  outline-color: rgb(204,204,204);
+  outline-width: 1.0px;
+  background: rgb(255,255,255);
+  port-color: rgb(0,0,0);
+  port-width: 1.0px;
+  drop-shadow: true;}
+.logic-arc {
+  path-color: rgb(0,0,0);
+  path-width: 1.0px;
+  arrow-scale: 1.0px;
+  path-corner-radius: 0.0px;}
+.compartment {
+  outline-color: rgb(0,0,0);
+  outline-width: 4.0px;
+  background: rgb(188,221,255);
+  font-size: 16.0px;
+  font-style: plain;
+  text-color: rgb(0,0,0);
+  label-outline-color: rgba(0,0,0, 0.0);
+  label-outline-width: 1.0px;
+  label-background-color: rgba(0,0,0, 0.0);
+  drop-shadow: false;}
+.submap {
+  outline-color: rgb(204,204,204);
+  outline-width: 1.0px;
+  background: rgb(255,255,255);
+  font-size: 12.0px;
+  font-style: plain;
+  text-color: rgb(0,0,0);
+  label-outline-color: rgba(0,0,0, 0.0);
+  label-outline-width: 1.0px;
+  label-background-color: rgba(0,0,0, 0.0);
+  drop-shadow: true;}
+.terminal {
+  font-size: 10.0px;
+  font-style: plain;
+  text-color: rgb(0,0,0);
+  outline-color: rgb(0,0,0);
+  outline-width: 1.0px;
+  background: rgb(255,255,255);
+  width: 20.0px;
+  height: 20.0px;}
+.annotation {
+  outline-color: rgb(204,204,204);
+  outline-width: 1.0px;
+  background: rgb(255,255,255);
+  font-size: 12.0px;
+  font-style: plain;
+  text-color: rgb(0,0,0);
+  label-outline-color: rgba(0,0,0, 0.0);
+  label-outline-width: 1.0px;
+  label-background-color: rgba(0,0,0, 0.0);
+  drop-shadow: true;}
+.state-variable {
+  font-size: 10.0px;
+  font-style: plain;
+  text-color: rgb(0,0,0);
+  label-outline-color: rgb(153,153,153);
+  label-outline-width: 1.0px;
+  label-background-color: rgb(255,255,255);
+  state-variable-shape: capsule;}
+.unit-of-information {
+  font-size: 10.0px;
+  font-style: plain;
+  text-color: rgb(0,0,0);
+  label-outline-color: rgb(153,153,153);
+  label-outline-width: 1.0px;
+  label-background-color: rgb(255,255,255);}
+.callout-label {
+  font-size: 12.0px;
+  font-style: plain;
+  text-color: rgb(0,0,0);
+  label-outline-color: rgb(204,204,204);
+  label-outline-width: 1.0px;
+  label-background-color: rgb(255,255,255);
+  drop-shadow: true;}
+.consumption {
+  path-color: rgb(0,0,0);
+  path-width: 1.0px;
+  arrow-scale: 1.0px;
+  path-corner-radius: 0.0px;}
+.production {
+  path-color: rgb(0,0,0);
+  path-width: 1.0px;
+  arrow-scale: 1.0px;
+  path-corner-radius: 0.0px;}
+.modulation {
+  path-color: rgb(0,0,0);
+  path-width: 1.0px;
+  arrow-scale: 1.0px;
+  path-corner-radius: 0.0px;}
+.stimulation {
+  path-color: rgb(0,0,0);
+  path-width: 1.0px;
+  arrow-scale: 1.0px;
+  path-corner-radius: 0.0px;}
+.catalysis {
+  path-color: rgb(0,0,0);
+  path-width: 1.0px;
+  arrow-scale: 1.0px;
+  path-corner-radius: 0.0px;}
+.inhibition {
+  path-color: rgb(0,0,0);
+  path-width: 1.0px;
+  arrow-scale: 1.0px;
+  path-corner-radius: 0.0px;}
+.necessary-stimulation {
+  path-color: rgb(0,0,0);
+  path-width: 1.0px;
+  arrow-scale: 1.0px;
+  path-corner-radius: 0.0px;}
+.cardinality {
+  font-size: 10.0px;
+  font-style: plain;
+  text-color: rgb(0,0,0);
+  label-outline-color: rgb(153,153,153);
+  label-outline-width: 1.0px;
+  label-background-color: rgb(255,255,255);}
+.clone-marker {
+  clone-marker-background: rgb(128,128,128);
+  clone-marker-font-size: 10.0px;
+  clone-marker-font-style: plain;
+  clone-marker-text-color: rgb(255,255,255);}
+map {
+  background-color: rgb(203,233,255);
+  highlight-color: rgb(161,192,87);}

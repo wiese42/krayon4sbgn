@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sbgn xmlns="http://sbgn.org/libsbgn/0.2">
+  <map language="process description">
+    <glyph class="process" id="id1">
+      <bbox h="20.0" w="20.0" x="29.0" y="-71.33045"/>
+      <port id="id2" x="59.0" y="-61.330452"/>
+      <port id="id3" x="19.0" y="-61.330452"/>
+      <port id="id4" x="39.0" y="-61.330452"/>
+    </glyph>
+    <glyph class="simple chemical" id="id5">
+      <label text="S1">
+        <bbox h="18.71" w="19.0" x="-77.0" y="-91.217064"/>
+      </label>
+      <bbox h="53.90741" w="121.0" x="-128.0" y="-108.81576"/>
+      <port id="id6" x="-25.036146" y="-104.14474"/>
+      <port id="id7" x="-18.998133" y="-62.205994"/>
+    </glyph>
+    <glyph class="process" id="id8">
+      <bbox h="20.0" w="20.0" x="29.0" y="-114.14474"/>
+      <port id="id9" x="59.0" y="-104.14474"/>
+      <port id="id10" x="19.0" y="-104.14474"/>
+      <port id="id11" x="39.0" y="-104.14474"/>
+    </glyph>
+    <glyph class="simple chemical" id="id12">
+      <label text="P1">
+        <bbox h="18.71" w="19.0" x="130.0" y="-91.217064"/>
+      </label>
+      <bbox h="53.90741" w="121.0" x="79.0" y="-108.81576"/>
+      <port id="id13" x="90.63791" y="-101.95588"/>
+      <port id="id14" x="91.21661" y="-61.330452"/>
+    </glyph>
+    <glyph class="macromolecule" id="id15">
+      <label text="enzyme1">
+        <bbox h="18.71" w="53.0" x="12.5" y="-187.38928"/>
+      </label>
+      <bbox h="60.0" w="100.0" x="-11.0" y="-208.03429"/>
+      <port id="id16" x="39.0" y="-178.03429"/>
+    </glyph>
+    <glyph class="macromolecule" id="id17">
+      <label text="enzyme2">
+        <bbox h="18.71" w="53.0" x="12.5" y="5.4439845"/>
+      </label>
+      <bbox h="60.0" w="100.0" x="-11.0" y="-15.201015"/>
+      <port id="id18" x="39.0" y="14.798985"/>
+    </glyph>
+    <arc class="consumption" id="id19" source="id6" target="id10">
+      <start x="-18.80152" y="-104.14474"/>
+      <end x="19.0" y="-104.14474"/>
+    </arc>
+    <arc class="production" id="id20" source="id9" target="id13">
+      <start x="59.0" y="-104.14474"/>
+      <end x="75.372185" y="-103.01203"/>
+    </arc>
+    <arc class="consumption" id="id21" source="id14" target="id2">
+      <start x="88.679184" y="-61.330452"/>
+      <end x="59.0" y="-61.330452"/>
+    </arc>
+    <arc class="production" id="id22" source="id3" target="id7">
+      <start x="19.0" y="-61.330452"/>
+      <end x="-2.7132976" y="-61.830765"/>
+    </arc>
+    <arc class="catalysis" id="id23" source="id16" target="id11">
+      <start x="39.0" y="-148.03429"/>
+      <end x="39.0" y="-126.14474"/>
+    </arc>
+    <arc class="catalysis" id="id24" source="id18" target="id4">
+      <start x="39.0" y="-15.201015"/>
+      <end x="39.0" y="-39.330452"/>
+    </arc>
+  </map>
+</sbgn>

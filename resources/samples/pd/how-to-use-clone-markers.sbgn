@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sbgn xmlns="http://sbgn.org/libsbgn/0.2">
+    <map language="process description">
+        <glyph class="simple chemical" id="id1">
+            <label text="Glucose">
+                <bbox w="50.0" h="18.71" x="25.0" y="130.645"/>
+            </label>
+            <bbox w="60.0" h="60.0" x="20.0" y="110.0"/>
+            <port id="id2" x="50.0" y="140.0"/>
+        </glyph>
+        <glyph class="annotation" id="id4">
+            <label text="Clone markers can be set or unset by dragging the clone marker feature on a node. Alternatively, use action &quot;Toggle Clone Marker&quot;, or even better action &quot;Auto-Assign Clone Markers&quot;  (see Help)."/>
+            <callout target="id3">
+                <point x="87.5" y="251.5"/>
+            </callout>
+            <bbox w="185.08589" h="121.72227" x="-29.0" y="313.0"/>
+        </glyph>
+        <glyph class="simple chemical" id="id3">
+            <label text="ATP">
+                <bbox w="26.0" h="18.71" x="87.0" y="220.645"/>
+            </label>
+            <clone/>
+            <bbox w="60.0" h="60.0" x="70.0" y="200.0"/>
+            <port id="id5" x="100.0" y="230.0"/>
+        </glyph>
+        <glyph class="annotation" id="id7">
+            <label text="To assign or edit a clone marker label, double click in the clone marker region of a node."/>
+            <callout target="id6">
+                <point x="248.5" y="262.5"/>
+            </callout>
+            <bbox w="144.0" h="111.71" x="260.0" y="320.0"/>
+        </glyph>
+        <glyph class="simple chemical" id="id6">
+            <label text="ADP">
+                <bbox w="28.0" h="18.71" x="216.0" y="220.645"/>
+            </label>
+            <clone>
+                <label text="marker">
+                    <bbox w="35.0" h="16.26" x="212.5" y="242.27"/>
+                </label>
+            </clone>
+            <bbox w="60.0" h="60.0" x="200.0" y="200.0"/>
+            <port id="id8" x="230.0" y="230.0"/>
+        </glyph>
+        <glyph class="simple chemical" id="id9">
+            <label text="Glucose&#xA;6P">
+                <bbox w="50.0" h="33.41" x="255.0" y="123.295"/>
+            </label>
+            <bbox w="60.0" h="60.0" x="250.0" y="110.0"/>
+            <port id="id10" x="280.0" y="140.0"/>
+            <port id="id11" x="280.0" y="140.0"/>
+        </glyph>
+        <glyph class="simple chemical" id="id12">
+            <label text="Fructose&#xA;6P">
+                <bbox w="52.0" h="33.41" x="454.0" y="123.295"/>
+            </label>
+            <bbox w="60.0" h="60.0" x="450.0" y="110.0"/>
+            <port id="id13" x="480.0" y="140.0"/>
+            <port id="id14" x="480.0" y="140.0"/>
+        </glyph>
+        <glyph class="annotation" id="id16">
+            <label text="To quickly remove all clone markers select all nodes with clone markers, then use action &quot;Toggle Clone Marker&quot;."/>
+            <callout target="id15">
+                <point x="533.5" y="255.5"/>
+            </callout>
+            <bbox w="158.04907" h="110.76521" x="455.0" y="316.0"/>
+        </glyph>
+        <glyph class="simple chemical" id="id15">
+            <label text="ATP">
+                <bbox w="26.0" h="18.71" x="517.0" y="220.645"/>
+            </label>
+            <clone/>
+            <bbox w="60.0" h="60.0" x="500.0" y="200.0"/>
+            <port id="id17" x="530.0" y="230.0"/>
+        </glyph>
+        <glyph class="simple chemical" id="id18">
+            <label text="ADP">
+                <bbox w="28.0" h="18.71" x="646.0" y="220.645"/>
+            </label>
+            <clone/>
+            <bbox w="60.0" h="60.0" x="630.0" y="200.0"/>
+            <port id="id19" x="660.0" y="230.0"/>
+        </glyph>
+        <glyph class="simple chemical" id="id20">
+            <label text="Fructose&#xA;1,6P">
+                <bbox w="52.0" h="33.41" x="664.0" y="123.295"/>
+            </label>
+            <bbox w="60.0" h="60.0" x="660.0" y="110.0"/>
+            <port id="id21" x="690.0" y="140.0"/>
+        </glyph>
+        <glyph class="process" id="id22">
+            <bbox w="40.0" h="20.0" x="140.0" y="130.0"/>
+            <port id="id23" x="140.0" y="140.0"/>
+            <port id="id24" x="180.0" y="140.0"/>
+        </glyph>
+        <glyph class="process" id="id25">
+            <bbox w="40.0" h="20.0" x="350.0" y="130.0"/>
+            <port id="id26" x="350.0" y="140.0"/>
+            <port id="id27" x="390.0" y="140.0"/>
+        </glyph>
+        <glyph class="process" id="id28">
+            <bbox w="40.0" h="20.0" x="570.0" y="130.0"/>
+            <port id="id29" x="570.0" y="140.0"/>
+            <port id="id30" x="610.0" y="140.0"/>
+        </glyph>
+        <arc class="consumption" id="id31" source="id2" target="id23">
+            <start x="80.0" y="140.0"/>
+            <end x="140.0" y="140.0"/>
+        </arc>
+        <arc class="consumption" id="id32" source="id5" target="id23">
+            <start x="112.167336" y="202.6235"/>
+            <end x="140.0" y="140.0"/>
+        </arc>
+        <arc class="consumption" id="id33" source="id10" target="id26">
+            <start x="310.0" y="140.0"/>
+            <end x="350.0" y="140.0"/>
+        </arc>
+        <arc class="consumption" id="id34" source="id13" target="id29">
+            <start x="510.0" y="140.0"/>
+            <end x="570.0" y="140.0"/>
+        </arc>
+        <arc class="consumption" id="id35" source="id17" target="id29">
+            <start x="542.16736" y="202.6235"/>
+            <end x="570.0" y="140.0"/>
+        </arc>
+        <arc class="production" id="id36" source="id24" target="id8">
+            <start x="180.0" y="140.0"/>
+            <end x="209.18222" y="192.52798"/>
+        </arc>
+        <arc class="production" id="id37" source="id24" target="id11">
+            <start x="180.0" y="140.0"/>
+            <end x="237.0" y="140.0"/>
+        </arc>
+        <arc class="production" id="id38" source="id27" target="id14">
+            <start x="390.0" y="140.0"/>
+            <end x="437.0" y="140.0"/>
+        </arc>
+        <arc class="production" id="id39" source="id30" target="id19">
+            <start x="610.0" y="140.0"/>
+            <end x="639.1822" y="192.52798"/>
+        </arc>
+        <arc class="production" id="id40" source="id30" target="id21">
+            <start x="610.0" y="140.0"/>
+            <end x="647.0" y="140.0"/>
+        </arc>
+    </map>
+</sbgn>

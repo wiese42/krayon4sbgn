@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sbgn xmlns="http://sbgn.org/libsbgn/0.2">
+    <map language="process description">
+        <glyph class="annotation" id="id2">
+            <label text="1. A complex can contain other entities. Members of a complex move along when the complex is moved."/>
+            <callout target="id1">
+                <point x="318.2939" y="584.0586"/>
+            </callout>
+            <bbox w="177.62794" h="85.31792" x="160.28725" y="441.35913"/>
+        </glyph>
+        <glyph class="annotation" id="id3">
+            <label text="2. To add members, drag them onto the complex. To remove members select them first, then either delete them or move them out of the complex."/>
+            <callout target="id1">
+                <point x="492.0694" y="580.83563"/>
+            </callout>
+            <bbox w="200.18869" h="104.6557" x="435.1653" y="422.02136"/>
+        </glyph>
+        <glyph class="annotation" id="id4">
+            <label text="3. A complex can be locked and unlocked again. In locked state the members cannot be selected or targeted anymore. Once your complex is designed it is a good idea to lock it."/>
+            <callout target="id1">
+                <point x="490.99506" y="645.2949"/>
+            </callout>
+            <bbox w="200.18869" h="121.84484" x="548.1653" y="568.67706"/>
+        </glyph>
+        <glyph class="annotation" id="id5">
+            <label text="5. Complexes can also be created by the use of the &quot;Convert to Complex&quot; action. See Help for more details."/>
+            <callout target="id1">
+                <point x="315.8807" y="681.82184"/>
+            </callout>
+            <bbox w="156.14153" h="106.804344" x="87.02378" y="632.85834"/>
+        </glyph>
+        <glyph class="annotation" id="id6">
+            <label text="4. Complexes can contain complexes themselves."/>
+            <callout target="id1">
+                <point x="489.8226" y="752.72705"/>
+            </callout>
+            <bbox w="153.99287" h="78.871994" x="548.1653" y="724.3753"/>
+        </glyph>
+        <glyph class="annotation" id="id7">
+            <label text="The label of a complex can be moved by first selecting it via Shift-click. The selected label can then be moved by left-dragging it."/>
+            <callout target="id1">
+                <point x="315.78256" y="773.13916"/>
+            </callout>
+            <bbox w="186.22252" h="117.54756" x="71.94279" y="782.07477"/>
+        </glyph>
+        <glyph class="complex" id="id1">
+            <label text="Ca/Cam/gCaMKII complex">
+                <bbox w="157.0" h="19.93" x="324.6653" y="762.1448"/>
+            </label>
+            <bbox w="210.0" h="213.39772" x="298.1653" y="568.67706"/>
+            <glyph class="macromolecule" id="id8">
+                <label text="γCaMKII">
+                    <bbox w="53.0" h="19.93" x="376.6653" y="608.71204"/>
+                </label>
+                <bbox w="120.0" h="60.0" x="343.1653" y="588.67706"/>
+            </glyph>
+            <glyph class="complex" id="id9">
+                <label text="Ca/CaM complex">
+                    <bbox w="104.0" h="19.93" x="351.6653" y="738.2735"/>
+                </label>
+                <bbox w="150.0" h="89.52643" x="328.1653" y="668.67706"/>
+                <glyph class="macromolecule" id="id10">
+                    <label text="CaM">
+                        <bbox w="31.0" h="19.93" x="417.6653" y="693.4807"/>
+                    </label>
+                    <bbox w="80.0" h="60.0" x="393.1653" y="673.4457"/>
+                </glyph>
+                <glyph class="simple chemical" id="id11">
+                    <label text="Ca++">
+                        <bbox w="36.0" h="19.93" x="335.1653" y="693.4807"/>
+                    </label>
+                    <bbox w="40.0" h="40.0" x="333.1653" y="683.4457"/>
+                </glyph>
+            </glyph>
+        </glyph>
+    </map>
+</sbgn>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="krayon-icons">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/krayon-icons/krayon-icons.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

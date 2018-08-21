@@ -1,0 +1,21 @@
+--Metabolic network
+REACTION_IRR_1_1, Reaction-PD01-IRR.sbgn, Irreversible reaction
+CATALYSIS_IRR_1_1, Catalysis-PD01-IRR-1x1.sbgn, Catalysis: irreversible reaction
+CATALYSIS_REV_1_1, Catalysis-PD02-REV-1x1.sbgn, Catalysis: reversible reaction
+#INHIBITION_IRR_1_1, Inhibition-PD01-enz.sbgn, Inhibition: irreversible metabolic reaction
+CATALYSIS_IRR_2_2, Catalysis-PD01-IRR-2x2.sbgn, Catalysis: multiple substrates and products
+CATALYSIS_2_REV_1_1, Catalysis2-PD-REV.sbgn, Catalysis: reversible reaction
+#PHOSPHORYLATION_2_2, Phosphorylation-2x2-krayon.sbgn, Phosphorylation
+--Signalling network
+#PROTEIN_PHOSPHORYLATION_1_1, ProteinPhosphorylation-krayon.sbgn, Protein phosphorylation
+PROTEIN_PHOSPHORYLATION_2_2, ProteinPhosphorylation-2x2-krayon.sbgn, Protein phosphorylation
+#ProteinPhosphorylation-PD01-Y.sbgn, Protein phosphorylation
+OLIGOMERISATION, Homodimerisation-PD01.sbgn, Oligomerisation
+COMPLEX_ASSOCIATION, ComplexFormation-PD01.sbgn, Complex association
+COMPLEX_DISSOCIATION, ComplexDissociation-PD01.sbgn, Complex dissociation
+--Gene regulatory network
+TRANSCRIPTION, Transcription-PD01.sbgn, Direct regulation of a target gene by a transcription factor
+TRANSLATION, Translation-PD01.sbgn, Translation
+--Transport
+PASSIVE_TRANSPORT, PassiveTransport-PD01.sbgn, Passive Transport
+ACTIVE_TRANSPORT, ActiveTransport-PD01.sbgn, Active Transport

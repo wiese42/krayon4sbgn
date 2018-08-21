@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sbgn xmlns="http://sbgn.org/libsbgn/0.2">
+    <map language="process description">
+        <glyph class="annotation" id="id3">
+            <label text="A monomer can be transformed into &#xA;a multimer or vice versa by dragging&#xA;the multimer feature from the palette&#xA;onto an entity of appropriate type."/>
+            <callout target="id1">
+                <point x="1082.05" y="596.53455"/>
+            </callout>
+            <bbox w="219.0" h="94.543335" x="1076.9406" y="457.30618"/>
+        </glyph>
+        <glyph class="macromolecule multimer" id="id1">
+            <label text="STAT1α">
+                <bbox w="47.0" h="18.71" x="1039.6072" y="608.66113"/>
+            </label>
+            <bbox w="100.0" h="60.0" x="1013.10724" y="588.0162"/>
+            <glyph class="unit of information" id="id2">
+                <label text="N:2"/>
+                <bbox w="33.0" h="25.26" x="1024.1072" y="575.38617"/>
+            </glyph>
+            <port id="id4" x="1063.1072" y="618.0162"/>
+        </glyph>
+        <glyph class="process" id="id5">
+            <bbox w="40.0" h="20.0" x="915.97516" y="608.0162"/>
+            <port id="id6" x="955.97516" y="618.0162"/>
+            <port id="id7" x="915.97516" y="618.0162"/>
+        </glyph>
+        <glyph class="macromolecule" id="id8">
+            <label text="STAT1α">
+                <bbox w="47.0" h="18.71" x="785.34314" y="608.6612"/>
+            </label>
+            <bbox w="100.0" h="60.0" x="758.84314" y="588.0162"/>
+            <port id="id9" x="808.84314" y="618.0162"/>
+        </glyph>
+        <glyph class="annotation" id="id10">
+            <label text="Cardinality labels can be added to&#xA;arcs by dragging a cardinality label&#xA;from the palette onto an arc of&#xA;appropriate type. ">
+                <bbox w="193.0" h="62.81" x="757.8085" y="469.71286"/>
+            </label>
+            <bbox w="203.33333" h="94.166664" x="752.64185" y="454.03452"/>
+        </glyph>
+        <arc class="production" id="id11" source="id6" target="id4">
+            <start x="955.97516" y="618.0162"/>
+            <end x="1000.10724" y="618.0162"/>
+        </arc>
+        <arc class="consumption" id="id12" source="id9" target="id7">
+            <glyph class="cardinality" id="id13">
+                <label text="2"/>
+                <bbox w="14.0" h="14.26" x="880.4091" y="603.75616"/>
+            </glyph>
+            <start x="858.84314" y="618.0162"/>
+            <end x="915.97516" y="618.0162"/>
+        </arc>
+    </map>
+</sbgn>

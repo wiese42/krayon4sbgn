@@ -1,0 +1,26 @@
+
+Copyright 2018 Roland Wiese
+
+This software with the exception of the 3rd party components listed below is licensed under the Apache License, Version 2.0 (the "License");
+you may not use this software except in compliance with the License. You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and limitations under the License.</p>
+
+Open source 3rd party components included in the repository and the binary distribution:
+* FindBugs, LGPL
+* FreeHEP VectorGraphics, LGPL
+* JH Labs Java Image Filters, Apache License, Version 2.0
+* Klaxon JSON Parser, Apache License, Version 2.0
+* Kotlin Stdlib, Apache License, Version 2.0
+* LibSBGN, Apache License, Version 2.0
+* ph-css, Apache License, Version 2.0
+* SBGN Bricks, MIT License
+* SLF4J, MIT License
+
+Commercial 3rd party components NOT included in the repository, but included in the binary distribution
+* IconExperience O-Collection Icons, License: https://www.iconexperience.com/o_collection/license
+* Files for Java by yWorks. Commercial License: https://www.yworks.com/products/yfiles-for-java/sla

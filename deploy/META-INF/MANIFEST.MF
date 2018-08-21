@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Class-Path: lib/jsr305-3.0.2.jar
+  lib/batik.jar lib/vectorgraphics.jar
+  lib/yfiles-for-java.jar
+  lib/kotlin-stdlib.jar
+  lib/kotlin-reflect.jar
+  lib/kotlin-test.jar
+  lib/kotlin-stdlib-jdk8.jar
+  lib/kotlin-stdlib-jdk7.jar
+  lib/slf4j-api-1.7.25.jar
+  lib/ph-commons-9.0.2.jar
+  lib/Filters.jar
+  lib/ph-css-6.1.1.jar
+  lib/org.sbgn.jar
+  lib/slf4j-nop-1.7.7.jar
+  lib/klaxon-3.0.1.jar
+  lib/material-ui-swing.jar
+  lib/krayon-icons.jar
+Main-Class: krayon.editor.sbgn.KrayonForSbgn

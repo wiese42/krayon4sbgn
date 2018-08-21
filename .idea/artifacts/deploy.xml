@@ -1,0 +1,30 @@
+<component name="ArtifactManager">
+  <artifact name="deploy">
+    <output-path>$PROJECT_DIR$/deploy/jar</output-path>
+    <properties id="ant-postprocessing">
+      <options enabled="true">
+        <file>file://$PROJECT_DIR$/deploy/scripts/build.xml</file>
+        <target>post-deploy</target>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="library" level="project" name="batik" />
+      <element id="library" level="project" name="jh-filters" />
+      <element id="library" level="project" name="klaxon" />
+      <element id="library" level="project" name="KotlinJavaRuntime" />
+      <element id="library" level="project" name="libsbgn" />
+      <element id="library" level="project" name="material-ui-swing" />
+      <element id="library" level="project" name="ph-css" />
+      <element id="library" level="project" name="vectorgraphics" />
+      <element id="file-copy" path="$PROJECT_DIR$/yfiles-lib-and-license/lib/yfiles-for-java.jar" />
+      <element id="archive" name="main.jar">
+        <element id="module-output" name="yfiles-lib-and-license" />
+        <element id="module-output" name="krayon-for-sbgn" />
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/deploy/META-INF/MANIFEST.MF" />
+        </element>
+      </element>
+      <element id="library" level="project" name="krayon-icons" />
+    </root>
+  </artifact>
+</component>

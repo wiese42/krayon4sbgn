@@ -1,0 +1,38 @@
+[
+  { "id": "OPEN_SBGN", "icon": "folder_open"  },
+  { "id": "SAVE_SBGN", "icon": "floppy_disk" },
+  { "id": "SAVE_PLAIN_SBGN", "icon": "floppy_disk_forbidden" },
+  { "id": "PRINT_PREVIEW", "icon": "printer" },
+  { "id": "GRAPHICS_EXPORT_PREVIEW", "icon": "uninstall" },
+  { "id": "ZOOM_IN", "icon": "zoom_in" },
+  { "id": "ZOOM_OUT", "icon": "zoom_out" },
+  { "id": "ZOOM_TO_NORMAL", "icon": "view_1_1" },
+  { "id": "FIT_GRAPH_BOUNDS", "icon": "fit_to_size" },
+  { "id": "UNDO", "icon": "undo" },
+  { "id": "REDO", "icon": "redo" },
+  { "id": "ACTIVATE_SBGN_STRICT_MODE", "icon": "security_badge_forbidden", "selected-icon": "security_badge"},
+  { "id": "SHOW_HELP", "icon": "box_surprise" },
+  { "id": "SHOW_SETTINGS", "icon": "gearwheels" },
+
+  { "id": "APPLY_STYLE", "icon": "check" },
+  { "id": "NEXT_STYLE_IN_USE", "icon": "navigate_right" },
+
+  { "id": "ICON.NAVIGATE_RIGHT", "icon": "navigate_right" },
+  { "id": "ICON.NAVIGATE_LEFT", "icon": "navigate_left" },
+
+  { "id": "ICON.NEW_STYLE", "icon": "document_tag" },
+  { "id": "ICON.EDIT_STYLE",   "icon": "pencil_forbidden", "selected-icon": "pencil" },
+  { "id": "ICON.DELETE_STYLE", "icon": "delete" },
+
+  { "id": "ICON.PAGE_FORMAT", "icon": "document_gear" },
+  { "id": "ICON.ZOOM_IN", "icon": "zoom_in" },
+  { "id": "ICON.ZOOM_OUT", "icon": "zoom_out" },
+  { "id": "ICON.ZOOM_TO_FIT_PAGE", "icon": "document_size" },
+  { "id": "ICON.ZOOM_TO_FIT_PAGE_WIDTH", "icon": "document_width" },
+
+
+  { "id": "OPTIONPANE.INFORMATION", "icon": "speech_balloon_answer" },
+  { "id": "OPTIONPANE.WARNING", "icon": "sign_stop" },
+  { "id": "OPTIONPANE.ERROR", "icon": "bomb" }
+
+]

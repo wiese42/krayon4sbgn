@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="yfiles-for-java">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/yfiles-lib-and-license/lib/yfiles-for-java.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="file://$PROJECT_DIR$/../yFiles-for-Java-Complete-3.1/doc/javadoc" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>

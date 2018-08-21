@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sbgn xmlns="http://sbgn.org/libsbgn/0.2">
+    <map language="process description">
+        <glyph class="process" id="id1">
+            <bbox w="40.0" h="20.0" x="308.0" y="168.0"/>
+            <port id="id2" x="308.0" y="178.0"/>
+            <port id="id3" x="348.0" y="178.0"/>
+        </glyph>
+        <glyph class="annotation" id="id5">
+            <label text="1. Create an arc by dragging&#xA;unselected node A.  Click the upper&#xA;process node to create a &#xA;consumation arc."/>
+            <callout target="id4">
+                <point x="160.0" y="216.645"/>
+            </callout>
+            <bbox w="217.0" h="93.71" x="51.5" y="54.935"/>
+        </glyph>
+        <glyph class="annotation" id="id6">
+            <label text="2. Repeat step 1, but this time&#xA;press SPACE while arc&#xA;creation is in progress. This will&#xA;change the arc type to production&#xA;and reverse its direction.&#xA;"/>
+            <callout target="id4">
+                <point x="137.0" y="230.645"/>
+            </callout>
+            <bbox w="187.0" h="104.71" x="-97.0" y="179.29"/>
+        </glyph>
+        <glyph class="annotation" id="id7">
+            <label text="3. Repeat step 2, but this time press&#xA;SPACE until a stimulation arc appears.&#xA;Click on the lower process node to&#xA;connect to a regulation port."/>
+            <callout target="id4">
+                <point x="150.0" y="253.645"/>
+            </callout>
+            <bbox w="210.0" h="109.71" x="35.5" y="314.645"/>
+        </glyph>
+        <glyph class="simple chemical" id="id4">
+            <label text="A">
+                <bbox w="11.0" h="18.71" x="154.5" y="222.29"/>
+            </label>
+            <bbox w="60.0" h="60.0" x="130.0" y="201.645"/>
+        </glyph>
+        <glyph class="annotation" id="id9">
+            <label text="4. Start arc creation. Click&#xA;on the empty canvas to&#xA;end the consumation arc at &#xA;a newly created process node.&#xA;"/>
+            <callout target="id8">
+                <point x="484.0" y="216.645"/>
+            </callout>
+            <bbox w="173.0" h="77.71" x="421.0" y="60.935"/>
+        </glyph>
+        <glyph class="annotation" id="id10">
+            <label text="5. Start arc creation, use SPACE&#xA;to switch to arc type logic. Click on&#xA;empty canvas to end logic arc at newly&#xA;created AND node."/>
+            <callout target="id8">
+                <point x="484.0" y="249.645"/>
+            </callout>
+            <bbox w="230.0" h="94.71" x="392.0" y="324.645"/>
+        </glyph>
+        <glyph class="simple chemical" id="id8">
+            <label text="B">
+                <bbox w="12.0" h="18.71" x="481.0" y="222.29"/>
+            </label>
+            <bbox w="60.0" h="60.0" x="457.0" y="201.645"/>
+        </glyph>
+        <glyph class="process" id="id11">
+            <bbox w="40.0" h="20.0" x="308.0" y="221.645"/>
+            <port id="id12" x="308.0" y="231.645"/>
+            <port id="id13" x="348.0" y="231.645"/>
+        </glyph>
+        <glyph class="process" id="id14">
+            <bbox w="20.0" h="40.0" x="318.0" y="275.29"/>
+            <port id="id15" x="328.0" y="275.29"/>
+            <port id="id16" x="328.0" y="315.29"/>
+        </glyph>
+        <glyph class="annotation" id="id18">
+            <label text="6. Drag a Catalysis arc from the&#xA;palette and drop it onto C.&#xA;This starts arc creation of type&#xA;catalysis. Now move the mouse and&#xA;continue as described above."/>
+            <callout target="id17">
+                <point x="8.0" y="631.645"/>
+            </callout>
+            <bbox w="255.0" h="111.71" x="-95.0" y="471.935"/>
+        </glyph>
+        <glyph class="simple chemical" id="id17">
+            <label text="C">
+                <bbox w="13.0" h="18.71" x="6.5" y="635.29"/>
+            </label>
+            <bbox w="60.0" h="60.0" x="-17.0" y="614.645"/>
+        </glyph>
+        <glyph class="annotation" id="id20">
+            <label text="7. Drag a production arc&#xA;from the palette and&#xA;drop it on this arc to&#xA;change its type. This will&#xA;make the process reversible."/>
+            <callout target="id19">
+                <point x="402.5" y="635.145"/>
+            </callout>
+            <bbox w="176.0" h="87.71" x="320.0" y="484.935"/>
+        </glyph>
+        <glyph class="simple chemical" id="id19">
+            <label text="D">
+                <bbox w="13.0" h="18.71" x="331.5" y="635.29"/>
+            </label>
+            <bbox w="60.0" h="60.0" x="308.0" y="614.645"/>
+            <port id="id21" x="338.0" y="644.645"/>
+        </glyph>
+        <glyph class="process" id="id22">
+            <bbox w="40.0" h="20.0" x="424.25" y="634.645"/>
+            <port id="id23" x="424.25" y="644.645"/>
+            <port id="id24" x="464.25" y="644.645"/>
+        </glyph>
+        <glyph class="simple chemical" id="id25">
+            <label text="E">
+                <bbox w="12.0" h="18.71" x="544.5" y="635.29"/>
+            </label>
+            <bbox w="60.0" h="60.0" x="520.5" y="614.645"/>
+            <port id="id26" x="550.5" y="644.645"/>
+        </glyph>
+        <glyph class="process" id="id27">
+            <bbox w="20.0" h="40.0" x="165.5" y="624.645"/>
+            <port id="id28" x="175.5" y="624.645"/>
+            <port id="id29" x="175.5" y="664.645"/>
+        </glyph>
+        <arc class="consumption" id="id30" source="id21" target="id23">
+            <start x="368.0" y="644.645"/>
+            <end x="424.25" y="644.645"/>
+        </arc>
+        <arc class="production" id="id31" source="id24" target="id26">
+            <start x="464.25" y="644.645"/>
+            <end x="507.5" y="644.645"/>
+        </arc>
+    </map>
+</sbgn>
