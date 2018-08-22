@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/krayon-for-sbgn.iml" filepath="$PROJECT_DIR$/.idea/krayon-for-sbgn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/krayon4sbgn.iml" filepath="$PROJECT_DIR$/.idea/krayon4sbgn.iml" />
       <module fileurl="file://$PROJECT_DIR$/yfiles-lib-and-license/yfiles-lib-and-license.iml" filepath="$PROJECT_DIR$/yfiles-lib-and-license/yfiles-lib-and-license.iml" />
     </modules>
   </component>

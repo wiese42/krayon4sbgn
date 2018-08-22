@@ -19,7 +19,7 @@
       <element id="file-copy" path="$PROJECT_DIR$/yfiles-lib-and-license/lib/yfiles-for-java.jar" />
       <element id="archive" name="main.jar">
         <element id="module-output" name="yfiles-lib-and-license" />
-        <element id="module-output" name="krayon-for-sbgn" />
+        <element id="module-output" name="krayon4sbgn" />
         <element id="directory" name="META-INF">
           <element id="file-copy" path="$PROJECT_DIR$/deploy/META-INF/MANIFEST.MF" />
         </element>
