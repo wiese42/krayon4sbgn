@@ -74,12 +74,12 @@ object SetLookAndFeel : ApplicationCommand("SET_LOOK_AND_FEEL") {
             UIManager.put("text", Color(230, 230, 230))
             UIManager.put("Table.foreground", Color(230, 230, 230))
             UIManager.put("Table.alternateRowColor", Color(70,70,70))
-            
+
             UIManager.put("OptionPane.informationIcon", IconManager.iconMap["OPTIONPANE.INFORMATION"]?.icon32)
             UIManager.put("OptionPane.errorIcon", IconManager.iconMap["OPTIONPANE.ERROR"]?.icon32)
             UIManager.put("OptionPane.questionIcon", IconManager.iconMap["OPTIONPANE.QUESTION"]?.icon32)
             UIManager.put("OptionPane.warningIcon", IconManager.iconMap["OPTIONPANE.WARNING"]?.icon32)
-            
+
             for (info in javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus" == info.name) {
                     javax.swing.UIManager.setLookAndFeel(info.className)

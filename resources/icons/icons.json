@@ -33,6 +33,7 @@
 
   { "id": "OPTIONPANE.INFORMATION", "icon": "speech_balloon_answer" },
   { "id": "OPTIONPANE.WARNING", "icon": "sign_stop" },
-  { "id": "OPTIONPANE.ERROR", "icon": "bomb" }
+  { "id": "OPTIONPANE.ERROR", "icon": "bomb" },
+  { "id": "OPTIONPANE.QUESTION", "icon": "symbol_questionmark" }
 
 ]
