@@ -82,8 +82,8 @@ class StyleManagementToolBar(val styleManager: StyleManager<SbgnType>, val palet
 
         add(styleComboBox)
         //add(Box.createHorizontalGlue())
-        addAction(NextStyleInUse.getAction(Application.focusedGraphComponent!!).apply { icon = NextStyleInUse.icon16 })
-        addAction(ApplyStyle.getAction(Application.focusedGraphComponent!!).apply { icon = ApplyStyle.icon16 })
+        //addAction(NextStyleInUse.getAction(Application.focusedGraphComponent!!).apply { icon = NextStyleInUse.icon16 })
+        addAction(ApplyStyleToSelection.getAction(Application.focusedGraphComponent!!).apply { icon = ApplyStyleToSelection.icon16 })
 
         newAction = object : AbstractAction("New") {
             init {
@@ -304,7 +304,7 @@ class StyleManagementToolBar(val styleManager: StyleManager<SbgnType>, val palet
     }
 
     companion object {
-        val ApplyStyle = object:ApplicationCommand("APPLY_STYLE") {
+        val ApplyStyleToSelection = object:ApplicationCommand("APPLY_STYLE_TO_SELECTION") {
             override fun execute(param: Any?) {
                 val graphStyle = SbgnBuilder.styleManager.currentStyle!!
                 if(graphComponent.selection.none()) {
@@ -319,6 +319,18 @@ class StyleManagementToolBar(val styleManager: StyleManager<SbgnType>, val palet
                 graphComponent.graph.invalidateDisplays()
             }
 
+            override fun canExecute(param: Any?) = true
+        }
+
+        val ApplyStyleToDiagram = object:ApplicationCommand("APPLY_STYLE_TO_DIAGRAM") {
+            override fun execute(param: Any?) {
+                val graphStyle = SbgnBuilder.styleManager.currentStyle!!
+                (graphComponent as SbgnGraphComponent).applyStyle(graphStyle)
+                (graphComponent.graph.nodes + graphComponent.graph.edges).forEach {
+                    SbgnBuilder.styleManager.applyStyle(graphStyle, graph, it, false)
+                }
+                graphComponent.graph.invalidateDisplays()
+            }
             override fun canExecute(param: Any?) = true
         }
 

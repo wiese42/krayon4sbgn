@@ -13,10 +13,14 @@
     "description": "A 'unit of information' label will be added to the border of a single selected node that accepts labels of that type",
     "mouse_gesture": "Left-drag a 'unit of information' label from the palette onto a node."
   },
-  { "id": "APPLY_STYLE",
-    "name": "Apply Style",
+  { "id": "APPLY_STYLE_TO_SELECTION",
+    "name": "Apply Style to Selection",
     "description": "Apply current style to selected diagram elements, or if none are selected, to the diagram itself.",
     "mouse_gesture": "Left-drag an element from the palette onto an element in the diagram to adapt its style and type"
+  },
+  { "id": "APPLY_STYLE_TO_DIAGRAM",
+    "name": "Apply Style to Diagram",
+    "description": "Apply current style to all elements of the diagram"
   },
   { "id": "AUTO-ASSIGN_CLONE_MARKERS",
     "name": "Auto-Assign Clone Markers",

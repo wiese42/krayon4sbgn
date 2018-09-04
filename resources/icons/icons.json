@@ -14,7 +14,7 @@
   { "id": "SHOW_HELP", "icon": "box_surprise" },
   { "id": "SHOW_SETTINGS", "icon": "gearwheels" },
 
-  { "id": "APPLY_STYLE", "icon": "check" },
+  { "id": "APPLY_STYLE_TO_SELECTION", "icon": "check" },
   { "id": "NEXT_STYLE_IN_USE", "icon": "navigate_right" },
 
   { "id": "ICON.NAVIGATE_RIGHT", "icon": "navigate_right" },

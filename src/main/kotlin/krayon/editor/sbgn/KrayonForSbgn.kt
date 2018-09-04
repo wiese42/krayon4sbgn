@@ -87,6 +87,8 @@ object KrayonForSbgn {
         val frame = createFrame()
         configure(frame.rootPane)
 
+//        frame.preferredSize = Dimension(1700,956)
+//        frame.pack()
         frame.isVisible = true
 
         SwingUtilities.invokeLater {
@@ -148,7 +150,8 @@ object KrayonForSbgn {
         CommandManager += SbgnPaletteDropInputMode.MirrorHorizontally
         CommandManager += SbgnPaletteDropInputMode.MirrorVertically
 
-        CommandManager += StyleManagementToolBar.ApplyStyle
+        CommandManager += StyleManagementToolBar.ApplyStyleToDiagram
+        CommandManager += StyleManagementToolBar.ApplyStyleToSelection
         CommandManager += StyleManagementToolBar.NextStyleInUse
 
         CommandManager += UnicodeTextEditorInputMode.ConvertToGreek
@@ -162,6 +165,8 @@ object KrayonForSbgn {
         javaClass.getResourceAsStream(stringMapPath).use {
             CommandManager.initializeTextualResources(it)
         }
+
+
     }
 
     private fun addNewGraphComponent() {

@@ -32,8 +32,8 @@
   { "key-stroke": "ctrl 0",       "id": "ZOOM_TO_NORMAL" },
   { "key-stroke": "ctrl T",       "id": "TOGGLE_EVENT_MONITOR" },
   { "key-stroke": "ctrl shift E", "id": "BEGIN_EDGE_CREATION" },
-  { "key-stroke": "ctrl Y",        "id": "APPLY_STYLE" },
-  { "key-stroke": "ctrl shift Y",  "id": "NEXT_STYLE_IN_USE" },
+  { "key-stroke": "ctrl Y",        "id": "APPLY_STYLE_TO_DIAGRAM" },
+  { "key-stroke": "ctrl shift Y",  "id": "APPLY_STYLE_TO_SELECTION" },
 
   { "key-stroke": "ctrl alt A",         "id": "AUTO-ASSIGN_CLONE_MARKERS" },
   { "key-stroke": "ctrl alt C",         "id": "TOGGLE_CLONE_MARKER" },
@@ -49,7 +49,7 @@
   { "key-stroke": "ctrl alt U",         "id": "ADD_UNIT_OF_INFORMATION" },
   { "key-stroke": "ctrl alt V",         "id": "ADD_STATE_VARIABLE" },
   { "key-stroke": "ctrl alt X",         "id": "CONVERT_TO_COMPLEX" },
-
+  { "key-stroke": "ctrl alt Y",         "id": "NEXT_STYLE_IN_USE" },
 
 
   { "key-stroke": "SPACE",        "id": "CREATE_EDGE.NEXT_TYPE" },
