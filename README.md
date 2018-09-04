@@ -38,8 +38,9 @@ Material| Dark | System (OS default)
 :------:|:------:|:------:|
 ![](web/images/laf-material.png)|![](web/images/laf-dark.png)|![UI Styles](web/images/laf-system.png)
 
-### Watch on YouTube
+### Tutorial Videos
 * [Diagram Creation](https://youtu.be/lPIQRGGGeSs)
+* [Styling Diagrams](https://youtu.be/3LAQX1Zv3pU)
 
 ## Source Code Installations:
 
