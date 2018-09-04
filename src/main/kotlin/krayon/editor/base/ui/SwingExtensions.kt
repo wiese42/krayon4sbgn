@@ -15,14 +15,12 @@ import javafx.application.Platform
 import javafx.stage.FileChooser
 import krayon.util.OperatingSystemChecker
 import krayon.util.UnicodeChars
-import java.awt.Component
-import java.awt.Graphics
-import java.awt.Graphics2D
-import java.awt.Insets
+import java.awt.*
 import java.awt.event.ActionListener
 import java.awt.event.InputEvent
 import java.awt.event.KeyEvent
 import java.awt.geom.Rectangle2D
+import java.net.URI
 import java.util.function.Supplier
 import javax.swing.*
 import kotlin.math.max
@@ -255,3 +253,11 @@ fun JSplitPane.setDividerLocationAnimated(location:Int) {
     })
     timer.start()
 }
+
+fun openUrlInBrowser(uri:String) {
+    val desktop = if (Desktop.isDesktopSupported()) Desktop.getDesktop() else null
+    if (desktop != null && desktop.isSupported(Desktop.Action.BROWSE)) {
+        desktop.browse(URI(uri))
+    }
+}
+
