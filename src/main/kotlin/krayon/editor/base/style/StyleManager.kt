@@ -11,6 +11,7 @@ package krayon.editor.base.style
 
 import com.yworks.yfiles.graph.*
 import krayon.editor.base.io.StyleIO
+import krayon.editor.base.model.IModelItemFeature
 import krayon.editor.base.model.IModelItemFeatureProvider
 import krayon.editor.base.util.withHeight
 import krayon.editor.base.util.withWidth
@@ -90,6 +91,11 @@ class StyleManager<T>(private val typeMapper:(IModelItem) -> T, private val styl
         }
         val port = item as? IPort
         if(port != null) applyStyleToPort(port, graph, styleMap, applySize)
+        val feature = item as? IModelItemFeature
+        if(feature != null) {
+            feature.style?.applyStyle(feature, graph, styleMap)
+        }
+
     }
 
     private fun applyStyleToPort(port:IPort, graph:IGraph, styleMap: StyleAttributes, applySize: Boolean) {
