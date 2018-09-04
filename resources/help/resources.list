@@ -12,6 +12,7 @@ how-to-use-ports-and-bends.sbgn; Ports and Bends
 how-to-use-submaps-terminals-and-tags.sbgn; Submaps, Terminals, and Tags
 --Sample Diagrams
 glycolysis.sbgn; Glycolysis
+glycolysis-regulation.sbgn; Glycolysis Regulation
 mapk_cascade.sbgn; MAPK/ERK Pathway
 activation-of-irf1.sbgn; Activation of IRF1
 insulin-like_growth_factor_signaling.sbgn; IGF Signaling Pathway
