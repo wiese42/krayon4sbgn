@@ -243,7 +243,7 @@ class StyleManager<T>(private val typeMapper:(IModelItem) -> T, private val styl
     }
 
     fun deleteStyleFromDir(graphStyle: GraphStyle<T>, dirPath:String) {
-        File(dirPath, graphStyle.name + ".css").deleteOnExit()
+        File(dirPath, graphStyle.name + ".css").delete()
     }
 
     /**
