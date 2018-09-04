@@ -146,7 +146,7 @@ object ShowHelp : ApplicationCommand("SHOW_HELP") {
                     override fun include(entry: Entry<out Any, out Any>): Boolean {
                         val command = entry.getValue(0) as ApplicationCommand
                         if(activeScopeFilter != null && activeScopeFilter != command.scope) return false
-                        if(command.name?.toLowerCase()?.contains(text) == true) return true
+                        if(command.name?.toLowerCase()?.contains(text.toLowerCase()) == true) return true
                         //if(command.description?.toLowerCase()?.contains(text) == true) return true
                         //if(command.mouseGestureDescription?.toLowerCase()?.contains(text) == true) return true
                         return false
@@ -209,8 +209,8 @@ object ShowHelp : ApplicationCommand("SHOW_HELP") {
         }
 
         val filterPanel = Box(BoxLayout.Y_AXIS).apply {
-            add(scopeChooser)
             add(searchField)
+            add(scopeChooser)
         }
 
         component.add(filterPanel, BorderLayout.NORTH)
