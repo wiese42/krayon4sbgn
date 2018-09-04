@@ -15,6 +15,7 @@ import krayon.editor.base.command.ApplicationCommand
 import krayon.editor.base.command.CommandManager
 import krayon.editor.base.command.CommandScope
 import krayon.editor.base.ui.JHintingTextField
+import krayon.editor.base.ui.openUrlInBrowser
 import krayon.editor.base.ui.toShortcutString
 import krayon.editor.base.util.ApplicationSettings
 import krayon.editor.sbgn.io.SbgnReader
@@ -34,7 +35,6 @@ import javax.swing.table.TableRowSorter
 import javax.swing.text.html.HTMLEditorKit
 import javax.swing.text.html.StyleSheet
 
-
 object ShowHelp : ApplicationCommand("SHOW_HELP") {
 
     val dialog:JDialog by lazy { createDialog() }
@@ -43,7 +43,7 @@ object ShowHelp : ApplicationCommand("SHOW_HELP") {
         return JDialog(SwingUtilities.getWindowAncestor(graphComponent),name, Dialog.ModalityType.APPLICATION_MODAL).apply {
             contentPane = JTabbedPane().apply {
                 addTab("Actions", createFindActionComponent())
-                addTab("Samples", createSamplesComponent())
+                addTab("Resources", createResourcesComponent())
                 addTab("About", createAboutComponent())
             }
             defaultCloseOperation = JDialog.HIDE_ON_CLOSE
@@ -237,67 +237,71 @@ object ShowHelp : ApplicationCommand("SHOW_HELP") {
         }
     }
 
-    private fun createSamplesComponent():JComponent {
-        val listContainer = JScrollPane(createSamplesList())
-        listContainer.preferredSize = Dimension(400,400)
-        return listContainer
-    }
+    class ResourceData(val name:String, val path:String?)
 
-    class SampleData(val name:String, val path:String?)
+    private fun createResourcesComponent():JComponent {
+        val model = DefaultListModel<ResourceData>()
+        val resourceList = JList<ResourceData>(model)
+        val helpPath = "${ApplicationSettings.APPLICATION_RESOURCE_PATH.value}/help"
+        val diagramPath = "$helpPath/diagrams"
 
-    private fun createSamplesList():JList<SampleData> {
-
-        val model = DefaultListModel<SampleData>()
-        val samplesList = JList<SampleData>(model)
-        val samplesPath = "${ApplicationSettings.APPLICATION_RESOURCE_PATH.value}/samples/pd"
-
-        samplesList.addMouseListener(object : MouseAdapter() {
+        resourceList.addMouseListener(object : MouseAdapter() {
             override fun mouseClicked(evt: MouseEvent) {
                 if (evt.clickCount == 2) {
-                    val index = samplesList.locationToIndex(evt.point)
+                    val index = resourceList.locationToIndex(evt.point)
                     if (index >= 0) {
-                        samplesList.model.getElementAt(index)?.path?.let {
-                            displaySample("$samplesPath/$it")
+                        resourceList.model.getElementAt(index)?.path?.let {
+                            if(it.startsWith("http")) {
+                                openUrlInBrowser(it)
+                            }
+                            else displayDiagram("$diagramPath/$it")
                         }
                     }
                 }
             }
         })
 
-        samplesList.cellRenderer = object:DefaultListCellRenderer() {
+        resourceList.cellRenderer = object:DefaultListCellRenderer() {
             val bg = background
             val fg = foreground
             override fun getListCellRendererComponent(list: JList<*>?, value: Any, index: Int, isSelected: Boolean, cellHasFocus: Boolean): Component {
-                val item = (value as SampleData).name
+                val item = (value as ResourceData).name
                 background = bg
                 background = fg
                 val comp =  super.getListCellRendererComponent(list, item, index, isSelected, cellHasFocus)
-                if(value.path == null) {
-                    background = fg
-                    foreground = bg
+                when {
+                    value.path == null -> {
+                        background = fg
+                        foreground = bg
+                        toolTipText = null
+                    }
+                    value.path.startsWith("http") -> toolTipText = "Double click to open video in browser"
+                    else -> toolTipText = "Double click to open diagram in editor"
                 }
                 return comp
             }
         }
 
-
-        InputStreamReader(ResourceLoader.getResourceAsStream("$samplesPath/samples.list")).forEachLine { line ->
-            if(!line.startsWith("#")) {
+        InputStreamReader(ResourceLoader.getResourceAsStream("$helpPath/resources.list")).forEachLine { line ->
+            if (!line.startsWith("#")) {
                 if (line.startsWith("--")) {
-                    model.addElement(SampleData(line.substring(2), null))
-                }
-                else {
+                    model.addElement(ResourceData(line.substring(2), null))
+                } else {
                     val entry = line.split(';')
                     val name = if (entry.size <= 1) entry[0] else entry[1]
                     val path = entry[0]
-                    model.addElement(SampleData(name, path))
+                    model.addElement(ResourceData(name, path))
                 }
             }
         }
-        return samplesList
+
+        return JScrollPane(resourceList).apply {
+            preferredSize = Dimension(400,200)
+        }
+
     }
 
-    fun displaySample(sampleFileName:String) {
+    fun displayDiagram(sampleFileName:String) {
         ResourceLoader.getResourceAsStream(sampleFileName)?.use {
             (Application.focusedGraphComponent as? SbgnGraphComponent)?.let { graphComponent ->
                 graphComponent.graph.clear()

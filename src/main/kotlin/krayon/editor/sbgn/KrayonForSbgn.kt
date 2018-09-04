@@ -337,6 +337,7 @@ object KrayonForSbgn {
                 palette.selectionBackground =  value as Color
             }
         }
+        graphComponent.repaint()
         palette.invalidateRenderer()
     }
 
@@ -444,15 +445,17 @@ object KrayonForSbgn {
     }
 
     private fun setIndividualStyleOnSelection(graphStyle:GraphStyle<SbgnType>?) {
-        graphComponent.selection.selectedNodes.forEach { node ->
-            node.graphStyle = graphStyle
-            SbgnBuilder.applyStyle(graphComponent.graph, node)
+        with(graphComponent) {
+            val items = selection.selectedNodes + selection.selectedEdges
+            if(items.isEmpty()) {
+                applyStyle(graphStyle)
+            }
+            else items.forEach { item ->
+                item.graphStyle = graphStyle
+                SbgnBuilder.applyStyle(graph, item)
+            }
+            repaint()
         }
-        graphComponent.selection.selectedEdges.forEach { edge ->
-            edge.graphStyle = graphStyle
-            SbgnBuilder.applyStyle(graphComponent.graph, edge)
-        }
-        graphComponent.repaint()
     }
 
     private fun createStyleMenu():JMenu {
@@ -473,7 +476,6 @@ object KrayonForSbgn {
         SbgnBuilder.styleManager.getStylesInDisplayOrder().forEach { style ->
             menu.add(JRadioButtonMenuItem(if(style.isFileLocal) "File:${style.name}" else style.name).apply {
                 isSelected = hasCommonStyle && commonStyle == style || (graphComponent.selection.none() && graphComponent.graphStyle == style)
-
                 addActionListener { setIndividualStyleOnSelection(style) }
             })
         }

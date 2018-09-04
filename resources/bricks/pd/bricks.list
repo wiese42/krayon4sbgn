@@ -1,7 +1,7 @@
 --Metabolic network
 REACTION_IRR_1_1, Reaction-PD01-IRR.sbgn, Irreversible reaction
 CATALYSIS_IRR_1_1, Catalysis-PD01-IRR-1x1.sbgn, Catalysis: irreversible reaction
-CATALYSIS_REV_1_1, Catalysis-PD02-REV-1x1.sbgn, Catalysis: reversible reaction
+#CATALYSIS_REV_1_1, Catalysis-PD02-REV-1x1.sbgn, Catalysis: reversible reaction
 #INHIBITION_IRR_1_1, Inhibition-PD01-enz.sbgn, Inhibition: irreversible metabolic reaction
 CATALYSIS_IRR_2_2, Catalysis-PD01-IRR-2x2.sbgn, Catalysis: multiple substrates and products
 CATALYSIS_2_REV_1_1, Catalysis2-PD-REV.sbgn, Catalysis: reversible reaction
