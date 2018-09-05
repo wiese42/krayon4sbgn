@@ -401,7 +401,6 @@ object KrayonForSbgn {
     fun onPopulateItemPopupMenu(source:Any, args: PopulateItemPopupMenuEventArgs<IModelItem>)
     {
         val selection = graphComponent.selection
-        //val commands = graphComponent.commands
 
         if(args.isHandled) return
 
@@ -449,20 +448,6 @@ object KrayonForSbgn {
         args.isHandled = true
     }
 
-    private fun setIndividualStyleOnSelection(graphStyle:GraphStyle<SbgnType>?) {
-        with(graphComponent) {
-            val items = selection.selectedNodes + selection.selectedEdges
-            if(items.isEmpty()) {
-                applyStyle(graphStyle)
-            }
-            else items.forEach { item ->
-                item.graphStyle = graphStyle
-                SbgnBuilder.applyStyle(graph, item)
-            }
-            repaint()
-        }
-    }
-
     private fun createStyleMenu():JMenu {
         val menu = JMenu("Style")
         val styleGroups = (graphComponent.selection.selectedNodes + graphComponent.selection.selectedEdges).groupBy {
@@ -473,15 +458,10 @@ object KrayonForSbgn {
             menu.add(JRadioButtonMenuItem("Undefined").apply { isSelected = true })
             menu.addSeparator()
         }
-        menu.add(JRadioButtonMenuItem("Dynamic").apply {
-            isSelected = hasCommonStyle && commonStyle == null || (graphComponent.selection.none() && graphComponent.graphStyle == null)
-            addActionListener { setIndividualStyleOnSelection(null) }
-        })
-        menu.addSeparator()
         SbgnBuilder.styleManager.getStylesInDisplayOrder().forEach { style ->
             menu.add(JRadioButtonMenuItem(if(style.isFileLocal) "File:${style.name}" else style.name).apply {
                 isSelected = hasCommonStyle && commonStyle == style || (graphComponent.selection.none() && graphComponent.graphStyle == style)
-                addActionListener { setIndividualStyleOnSelection(style) }
+                addActionListener(StyleManagementToolBar.ApplyStyleToSelection.getAction(graphComponent, style))
             })
         }
         return menu

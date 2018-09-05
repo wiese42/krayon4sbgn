@@ -19,6 +19,8 @@ import krayon.editor.base.style.StyleManager
 import krayon.editor.base.style.StyleProperty
 import krayon.editor.base.ui.*
 import krayon.editor.base.util.IconManager
+import krayon.editor.base.util.addValueUndoEdit
+import krayon.editor.base.util.beginEdit
 import krayon.editor.sbgn.model.SbgnType
 import krayon.editor.sbgn.model.graphStyle
 import krayon.editor.sbgn.model.type
@@ -306,30 +308,45 @@ class StyleManagementToolBar(val styleManager: StyleManager<SbgnType>, val palet
     companion object {
         val ApplyStyleToSelection = object:ApplicationCommand("APPLY_STYLE_TO_SELECTION") {
             override fun execute(param: Any?) {
-                val graphStyle = SbgnBuilder.styleManager.currentStyle!!
-                if(graphComponent.selection.none()) {
-                    (graphComponent as SbgnGraphComponent).applyStyle(graphStyle)
-                }
-                else {
-                    val selectedItems = graphComponent.selection.selectedNodes + graphComponent.selection.selectedEdges
-                    selectedItems.forEach {
-                        SbgnBuilder.styleManager.applyStyle(graphStyle, graph, it, false)
+                val graphStyle = param as? SbgnStyle ?: SbgnBuilder.styleManager.currentStyle!!
+                val gc = (graphComponent as SbgnGraphComponent)
+                gc.graph.beginEdit(id).use { _ ->
+                    if (gc.selection.none()) {
+                        gc.graph.addValueUndoEdit(id, gc.graphStyle, graphStyle) { style ->
+                            if (style != null) gc.applyStyle(style)
+                        }
+                        gc.applyStyle(graphStyle)
+                    } else {
+                        (gc.selection.selectedNodes + gc.selection.selectedEdges).forEach {
+                            gc.graph.addValueUndoEdit(id, it.graphStyle, graphStyle) { style ->
+                                if (style != null) SbgnBuilder.styleManager.applyStyle(style, graph, it, false)
+                            }
+                            SbgnBuilder.styleManager.applyStyle(graphStyle, graph, it, false)
+                        }
                     }
                 }
-                graphComponent.graph.invalidateDisplays()
+                gc.graph.invalidateDisplays()
             }
-
             override fun canExecute(param: Any?) = true
         }
 
         val ApplyStyleToDiagram = object:ApplicationCommand("APPLY_STYLE_TO_DIAGRAM") {
             override fun execute(param: Any?) {
                 val graphStyle = SbgnBuilder.styleManager.currentStyle!!
-                (graphComponent as SbgnGraphComponent).applyStyle(graphStyle)
-                (graphComponent.graph.nodes + graphComponent.graph.edges).forEach {
-                    SbgnBuilder.styleManager.applyStyle(graphStyle, graph, it, false)
+                val gc = (graphComponent as SbgnGraphComponent)
+                gc.graph.beginEdit(id).use { _ ->
+                    gc.graph.addValueUndoEdit(id, gc.graphStyle, graphStyle) { style ->
+                        if (style != null) gc.applyStyle(style)
+                    }
+                    gc.applyStyle(graphStyle)
+                    (gc.graph.nodes + gc.graph.edges).forEach {
+                        gc.graph.addValueUndoEdit(id, it.graphStyle, graphStyle) { style ->
+                            if (style != null) SbgnBuilder.styleManager.applyStyle(style, graph, it, false)
+                        }
+                        SbgnBuilder.styleManager.applyStyle(graphStyle, graph, it, false)
+                    }
                 }
-                graphComponent.graph.invalidateDisplays()
+                gc.graph.invalidateDisplays()
             }
             override fun canExecute(param: Any?) = true
         }
