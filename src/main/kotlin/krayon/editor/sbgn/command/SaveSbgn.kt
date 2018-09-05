@@ -31,6 +31,7 @@ class SaveSbgnCommand(id:String, private val includeStyle: Boolean = true) : Sbg
         fileChooser.apply {
             dialogTitle = "Save as SBGN File"
             dialogType = JFileChooser.SAVE_DIALOG
+            (ApplicationSettings.LAST_FILE_LOCATION.value as? String)?.let { fileChooser.currentDirectory = File(it) }
             (ApplicationSettings.DIAGRAM_FILE.scoped(graphComponent).value as? File)?.let { selectedFile = it }
         }
 
@@ -40,6 +41,8 @@ class SaveSbgnCommand(id:String, private val includeStyle: Boolean = true) : Sbg
             fileChooser.selectedFile.absolutePath
         }
         else return
+
+        ApplicationSettings.LAST_FILE_LOCATION.value = fileChooser.selectedFile.parent
         SbgnWriter(includeStyle).write(FileOutputStream(fileName), graph, sbgnGraphComponent)
     }
 
