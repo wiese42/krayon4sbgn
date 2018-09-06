@@ -68,5 +68,5 @@ which are available under a commercial license.
 1. Go to the [release](https://github.com/wiese42/krayon4sbgn/releases) section of this project and fetch the latest version either as self-contained windows installer, or as zip file containing all necessary jar files to run the application. 
 2. With the windows installer, simply follow the instructions, to install and run the application.
 3. For the zipped jar distribution, you need to have a Java JRE 8, 9 or 10 installed. To run the software switch to the installation folder and execute on the command line:
-  - **with Java 8**: java -jar kreator-for-sbgn.jar
-  - **with Java 9 or 10**: java --add-modules=java.xml.bind -jar kreator-for-sbgn.jar
+  - **with Java 8**: java -jar krayon4sbgn.jar
+  - **with Java 9 or 10**: java --add-modules=java.xml.bind -jar krayon4sbgn.jar
