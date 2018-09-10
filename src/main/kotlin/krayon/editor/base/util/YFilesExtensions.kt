@@ -113,15 +113,10 @@ fun IGraph.getBounds(isIncluded: NodePredicate, includeBends:Boolean = true, inc
     return bounds.toRectD()
 }
 
-@Suppress("unused")
 fun IGraph.beginEdit(name:String = "") = this.beginEdit(name, name)!!
-@Suppress("unused")
 fun <T> IGraph.beginEdit(item:T) = this.beginEdit("","", listOf(item))!!
-@Suppress("unused")
 fun <T> IGraph.beginEdit(name:String, item:T) = this.beginEdit(name,name, listOf(item))!!
-@Suppress("unused")
 fun <T> IGraph.beginEdit(items: Iterable<T>) = beginEdit("","", items)!!
-@Suppress("unused")
 fun <T> IGraph.beginEdit(name:String, items: Iterable<T>) = beginEdit(name,name, items)!!
 fun <T> IGraph.addValueUndoEdit(name:String, startValue:T, endValue:T, actor: (T) -> Unit) = undoEngine.addUnit(ValueUndoUnit(name, startValue, endValue, actor))
 
@@ -164,7 +159,6 @@ fun IPoint.withY(newY:Double) = PointD(x, newY)
 operator fun IPoint.minus(p:PointD) = PointD(x-p.x,y-p.y)
 operator fun IPoint.plus(p:PointD) = PointD(x+p.x,y+p.y)
 operator fun IPoint.times(scalar:Double) = PointD(x*scalar,y*scalar)
-
 fun IPoint.isInBottomOuterSector(box:IRectangle):Boolean {
     return y > box.maxY && ((x >= box.x && x <= box.maxX) || (x < box.x && box.x-x <= y-box.maxY) || (x > box.maxX && x-box.maxX <= y-box.maxY))
 }
@@ -177,13 +171,8 @@ fun IPoint.isInLeftOuterSector(box:IRectangle):Boolean {
 fun IPoint.isInRightOuterSector(box:IRectangle):Boolean {
     return x > box.maxX && ((y >= box.y && y <= box.maxY) || (y < box.y && box.y-y <= x-box.maxX) || (y > box.maxY && y-box.maxY <= x-box.maxX))
 }
-
 fun IPoint.isOnBorder(box:IRectangle):Boolean = (x == box.x || x == box.maxX) && y >= box.y && y <= box.maxY || (y == box.y || y == box.maxY) && x >= box.x && x <= box.maxX
-
-
-fun IPoint.clamp(min:IPoint, max:IPoint):PointD {
-    return PointD(min(max(x,min.x),max.x), min(max(y,min.y),max.y))
-}
+fun IPoint.clamp(min:IPoint, max:IPoint) = PointD(min(max(x,min.x),max.x), min(max(y,min.y),max.y))
 
 operator fun PointD.unaryMinus() = PointD(-x,-y)
 
@@ -228,10 +217,7 @@ val GraphComponent.geim: GraphEditorInputMode
 val IInputModeContext.graphComponent
     get() = canvasComponent as GraphComponent
 
-
-
 val INode.center: PointD get() = layout.center
-
 typealias NodePredicate = (INode) -> Boolean
 
 fun GraphModelManager.getMainCanvasObject(node:INode):ICanvasObject {
