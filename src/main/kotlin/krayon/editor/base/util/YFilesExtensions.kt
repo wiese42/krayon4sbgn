@@ -71,6 +71,47 @@ fun IGraph.translate(offset: PointD, subgraphNodes:Iterable<INode>) {
     subgraphNodes.forEach { setNodeCenter(it, PointD.add(it.layout.center, offset)) }
     bends.filter{ nodeSet.contains(it.owner.sourceNode) &&  nodeSet.contains(it.owner.targetNode) }.forEach { setBendLocation(it, PointD.add(it.location.toPointD(), offset)) }
 }
+fun IGraph.isAncestor(node: INode, maybeAncestor:INode?):Boolean {
+    var parent = getParent(node)
+    while (parent != null) {
+        if(parent == maybeAncestor) return true
+        else parent = getParent(parent)
+    }
+    return false
+}
+
+fun IGraph.getAncestors(node: INode):List<INode> {
+    val result = mutableListOf<INode>()
+    var parent = getParent(node)
+    while (parent != null) {
+        result.add(parent)
+        parent = getParent(parent)
+    }
+    return result
+}
+
+fun IGraph.getBounds(): RectD = getBounds({ true })
+fun IGraph.getBounds(isIncluded: NodePredicate, includeBends:Boolean = true, includeLabels:Boolean = true): RectD {
+    val bounds = MutableRectangle()
+    nodes.forEach{
+        if(isIncluded(it)) {
+            bounds.add(it.layout)
+            if(includeLabels) it.labels.forEach { label ->
+                bounds.add(label.bounds)
+            }
+        }
+    }
+    if(includeBends) {
+        edges.forEach {
+            if(it.bends.any() && isIncluded(it.sourceNode) && isIncluded(it.targetNode)) {
+                it.bends.forEach { bend ->
+                    bounds.add(bend.location)
+                }
+            }
+        }
+    }
+    return bounds.toRectD()
+}
 
 @Suppress("unused")
 fun IGraph.beginEdit(name:String = "") = this.beginEdit(name, name)!!
@@ -101,53 +142,28 @@ fun SizeD.withHeight(newHeight:Double) = SizeD(width, newHeight)
 fun SizeD.withWidth(newWidth:Double) = SizeD(newWidth, height)
 fun SizeD.scale(sx:Double, sy:Double) = SizeD(width*sx, height*sy)
 fun SizeD.swap() = SizeD(height, width)
-@Suppress("unused")
-fun IRectangle.withX(newX:Double) = RectD(newX,y,width, height)
-@Suppress("unused")
-fun IRectangle.withY(newY:Double) = RectD(x,newY,width, height)
-@Suppress("unused")
-fun IRectangle.withCenterX(newCenterX:Double) = RectD.fromCenter(PointD(newCenterX, center.y), toSizeD())!!
-@Suppress("unused")
-fun IRectangle.withCenterY(newCenterY:Double) = RectD.fromCenter(PointD(center.x, newCenterY), toSizeD())!!
+
 fun IRectangle.withWidth(newWidth:Double) = RectD(x,y,newWidth, height)
 fun IRectangle.withHeight(newHeight:Double) = RectD(x,y,width, newHeight)
-@Suppress("unused")
-fun IRectangle.withSize(newSize:SizeD) = RectD(x,y,newSize.width, newSize.height)
 fun IRectangle.translate(delta: PointD) = RectD(x+delta.x, y+delta.y, width, height)
 fun IRectangle.translate(deltaX: Double, deltaY:Double) = RectD(x+deltaX, y+deltaY, width, height)
+operator fun IRectangle.minus(p:PointD) = RectD(x-p.x, y-p.y, width, height)
+fun IRectangle.convertToRatioPoint(p:PointD) = PointD((p.x - x) / width, (p.y - y) / height)
+fun IRectangle.convertFromRatioPoint(p:PointD) = PointD(x + (width*p.x), y + (height*p.y))
+fun IRectangle.containsRect(rect:IRectangle) = contains(rect.bottomLeft) && contains(rect.bottomRight) && contains(topLeft) && contains(topRight)
 
-fun IPoint.distanceToSqr(p:IPoint):Double = (x-p.x)*(x-p.x)+(y-p.y)*(y-p.y)
-@Suppress("unused")
-fun IPoint.withX(newX:Double) = PointD(newX, y)
-@Suppress("unused")
-fun IPoint.withY(newY:Double) = PointD(x, newY)
-operator fun PointD.unaryMinus(): PointD {
-    return PointD(-x,-y)
-}
-@Suppress("unused")
+fun IRectangle.toRectangle2D() = Rectangle2D.Double(x,y,width,height)
 val IRectangle.centerLeft get() = PointD(x, y+0.5*height)
-@Suppress("unused")
 val IRectangle.centerRight get() = PointD(maxX, y+0.5*height)
-@Suppress("unused")
 val IRectangle.centerTop get() = PointD(x+0.5*width, y)
-@Suppress("unused")
 val IRectangle.centerBottom get() = PointD(x+0.5*width, maxY)
 
-operator fun IPoint.minus(p:PointD): PointD {
-    return PointD(x-p.x,y-p.y)
-}
-
-operator fun IPoint.plus(p:PointD): PointD {
-    return PointD(x+p.x,y+p.y)
-}
-
-operator fun IPoint.times(scalar:Double): PointD {
-    return PointD(x*scalar,y*scalar)
-}
-
-operator fun IRectangle.minus(p:PointD): RectD {
-    return RectD(x-p.x, y-p.y, width, height)
-}
+fun IPoint.distanceToSqr(p:IPoint):Double = (x-p.x)*(x-p.x)+(y-p.y)*(y-p.y)
+fun IPoint.withX(newX:Double) = PointD(newX, y)
+fun IPoint.withY(newY:Double) = PointD(x, newY)
+operator fun IPoint.minus(p:PointD) = PointD(x-p.x,y-p.y)
+operator fun IPoint.plus(p:PointD) = PointD(x+p.x,y+p.y)
+operator fun IPoint.times(scalar:Double) = PointD(x*scalar,y*scalar)
 
 fun IPoint.isInBottomOuterSector(box:IRectangle):Boolean {
     return y > box.maxY && ((x >= box.x && x <= box.maxX) || (x < box.x && box.x-x <= y-box.maxY) || (x > box.maxX && x-box.maxX <= y-box.maxY))
@@ -169,19 +185,9 @@ fun IPoint.clamp(min:IPoint, max:IPoint):PointD {
     return PointD(min(max(x,min.x),max.x), min(max(y,min.y),max.y))
 }
 
-fun IRectangle.convertToRatioPoint(p:PointD):PointD {
-    return PointD((p.x - x) / width, (p.y - y) / height)
-}
+operator fun PointD.unaryMinus() = PointD(-x,-y)
 
-fun IRectangle.convertFromRatioPoint(p:PointD):PointD {
-    return PointD(x + (width*p.x), y + (height*p.y))
-}
 
-fun IRectangle.containsRect(rect:IRectangle):Boolean {
-    return contains(rect.bottomLeft) && contains(rect.bottomRight) && contains(topLeft) && contains(topRight)
-}
-
-fun IRectangle.toRectangle2D() = Rectangle2D.Double(x,y,width,height)
 fun Rectangle2D.toRectD() = RectD(x,y,width,height)
 
 fun Array<GraphItemTypes>.ensureBefore(item1:GraphItemTypes, item2:GraphItemTypes): Array<GraphItemTypes> {
@@ -207,7 +213,6 @@ fun ILabelModelParameterFinder.findBestParameter(label: ILabel, center:PointD):I
     return findBestParameter(label, label.layoutParameter.model, OrientedRectangle(RectD.fromCenter(center,label.preferredSize)))
 }
 
-@Suppress("unused")
 fun ILabelModelParameterFinder.findBestParameter(label: ILabel, box:RectD):ILabelModelParameter {
     return findBestParameter(label, label.layoutParameter.model, OrientedRectangle(box))
 }
@@ -217,60 +222,13 @@ val MOUSE_MIDDLE_PRESSED = IEventRecognizer { _, args ->
     args is Mouse2DEventArgs && args.eventType == Mouse2DEventTypes.PRESSED && args.changedButtons == MouseButtons.MIDDLE
 }
 
-@Suppress("unused")
-val MOUSE_MIDDLE_RELEASED = IEventRecognizer { _, args ->
-    args is Mouse2DEventArgs && args.eventType == Mouse2DEventTypes.RELEASED && args.changedButtons == MouseButtons.MIDDLE
-}
-
-val GraphComponent.ceim: GraphEditorInputMode
+val GraphComponent.geim: GraphEditorInputMode
     get() = inputMode as GraphEditorInputMode
 
 val IInputModeContext.graphComponent
     get() = canvasComponent as GraphComponent
 
-fun IGraph.isAncestor(node: INode, maybeAncestor:INode?):Boolean {
-    var parent = getParent(node)
-    while (parent != null) {
-        if(parent == maybeAncestor) return true
-        else parent = getParent(parent)
-    }
-    return false
-}
 
-fun IGraph.getAncestors(node: INode):List<INode> {
-    val result = mutableListOf<INode>()
-    var parent = getParent(node)
-    while (parent != null) {
-        result.add(parent)
-        parent = getParent(parent)
-    }
-    return result
-}
-
-
-@Suppress("unused")
-fun IGraph.getBounds(): RectD = getBounds({ true })
-fun IGraph.getBounds(isIncluded: NodePredicate, includeBends:Boolean = true, includeLabels:Boolean = true): RectD {
-    val bounds = MutableRectangle()
-    nodes.forEach{
-        if(isIncluded(it)) {
-            bounds.add(it.layout)
-            if(includeLabels) it.labels.forEach { label ->
-                bounds.add(label.bounds)
-            }
-        }
-    }
-    if(includeBends) {
-        edges.forEach {
-            if(it.bends.any() && isIncluded(it.sourceNode) && isIncluded(it.targetNode)) {
-                it.bends.forEach { bend ->
-                    bounds.add(bend.location)
-                }
-            }
-        }
-    }
-    return bounds.toRectD()
-}
 
 val INode.center: PointD get() = layout.center
 
