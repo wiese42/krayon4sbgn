@@ -22,7 +22,7 @@ object ToggleComplexLock : SbgnCommand("TOGGLE_COMPLEX_LOCK") {
         graph.beginEdit(id).use { _ ->
             getNodes(param).forEach { node ->
                 if(node.type.isComplex()) {
-                    graph.addValueUndoEdit(id, node.isLocked, !node.isLocked, { node.isLocked = it})
+                    graph.addValueUndoEdit(id, node.isLocked, !node.isLocked) { node.isLocked = it}
                     node.isLocked = !node.isLocked
                 }
             }
