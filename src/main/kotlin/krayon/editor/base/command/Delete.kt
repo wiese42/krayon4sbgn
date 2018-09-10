@@ -18,5 +18,6 @@ object Delete : ApplicationCommand("DELETE") {
         graphComponent.selection.selectedNodes.toList().forEach(graph::remove)
         graphComponent.selection.selectedEdges.toList().forEach(graph::remove)
         graphComponent.selection.selectedBends.toList().forEach(graph::remove)
+        graphComponent.selection.selectedLabels.toList().forEach(graph::remove)
     }
 }
