@@ -20,7 +20,7 @@ import krayon.editor.base.style.StyleProperty
 import krayon.editor.base.ui.*
 import krayon.editor.base.util.ApplicationSettings
 import krayon.editor.base.util.IconManager
-import krayon.editor.base.util.ceim
+import krayon.editor.base.util.geim
 import krayon.editor.sbgn.command.*
 import krayon.editor.sbgn.io.SbgnReader
 import krayon.editor.sbgn.model.SbgnType
@@ -183,7 +183,7 @@ object KrayonForSbgn {
         geim.popupMenuItems = GraphItemTypes.NODE
         geim.addPopulateItemPopupMenuListener(::onPopulateItemPopupMenu)
         graphComponent.inputMode = geim
-        CommandManager.registerKeyBindings(graphComponent.ceim.keyboardInputMode)
+        CommandManager.registerKeyBindings(graphComponent.geim.keyboardInputMode)
     }
 
     private fun createPaletteComponent():ConfiguredSbgnPaletteComponent {

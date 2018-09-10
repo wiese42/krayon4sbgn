@@ -103,7 +103,6 @@ object SbgnDecorations {
                 return@setImplementationWrapper CenteredAspectRatioHandleProvider(delegateProvider, node)
             else
                 return@setImplementationWrapper MultiplexingReshapeHandleProvider(delegateProvider, node)
-                //return@setImplementationWrapper delegateProvider
         }
     }
 

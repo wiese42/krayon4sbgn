@@ -12,14 +12,14 @@ package krayon.editor.sbgn.command
 import krayon.editor.base.ui.MultiplexingNodeHoverInputMode
 import krayon.editor.base.util.addValueUndoEdit
 import krayon.editor.base.util.beginEdit
-import krayon.editor.base.util.ceim
+import krayon.editor.base.util.geim
 import krayon.editor.sbgn.model.isLocked
 import krayon.editor.sbgn.model.type
 
 object ToggleComplexLock : SbgnCommand("TOGGLE_COMPLEX_LOCK") {
     override fun canExecute(param: Any?) = getNodes(param).any { it.type.isComplex() }
     override fun execute(param: Any?) {
-        graph.beginEdit(id).use {
+        graph.beginEdit(id).use { _ ->
             getNodes(param).forEach { node ->
                 if(node.type.isComplex()) {
                     graph.addValueUndoEdit(id, node.isLocked, !node.isLocked, { node.isLocked = it})
@@ -27,7 +27,7 @@ object ToggleComplexLock : SbgnCommand("TOGGLE_COMPLEX_LOCK") {
                 }
             }
         }
-        (graphComponent.ceim.itemHoverInputMode as? MultiplexingNodeHoverInputMode)?.updateHoverEffects()
+        (graphComponent.geim.itemHoverInputMode as? MultiplexingNodeHoverInputMode)?.updateHoverEffects()
         graph.invalidateDisplays()
     }
 }

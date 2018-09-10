@@ -21,7 +21,7 @@ import krayon.editor.base.command.CommandScope
 import krayon.editor.base.model.IEdgeCreationHint
 import krayon.editor.base.model.IItemType
 import krayon.editor.base.model.IModelConstraintManager
-import krayon.editor.base.util.ceim
+import krayon.editor.base.util.geim
 import krayon.editor.base.util.graphComponent
 import krayon.editor.sbgn.style.SbgnBuilder
 import java.awt.Color
@@ -39,7 +39,7 @@ open class ConstrainedCreateEdgeInputMode<T> : CreateEdgeInputMode() {
     val typeModel get() = inputModeContext.graphComponent.lookup(IItemType::class.java) as IItemType<T>
     @Suppress("UNCHECKED_CAST")
     val constraintManager get() = inputModeContext.graphComponent.lookup(IModelConstraintManager::class.java) as IModelConstraintManager<T>
-    
+
     private var showInvalidPorts = true
 
     protected open fun configureTargetNode(target:INode, targetType:T, location:PointD, edgeHint: IEdgeCreationHint<T>) {
@@ -248,7 +248,7 @@ open class ConstrainedCreateEdgeInputMode<T> : CreateEdgeInputMode() {
             override fun canExecute(param: Any?) = true
 
             override fun execute(param: Any?) {
-                (graphComponent.ceim.createEdgeInputMode as? ConstrainedCreateEdgeInputMode<*>)?.let {
+                (graphComponent.geim.createEdgeInputMode as? ConstrainedCreateEdgeInputMode<*>)?.let {
                     if (it.isCreationInProgress) {
                         it.cycleDummyEdgeType()
                         graphComponent.repaint()
@@ -262,14 +262,14 @@ open class ConstrainedCreateEdgeInputMode<T> : CreateEdgeInputMode() {
 
             override fun execute(param: Any?) {
                 val location = graphComponent.lastMouse2DEvent.location
-                with(graphComponent.ceim.inputModeContext) {
+                with(graphComponent.geim.inputModeContext) {
                     val node = lookup(INodeHitTester::class.java)?.enumerateHits(this, location)?.firstOrNull()
                     if (node != null) {
                         val portCandidates = node.lookup(IPortCandidateProvider::class.java)?.getSourcePortCandidates(this)
                         if (portCandidates != null) {
                             val pc = HighlightPortsSupport.getClosestPortCandidate(node, location, portCandidates)
                             if (pc != null) {
-                                graphComponent.ceim.createEdgeInputMode.doStartEdgeCreation(pc)
+                                graphComponent.geim.createEdgeInputMode.doStartEdgeCreation(pc)
                             }
                         }
                     }
@@ -284,7 +284,7 @@ open class ConstrainedCreateEdgeInputMode<T> : CreateEdgeInputMode() {
 
             override fun execute(param: Any?) {
                 val location = graphComponent.lastMouse2DEvent.location
-                with(graphComponent.ceim.createEdgeInputMode as ConstrainedCreateEdgeInputMode<*>) {
+                with(graphComponent.geim.createEdgeInputMode as ConstrainedCreateEdgeInputMode<*>) {
                     val node = graph.lookup(INodeHitTester::class.java)?.enumerateHits(inputModeContext, location)?.firstOrNull()
                     if (node != null) {
                         doCreateEdge()

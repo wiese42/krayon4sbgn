@@ -15,12 +15,12 @@ import com.yworks.yfiles.view.input.GraphEditorInputMode
 import com.yworks.yfiles.view.input.ICommand
 import com.yworks.yfiles.view.input.IEventRecognizer
 import com.yworks.yfiles.view.input.InputModeEventArgs
-import krayon.editor.base.util.ceim
+import krayon.editor.base.util.geim
 
 object InteractivePaste : ApplicationCommand("INTERACTIVE_PASTE") {
     override fun execute(param: Any?) {
         val location = param as? PointD ?: graphComponent.lastMouse2DEvent.location
-        val ceim = graphComponent.ceim
+        val ceim = graphComponent.geim
         ICommand.PASTE.execute(location, graphComponent)
         cleanupPorts()
         when {

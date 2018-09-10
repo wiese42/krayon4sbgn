@@ -13,7 +13,7 @@ import com.yworks.yfiles.view.input.TextEditorInputMode
 import krayon.editor.base.command.ApplicationCommand
 import krayon.editor.base.command.CommandManager
 import krayon.editor.base.command.CommandScope
-import krayon.editor.base.util.ceim
+import krayon.editor.base.util.geim
 import java.awt.event.KeyEvent
 import java.awt.event.KeyListener
 import javax.swing.JTextArea
@@ -40,7 +40,7 @@ class UnicodeTextEditorInputMode : TextEditorInputMode() {
         }
 
         override fun execute(param: Any?) {
-            (graphComponent.ceim.mutexOwner as? UnicodeTextEditorInputMode)?.let { inputMode ->
+            (graphComponent.geim.mutexOwner as? UnicodeTextEditorInputMode)?.let { inputMode ->
                 //println("execute param=$param")
                 (param as? Char)?.let { char ->
                     translateChar(char)?.let { newChar ->

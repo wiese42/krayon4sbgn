@@ -15,7 +15,7 @@ import com.yworks.yfiles.view.input.KeyboardInputMode
 import krayon.editor.base.Application
 import krayon.editor.base.ui.GraphPaletteDropInputMode
 import krayon.editor.base.ui.UnicodeTextEditorInputMode
-import krayon.editor.base.util.ceim
+import krayon.editor.base.util.geim
 import krayon.util.OperatingSystemChecker
 import java.io.InputStream
 import javax.swing.KeyStroke
@@ -38,8 +38,8 @@ object CommandManager {
             reader.beginArray {
                 while (reader.hasNext()) {
                     reader.nextObject().let { item ->
-                        item.string("id")?.let {
-                            getScopeAndCommand(it)?.let { (scope, id) ->
+                        item.string("id")?.let { fqId ->
+                            getScopeAndCommand(fqId)?.let { (scope, id) ->
                                 getCommand(id, scope)?.let { command ->
                                     item.string("key-stroke")?.let {
                                         val keyString = if (OperatingSystemChecker.isMac) it.replace("ctrl", "meta") else it
@@ -128,7 +128,7 @@ object CommandManager {
     }
 
     private fun hasValidCommandContext(command:ApplicationCommand):Boolean {
-        return when(Application.focusedGraphComponent?.ceim?.mutexOwner) {
+        return when(Application.focusedGraphComponent?.geim?.mutexOwner) {
             null -> command.scope == CommandScope.DEFAULT
             is CreateEdgeInputMode -> command.scope == CommandScope.CREATE_EDGE
             is GraphPaletteDropInputMode -> command.scope == CommandScope.DRAG_ITEM

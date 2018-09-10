@@ -9,7 +9,7 @@
 
 package krayon.editor.sbgn.command
 
-import krayon.editor.base.util.ceim
+import krayon.editor.base.util.geim
 import krayon.editor.sbgn.model.SbgnType
 import krayon.editor.sbgn.model.type
 import krayon.editor.sbgn.style.SbgnBuilder
@@ -24,7 +24,7 @@ object EditLabel : SbgnCommand("EDIT_LABEL") {
             }
         }
         val label = getUniqueLabel(param) ?: getUniqueNode(param)?.labels?.firstOrNull { it.type == SbgnType.NAME_LABEL }
-        if(label != null) graphComponent.ceim.editLabel(label)
+        if(label != null) graphComponent.geim.editLabel(label)
     }
 
     override fun canExecute(param: Any?): Boolean {

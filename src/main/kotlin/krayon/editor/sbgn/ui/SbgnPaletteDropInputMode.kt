@@ -17,7 +17,7 @@ import krayon.editor.base.command.CommandScope
 import krayon.editor.base.model.IModelItemFeature
 import krayon.editor.base.ui.GraphPaletteDropInputMode
 import krayon.editor.base.util.beginEdit
-import krayon.editor.base.util.ceim
+import krayon.editor.base.util.geim
 import krayon.editor.base.util.convertToRatioPoint
 import krayon.editor.sbgn.command.ToggleCloneMarker
 import krayon.editor.sbgn.command.ToggleMultimer
@@ -31,7 +31,7 @@ class SbgnPaletteDropInputMode(paletteGraph: IGraph) : GraphPaletteDropInputMode
 
     private val nodeDropSupport = DragNodesManager()
     private val constraintManager get() = inputModeContext.sbgnConstraintManager
-            
+
     init {
         setIsValidParentPredicate { it == null } //handle group nodes as DropActions
         isDropTargetHighlightEnabled = false //handle own highlights
@@ -215,7 +215,7 @@ class SbgnPaletteDropInputMode(paletteGraph: IGraph) : GraphPaletteDropInputMode
     private abstract class DragItemCommand(id:String):ApplicationCommand(id,CommandScope.DRAG_ITEM) {
         override fun canExecute(param: Any?) = true
         override fun execute(param: Any?) {
-            (graphComponent.ceim.mutexOwner as? SbgnPaletteDropInputMode)?.let {
+            (graphComponent.geim.mutexOwner as? SbgnPaletteDropInputMode)?.let {
                 executeDragItemCommand(it, param)
                 //necessary rotation and mirror commands that involve tag nodes
                 it.updatePreview(it.transferGraph, it.mousePosition.toPointD())

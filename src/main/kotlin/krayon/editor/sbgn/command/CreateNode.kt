@@ -16,7 +16,7 @@ import com.yworks.yfiles.view.input.IEventRecognizer
 import com.yworks.yfiles.view.input.INodeHitTester
 import com.yworks.yfiles.view.input.InputModeEventArgs
 import krayon.editor.base.command.ApplicationCommand
-import krayon.editor.base.util.ceim
+import krayon.editor.base.util.geim
 import krayon.editor.sbgn.model.SbgnType
 import krayon.editor.sbgn.model.orientation
 import krayon.editor.sbgn.model.type
@@ -35,7 +35,7 @@ object CreateNode : ApplicationCommand("CREATE_NODE") {
         val location = graphComponent.lastMouse2DEvent.location
         graph.setNodeLayout(node, RectD.fromCenter(location, SbgnBuilder.getPrevalentSize(graph, node.type, node.orientation, node) ?: node.layout.toSizeD()))
 
-        with(graphComponent.ceim.inputModeContext) {
+        with(graphComponent.geim.inputModeContext) {
             val parent = lookup(INodeHitTester::class.java)?.enumerateHits(this, location)?.firstOrNull{ graph.isGroupNode(it)}
             graph.setParent(node, parent)
         }
@@ -48,7 +48,7 @@ object CreateNode : ApplicationCommand("CREATE_NODE") {
     }
 
     private fun doStartMoveSelection(location: PointD) {
-        with(graphComponent.ceim.moveInputMode) {
+        with(graphComponent.geim.moveInputMode) {
             val prevDraggedRecognizer = draggedRecognizer
             draggedRecognizer = IEventRecognizer.MOUSE_MOVED
             var cleanup: IEventListener<InputModeEventArgs?>? = null
