@@ -76,6 +76,7 @@ object ShowHelp : ApplicationCommand("SHOW_HELP") {
                 }
             }
             text = """
+                <h1>Krayon for SBGN ${ApplicationSettings.APPLICATION_VERSION.value}</h1>
                 <h1>License</h1>
                 <p>Copyright 2018 Roland Wiese</p>
                 <p>This software with the exception of the 3rd party components listed below is licensed under the Apache License, Version 2.0 (the "License");
