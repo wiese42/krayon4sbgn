@@ -30,10 +30,9 @@ import krayon.editor.sbgn.style.SbgnBuilder
 import krayon.editor.sbgn.style.SbgnBuilder.styleManager
 import krayon.editor.sbgn.ui.*
 import krayon.util.OperatingSystemChecker
-import java.awt.BorderLayout
-import java.awt.Color
-import java.awt.Dimension
-import java.awt.EventQueue
+import java.awt.*
+import java.awt.event.ComponentAdapter
+import java.awt.event.ComponentEvent
 import java.beans.PropertyChangeListener
 import java.io.File
 import java.io.InputStreamReader
@@ -68,6 +67,7 @@ object KrayonForSbgn {
         ApplicationSettings.apply {
             backingFile = File(settingsPath)
             load()
+            ApplicationSettings.APPLICATION_VERSION.value = "v1.0.1"
             ApplicationSettings.APPLICATION_TITLE.value = appTitle
             ApplicationSettings.APPLICATION_RESOURCE_PATH.value = "/resources"
             ApplicationSettings.APPLICATION_ICON.value = "/resources/icons/krayon.png"
@@ -84,12 +84,20 @@ object KrayonForSbgn {
 
         initializeActions()
 
-        val frame = createFrame()
-        configure(frame.rootPane)
-
-//        frame.preferredSize = Dimension(1700,956)
-//        frame.pack()
-        frame.isVisible = true
+        createFrame().apply {
+            configure(this.rootPane)
+            preferredSize = ApplicationSettings.APPLICATION_WINDOW_SIZE.dimension ?: Dimension(1600,956)
+            pack()
+            isVisible = true
+            addComponentListener(object:ComponentAdapter() {
+                override fun componentResized(e: ComponentEvent) {
+                    val frame = e.source as JFrame
+                    if(frame.extendedState and Frame.MAXIMIZED_BOTH != Frame.MAXIMIZED_BOTH) {
+                        ApplicationSettings.APPLICATION_WINDOW_SIZE.dimension = frame.size
+                    }
+                }
+            })
+        }
 
         SwingUtilities.invokeLater {
             paletteContainer.verticalScrollBarPolicy = ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED
@@ -355,7 +363,6 @@ object KrayonForSbgn {
     private fun createFrame(): JFrame {
         val frame = JFrame(ApplicationSettings.APPLICATION_TITLE.value as String)
         frame.iconImage = ImageIcon(ApplicationSettings.APPLICATION_ICON.asResource()).image
-        frame.setSize(1365, 868)
         frame.defaultCloseOperation = WindowConstants.EXIT_ON_CLOSE
         ApplicationSettings.addPropertyChangeListener(PropertyChangeListener {
             if(ApplicationSettings.DIAGRAM_FILE.name == it.propertyName) {

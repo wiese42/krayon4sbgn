@@ -9,6 +9,7 @@
 
 package krayon.editor.base.util
 
+import java.awt.Dimension
 import java.beans.PropertyChangeEvent
 import java.beans.PropertyChangeListener
 import java.beans.PropertyChangeSupport
@@ -32,10 +33,19 @@ data class PropertyKey(val name:String, val isPersistant:Boolean = false, val sc
     override fun toString() = name
 
     fun scoped(scope:Any) = PropertyKey(name, isPersistant, scope)
+
+    var dimension: Dimension?
+        set(v) {
+            if(v != null) ApplicationSettings[this] = "[${v.width},${v.height}]"
+            else ApplicationSettings[this] = null
+        }
+        get() {
+            val list = ApplicationSettings[this]?.toString()?.split('[',',',']')
+            return if(list != null) Dimension(list[1].toInt(), list[2].toInt()) else null
+        }
 }
 
 object ApplicationSettings {
-
     var backingFile:File? = null
 
     private val pcs = PropertyChangeSupport(this)
@@ -45,6 +55,8 @@ object ApplicationSettings {
     val LAST_FILE_LOCATION = PropertyKey("LAST_FILE_LOCATION", true)
     val APPLICATION_ICON = PropertyKey("APPLICATION_ICON")
     val APPLICATION_TITLE = PropertyKey("APPLICATION_TITLE")
+    val APPLICATION_WINDOW_SIZE = PropertyKey("APPLICATION_WINDOW_SIZE", true)
+    val APPLICATION_VERSION = PropertyKey("APPLICATION_VERSION")
     val APPLICATION_RESOURCE_PATH = PropertyKey("APPLICATION_RESOURCE_PATH")
     val DIAGRAM_FILE = PropertyKey("DIAGRAM_FILE")
     val CANVAS_ICON_PATH = PropertyKey("CANVAS_ICON_PATH")
@@ -58,9 +70,11 @@ object ApplicationSettings {
 
     operator fun set(key:PropertyKey, value:Any?) {
         val oldValue = properties[key]
-        properties[key] = value
-        pcs.firePropertyChange(PropertyChangeEvent(key.scope ?: this,key.name, oldValue, value))
-        if(key.isPersistant) save()
+        if(oldValue != value) {
+            properties[key] = value
+            pcs.firePropertyChange(PropertyChangeEvent(key.scope ?: this,key.name, oldValue, value))
+            if(key.isPersistant) save()
+        }
     }
 
     operator fun get(key:PropertyKey):Any? {
