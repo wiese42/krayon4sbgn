@@ -50,7 +50,7 @@ Setting up your IDEA project:
 2. Set Java 8 as project SDK
 3. Set project language level to 8
 3. Set the compile output path to 'out' 
-4. Copy yFiles for Java v3.1.x jar file to yfiles-lib-and-license/lib
+4. Copy yFiles for Java v3.1.0.1 jar file to yfiles-lib-and-license/lib
 5. Copy yFiles for Java license file to yfiles-lib-and-license/license
   
 Testing your installation:
