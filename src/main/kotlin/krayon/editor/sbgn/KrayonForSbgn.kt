@@ -51,19 +51,29 @@ object KrayonForSbgn {
     private const val keyMapPath = "/resources/actions/keys.json"
     private const val iconMapPath = "/resources/icons/icons.json"
 
-    private lateinit var palette: ConfiguredSbgnPaletteComponent
-    private lateinit var bricksPalette: SbgnPaletteComponent
-    private lateinit var editorContainer: JPanel
-    private lateinit var propertyTable: PropertyTable
-    private lateinit var paletteContainer: JScrollPane
-    private lateinit var propertyTableContainer:JScrollPane
-    private lateinit var tableAndBrickPane:JSplitPane
-    private var tableAndBrickPaneDividerSize:Int = 0
-    private var propertyTablePreferredHeight:Int = 200
+    lateinit var sidePane: JSplitPane
+    lateinit var mainSplit: JSplitPane
+    lateinit var frame: JFrame
+    lateinit var palette: ConfiguredSbgnPaletteComponent
+    lateinit var bricksPalette: SbgnPaletteComponent
+    lateinit var editorContainer: JPanel
+    lateinit var propertyTable: PropertyTable
+    lateinit var paletteContainer: JScrollPane
+    lateinit var propertyTableContainer:JScrollPane
+    lateinit var tableAndBrickPane:JSplitPane
+    var tableAndBrickPaneDividerSize:Int = 0
+    var propertyTablePreferredHeight:Int = 200
 
     val graphComponent get() = Application.focusedGraphComponent as SbgnGraphComponent
 
     fun start() {
+        setup()
+        frame.apply {
+            isVisible = true
+        }
+    }
+
+    fun setup() {
         ApplicationSettings.apply {
             backingFile = File(settingsPath)
             load()
@@ -84,11 +94,10 @@ object KrayonForSbgn {
 
         initializeActions()
 
-        createFrame().apply {
+        frame = createFrame().apply {
             configure(this.rootPane)
             preferredSize = ApplicationSettings.APPLICATION_WINDOW_SIZE.dimension ?: Dimension(1600,956)
             pack()
-            isVisible = true
             addComponentListener(object:ComponentAdapter() {
                 override fun componentResized(e: ComponentEvent) {
                     val frame = e.source as JFrame
@@ -104,7 +113,7 @@ object KrayonForSbgn {
         }
     }
 
-    private fun initializeActions() {
+    fun initializeActions() {
         CommandManager += ActivateSbgnStrictMode
         CommandManager += AddStateVariable
         CommandManager += AddUnitOfInformation
@@ -177,14 +186,14 @@ object KrayonForSbgn {
 
     }
 
-    private fun addNewGraphComponent() {
+    fun addNewGraphComponent() {
         val newGraphComponent = SbgnGraphComponent()
         configureGraphComponent(newGraphComponent)
         editorContainer.add(newGraphComponent)
         Application.focusedGraphComponent = newGraphComponent
     }
 
-    private fun configureGraphComponent(graphComponent: SbgnGraphComponent) {
+    fun configureGraphComponent(graphComponent: SbgnGraphComponent) {
         val geim = graphComponent.createEditorMode()
         geim.nodeDropInputMode = GraphPaletteDropInputMode(palette.modelGraph)
         geim.nodeDropInputMode = SbgnPaletteDropInputMode(palette.modelGraph)
@@ -194,7 +203,7 @@ object KrayonForSbgn {
         CommandManager.registerKeyBindings(graphComponent.geim.keyboardInputMode)
     }
 
-    private fun createPaletteComponent():ConfiguredSbgnPaletteComponent {
+    fun createPaletteComponent():ConfiguredSbgnPaletteComponent {
         return ConfiguredSbgnPaletteComponent().apply {
             selectionMode = javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION
             tooltipProvider = { index ->
@@ -209,7 +218,7 @@ object KrayonForSbgn {
         }
     }
 
-    private fun createBricksComponent(modelGraph:IGraph):SbgnPaletteComponent {
+    fun createBricksComponent(modelGraph:IGraph):SbgnPaletteComponent {
         return BricksPaletteComponent(modelGraph).apply {
             (cellRenderer as GraphPaletteComponent.PaletteNodeRenderer).also {
                 it.maxIconHeight = 80
@@ -233,7 +242,7 @@ object KrayonForSbgn {
         }
     }
 
-    private fun configure(rootPane: JRootPane) {
+    fun configure(rootPane: JRootPane) {
         val contentPane = rootPane.contentPane
         palette = createPaletteComponent()
 
@@ -316,10 +325,10 @@ object KrayonForSbgn {
         styleAndPalettePane.add(styleToolbar, BorderLayout.NORTH)
         styleAndPalettePane.add(paletteContainer, BorderLayout.CENTER)
 
-        val sidePane = JSplitPane(JSplitPane.VERTICAL_SPLIT, styleAndPalettePane, tableAndBrickPane)
+        sidePane = JSplitPane(JSplitPane.VERTICAL_SPLIT, styleAndPalettePane, tableAndBrickPane)
         sidePane.dividerLocation = paletteContainer.preferredSize.height
 
-        val mainSplit = JSplitPane(JSplitPane.HORIZONTAL_SPLIT, editorContainer, sidePane)
+        mainSplit = JSplitPane(JSplitPane.HORIZONTAL_SPLIT, editorContainer, sidePane)
         mainSplit.resizeWeight = 1.0
 
         contentPane.add(mainSplit, BorderLayout.CENTER)
@@ -333,7 +342,7 @@ object KrayonForSbgn {
         updatePaletteStyle(bricksPalette, styleManager.currentStyle!!)
     }
 
-    private fun updatePaletteStyle(palette:GraphPaletteComponent, style:GraphStyle<SbgnType>) {
+    fun updatePaletteStyle(palette:GraphPaletteComponent, style:GraphStyle<SbgnType>) {
         for (index in 0 until palette.itemCount) {
             palette.getPaletteModelItem(index)?.let {
                 styleManager.applyStyle(style, palette.getItemGraph(index), it, applySize = true)
@@ -353,14 +362,13 @@ object KrayonForSbgn {
         graphComponent.repaint()
         palette.invalidateRenderer()
     }
-
-    private fun createDefaultStyle(palette: ConfiguredSbgnPaletteComponent): GraphStyle<SbgnType> {
+    fun createDefaultStyle(palette: ConfiguredSbgnPaletteComponent): GraphStyle<SbgnType> {
         val defaultStyleMap = palette.createStyleTemplateMap()
         defaultStyleMap[SbgnType.MAP] = graphComponent.createStyleMap()
         return GraphStyle("Canonical", true, defaultStyleMap)
     }
 
-    private fun createFrame(): JFrame {
+    fun createFrame(): JFrame {
         val frame = JFrame(ApplicationSettings.APPLICATION_TITLE.value as String)
         frame.iconImage = ImageIcon(ApplicationSettings.APPLICATION_ICON.asResource()).image
         frame.defaultCloseOperation = WindowConstants.EXIT_ON_CLOSE
@@ -377,7 +385,7 @@ object KrayonForSbgn {
         get() = getAction(this@KrayonForSbgn.graphComponent)
 
 
-    private fun createToolBar():JToolBar {
+    fun createToolBar():JToolBar {
         return JToolBar().apply {
             add(OpenSbgn.action)
             add(SaveSbgn.action)
@@ -455,7 +463,7 @@ object KrayonForSbgn {
         args.isHandled = true
     }
 
-    private fun createStyleMenu():JMenu {
+    fun createStyleMenu():JMenu {
         val menu = JMenu("Style")
         val styleGroups = (graphComponent.selection.selectedNodes + graphComponent.selection.selectedEdges).groupBy {
             it.graphStyle }
@@ -474,7 +482,7 @@ object KrayonForSbgn {
         return menu
     }
 
-    private fun getAppHome():String {
+    fun getAppHome():String {
         return when {
             OperatingSystemChecker.isWindows -> "${System.getenv("APPDATA")}/$appTitle"
             OperatingSystemChecker.isMac -> "${System.getProperty("user.home")}/Library/Application Support/$appTitle"
@@ -489,4 +497,3 @@ object KrayonForSbgn {
         }
     }
 }
-
