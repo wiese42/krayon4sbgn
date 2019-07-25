@@ -4,7 +4,7 @@
       <root url="jar://$PROJECT_DIR$/yfiles-lib-and-license/lib/yfiles-for-java.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="file://$PROJECT_DIR$/../yFiles-for-Java-Complete-3.1/doc/javadoc" />
+      <root url="file://$PROJECT_DIR$/../yFiles-for-Java-Complete-3.1.0.1/doc/api" />
     </JAVADOC>
     <SOURCES />
   </library>
