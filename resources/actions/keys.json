@@ -61,6 +61,7 @@
 
   { "key-stroke": "ctrl G",       "id": "ENTER_TEXT.CONVERT_TO_GREEK" },
   { "key-stroke": "ctrl B",       "id": "ENTER_TEXT.CONVERT_TO_SUBSCRIPT" },
-  { "key-stroke": "ctrl P",       "id": "ENTER_TEXT.CONVERT_TO_SUPERSCRIPT" }
+  { "key-stroke": "ctrl P",       "id": "ENTER_TEXT.CONVERT_TO_SUPERSCRIPT" },
+  { "key-stroke": "ctrl O",       "id": "ENTER_TEXT.ADD_OVERLINE" }
 
 ]

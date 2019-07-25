@@ -245,6 +245,10 @@
     "name": "Convert To Greek Letter",
     "description": "Convert next letter a, b, c, d, e, f, g, or h to its greek equivalent. Also works for upper case variants."
   },
+  { "id": "ENTER_TEXT.ADD_OVERLINE",
+    "name": "Add Overline",
+    "description": "Add overline to previous character."
+  },
   { "id": "ENTER_TEXT.CONVERT_TO_SUBSCRIPT",
     "name": "Convert To Subscript",
     "description": "Convert next digit, +, or - sign entered to its subscript equivalent."

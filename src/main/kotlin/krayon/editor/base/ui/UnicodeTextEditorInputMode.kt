@@ -21,22 +21,22 @@ import javax.swing.KeyStroke
 
 class UnicodeTextEditorInputMode : TextEditorInputMode() {
 
-    private val commandShortcutListener:CommandShortcutKeyListener = CommandShortcutKeyListener()
-    var encorcedCaretPos = -1
+    private val commandShortcutListener: CommandShortcutKeyListener = CommandShortcutKeyListener()
+    var enforcedCaretPos = -1
 
     init {
         textArea.addKeyListener(commandShortcutListener)
         textArea.addCaretListener { e ->
-            if(encorcedCaretPos >= 0 && e.dot != encorcedCaretPos && textArea.document.length >= encorcedCaretPos) {
-                textArea.caretPosition = encorcedCaretPos
-                encorcedCaretPos = -1
+            if (enforcedCaretPos >= 0 && e.dot != enforcedCaretPos && textArea.document.length >= enforcedCaretPos) {
+                textArea.caretPosition = enforcedCaretPos
+                enforcedCaretPos = -1
             }
         }
     }
 
-    abstract class CharConversionCommand(id:String):ApplicationCommand(id, CommandScope.ENTER_TEXT) {
+    abstract class CharConversionCommand(id: String) : ApplicationCommand(id, CommandScope.ENTER_TEXT) {
         override fun canExecute(param: Any?): Boolean {
-            return if(param is Char) return translateChar(param) != null else false
+            return if (param is Char) return translateChar(param) != null else false
         }
 
         override fun execute(param: Any?) {
@@ -45,34 +45,36 @@ class UnicodeTextEditorInputMode : TextEditorInputMode() {
                 (param as? Char)?.let { char ->
                     translateChar(char)?.let { newChar ->
                         val caretPos = inputMode.textArea.caretPosition
-                        val newText = inputMode.textArea.text.let { it.substring(0,caretPos) + newChar + it.substring(caretPos)}
+                        val newText = inputMode.textArea.text.let { it.substring(0, caretPos) + newChar + it.substring(caretPos) }
                         inputMode.commandShortcutListener.convertedText = newText //inputMode.textArea.text + newChar
-                        if(caretPos < inputMode.textArea.document.length) {
+                        if (caretPos < inputMode.textArea.document.length) {
                             //insert not at end. since we replace the text, this will mess up caret pos.
                             //fix the mess via caretListener.
-                            inputMode.encorcedCaretPos = caretPos + 1
+                            inputMode.enforcedCaretPos = caretPos + 1
                         }
                     }
                 }
             }
         }
-        abstract fun translateChar(c:Char):Char?
+
+        abstract fun translateChar(c: Char): Char?
     }
 
     companion object {
-        val ConvertToGreek = object:CharConversionCommand("CONVERT_TO_GREEK") {
+        val ConvertToGreek = object : CharConversionCommand("CONVERT_TO_GREEK") {
             val greekMap = mapOf('a' to '\u03B1', 'b' to '\u03B2', 'c' to '\u03B3', 'd' to '\u03B4', 'e' to '\u03B5', 'f' to '\u03B6', 'g' to '\u03B7',
+                    'k' to '\u03BA', 'l' to '\u03BB', 'm' to '\u03BC', 'n' to '\u03BD', 'p' to '\u03C0', 'r' to '\u03C1', 's' to '\u03C3', 't' to '\u03C4',
                     'A' to '\u0391', 'B' to '\u0392', 'C' to '\u0393', 'D' to '\u0394', 'E' to '\u0395', 'F' to '\u0396', 'G' to '\u0397')
+
             override fun translateChar(c: Char): Char? {
                 return greekMap[c]
             }
         }
 
-        val ConvertToSubscript = object:CharConversionCommand("CONVERT_TO_SUBSCRIPT") {
+        val ConvertToSubscript = object : CharConversionCommand("CONVERT_TO_SUBSCRIPT") {
             val subscriptMap = mapOf('0' to '\u2080', '1' to '\u2081', '2' to '\u2082', '3' to '\u2083', '4' to '\u2084', '5' to '\u2085',
                     '6' to '\u2086', '7' to '\u2087', '8' to '\u2088', '9' to '\u2089', '+' to '\u208A', '-' to '\u208B',
                     '=' to '\u208C', '(' to '\u208D', ')' to '\u208E', 'm' to '\u2098', 'n' to '\u2099')
-
 
 
             override fun translateChar(c: Char): Char? {
@@ -80,35 +82,58 @@ class UnicodeTextEditorInputMode : TextEditorInputMode() {
             }
         }
 
-        val ConvertToSuperscript = object:CharConversionCommand("CONVERT_TO_SUPERSCRIPT") {
+        val ConvertToSuperscript = object : CharConversionCommand("CONVERT_TO_SUPERSCRIPT") {
             val superscriptMap = mapOf('0' to '\u2070', '1' to '\u00B9', '2' to '\u00B2', '3' to '\u00B3', '4' to '\u2074', '5' to '\u2075',
                     '6' to '\u2076', '7' to '\u2077', '8' to '\u2078', '9' to '\u2079', '+' to '\u207A', '-' to '\u207B',
                     '=' to '\u207C', '(' to '\u207D', ')' to '\u207E', 'n' to '\u207F')
+
             override fun translateChar(c: Char): Char? {
                 return superscriptMap[c]
+            }
+        }
+
+        val AddOverline = object : ApplicationCommand("ADD_OVERLINE", CommandScope.ENTER_TEXT) {
+            override fun canExecute(param: Any?)    : Boolean {
+                return param is Char && param.isISOControl()
+            }
+
+            override fun execute(param: Any?) {
+                (graphComponent.geim.mutexOwner as? UnicodeTextEditorInputMode)?.let { inputMode ->
+                    val caretPos = inputMode.textArea.caretPosition
+                    if(caretPos > 0) {
+                        val newText = inputMode.textArea.text.let { it.substring(0, caretPos) + '\u0305' + it.substring(caretPos) }
+                        inputMode.commandShortcutListener.convertedText = newText //inputMode.textArea.text + newChar
+                        if (caretPos < inputMode.textArea.document.length) {
+                            //insert not at end. since we replace the text, this will mess up caret pos.
+                            //fix the mess via caretListener.
+                            inputMode.enforcedCaretPos = caretPos + 1
+                        }
+                    }
+
+                }
             }
         }
     }
 
     private class CommandShortcutKeyListener : KeyListener {
 
-        var activeCommand:ApplicationCommand? = null
+        var activeCommand: ApplicationCommand? = null
         var convertedText: String? = null
 
         override fun keyTyped(e: KeyEvent) {
             //println("keyTyped e=${e.keyChar}  activeCommand=${activeCommand?.id}")
-            if(activeCommand != null) {
-                CommandManager.execute(activeCommand!!,e.keyChar,CommandManager.InvocationMethod.VIA_KEYBOARD)
+            if (activeCommand != null) {
+                CommandManager.execute(activeCommand!!, e.keyChar, CommandManager.InvocationMethod.VIA_KEYBOARD)
             }
 
-            if(!e.isControlDown && !e.isMetaDown && !e.isAltDown)  {
+            if (!e.isControlDown && !e.isMetaDown && !e.isAltDown) {
                 activeCommand = null
             }
         }
 
         override fun keyPressed(e: KeyEvent) {
             val keyStroke = KeyStroke.getKeyStroke(e.keyCode, e.modifiers)
-            if(activeCommand == null) {
+            if (activeCommand == null) {
                 activeCommand = CommandManager.getCommand(keyStroke, CommandScope.ENTER_TEXT)
                 //println("keyPressed activeCommand = ${activeCommand?.id}")
             }
@@ -116,7 +141,7 @@ class UnicodeTextEditorInputMode : TextEditorInputMode() {
 
         override fun keyReleased(e: KeyEvent) {
             //println("keyReleased: convertextText=$convertedText")
-            if(convertedText != null) {
+            if (convertedText != null) {
                 val source = e.source as JTextArea
                 source.text = convertedText
                 convertedText = null

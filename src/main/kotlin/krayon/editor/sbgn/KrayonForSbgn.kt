@@ -165,6 +165,7 @@ object KrayonForSbgn {
         CommandManager += UnicodeTextEditorInputMode.ConvertToGreek
         CommandManager += UnicodeTextEditorInputMode.ConvertToSubscript
         CommandManager += UnicodeTextEditorInputMode.ConvertToSuperscript
+        CommandManager += UnicodeTextEditorInputMode.AddOverline
 
 
         javaClass.getResourceAsStream(keyMapPath).use {
