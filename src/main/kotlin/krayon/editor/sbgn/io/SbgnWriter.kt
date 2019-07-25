@@ -272,7 +272,7 @@ class SbgnWriter(val includeStyle:Boolean = true) {
                         compartmentOrder = curId.toFloat()
                         writeNodes(graph, parentGlyph, graph.getChildren(node).toList(), glyph)
                     }
-                    SbgnType.COMPLEX -> {
+                    SbgnType.COMPLEX, SbgnType.COMPLEX_MULTIMER -> {
                         writeNodes(graph, glyph.glyph, graph.getChildren(node).toList())
                     }
                     SbgnType.TAG -> {
