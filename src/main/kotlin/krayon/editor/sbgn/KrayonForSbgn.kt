@@ -67,7 +67,7 @@ object KrayonForSbgn {
         ApplicationSettings.apply {
             backingFile = File(settingsPath)
             load()
-            ApplicationSettings.APPLICATION_VERSION.value = "v1.0.1"
+            ApplicationSettings.APPLICATION_VERSION.value = "v1.0.3"
             ApplicationSettings.APPLICATION_TITLE.value = appTitle
             ApplicationSettings.APPLICATION_RESOURCE_PATH.value = "/resources"
             ApplicationSettings.APPLICATION_ICON.value = "/resources/icons/krayon.png"
