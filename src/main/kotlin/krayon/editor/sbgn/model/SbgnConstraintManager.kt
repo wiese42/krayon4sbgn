@@ -228,13 +228,17 @@ object SbgnConstraintManager : IModelConstraintManager<SbgnType> {
         }
         return if(!edgeCheck) false
         else when {
-            targetType == SbgnType.ASSOCIATION -> graph.inEdgesAt(targetPort).count { it.targetPort.type == SbgnType.INPUT_AND_OUTPUT } <= 1
-            targetType == SbgnType.DISSOCIATION -> graph.outEdgesAt(targetPort).count { it.targetPort.type == SbgnType.INPUT_AND_OUTPUT } <= 1
+            //make sure PN has no inEdges at opposite INPUT_AND_OUTPUT port.
+            targetType.isPN() -> targetPort?.type != SbgnType.INPUT_AND_OUTPUT || graph.inEdgesAt(getOppositeInOutPort(target, targetPort)).count() == 0
             targetType == SbgnType.SOURCE_AND_SINK -> graph.degree(target) <= 1
-            targetType == SbgnType.NOT -> graph.inDegree(targetPort) <= 1
+            targetType == SbgnType.NOT -> targetPort != null && graph.inDegree(targetPort) <= 1
             targetType.isEPN() -> !graph.groupingSupport.getPathToRoot(target).any{ it != target && it.type.isComplex() }
             else -> true
         }
+    }
+
+    private fun getOppositeInOutPort(node:INode, port:IPort):IPort {
+        return node.ports.find { it.type == SbgnType.INPUT_AND_OUTPUT && it != port }!!
     }
 
     override fun isValidSource(graph:IGraph, target: INode, edgeType: SbgnType, source:INode, sourceType:SbgnType, sourcePort: IPort?): Boolean {
