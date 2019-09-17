@@ -16,10 +16,10 @@
         <property name="main.jar"             value="main.jar"/>
         <property name="app.name"             value="krayon4sbgn" />
         <property name="app.title"            value="Krayon for SBGN" />
-        <property name="app.version"          value="1.0.1" />
-        <property name="app.version.strict"   value="1.0.1.0" />
+        <property name="app.version"          value="1.0.3" />
+        <property name="app.version.strict"   value="1.0.3.0" />
         <property name="author"               value="Roland Wiese" />
-        <property name="copyright"            value="2018" />
+        <property name="copyright"            value="2019" />
         <property name="log.dir"              value="${root}/log"/>
         <property name="jarlib.dir"           value="${root}/lib"/>
 
