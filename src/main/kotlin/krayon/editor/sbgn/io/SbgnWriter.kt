@@ -19,6 +19,7 @@ import com.yworks.yfiles.graph.INode
 import com.yworks.yfiles.graph.IPort
 import krayon.editor.base.style.GraphStyle
 import krayon.editor.base.util.convertFromRatioPoint
+import krayon.editor.base.util.getMainCanvasObject
 import krayon.editor.base.util.plus
 import krayon.editor.sbgn.model.*
 import krayon.editor.sbgn.ui.SbgnGraphComponent
@@ -113,7 +114,7 @@ class SbgnWriter(val includeStyle:Boolean = true) {
 
         sbgn.map = map
         val nodes = graph.nodes.filter { graph.getParent(it) == null }
-        writeNodes(graph, map.glyph, nodes)
+        writeNodes(graph, map.glyph, nodes, null, graphComponent)
         writeEdges(graph, map)
 
         val context = JAXBContext.newInstance("org.sbgn.bindings")
@@ -157,7 +158,7 @@ class SbgnWriter(val includeStyle:Boolean = true) {
         } else null
     }
 
-    private fun writeNodes(graph:IGraph, parentGlyph:MutableList<Glyph>, nodes:List<INode>, compartmentRef:Glyph? = null) {
+    private fun writeNodes(graph:IGraph, parentGlyph:MutableList<Glyph>, nodes:List<INode>, compartmentRef:Glyph? = null, graphComponent: SbgnGraphComponent?) {
         nodes.forEach { node ->
             parentGlyph.add(Glyph().apply {
                 val glyph = this
@@ -269,11 +270,20 @@ class SbgnWriter(val includeStyle:Boolean = true) {
 
                 when(node.type) {
                     SbgnType.COMPARTMENT -> {
-                        compartmentOrder = curId.toFloat()
-                        writeNodes(graph, parentGlyph, graph.getChildren(node).toList(), glyph)
+                        compartmentOrder = if(graphComponent != null) {
+                            var mainCanvasObject = graphComponent.graphModelManager.getMainCanvasObject(node)
+                            var index = 0
+                            while(mainCanvasObject.previous != null) {
+                                mainCanvasObject = mainCanvasObject.previous
+                                index++
+                            }
+                            index.toFloat()
+                        } else curId.toFloat()
+
+                        writeNodes(graph, parentGlyph, graph.getChildren(node).toList(), glyph, graphComponent)
                     }
                     SbgnType.COMPLEX, SbgnType.COMPLEX_MULTIMER -> {
-                        writeNodes(graph, glyph.glyph, graph.getChildren(node).toList())
+                        writeNodes(graph, glyph.glyph, graph.getChildren(node).toList(), null, graphComponent)
                     }
                     SbgnType.TAG -> {
                         glyph.orientation = node.orientation
@@ -291,19 +301,22 @@ class SbgnWriter(val includeStyle:Boolean = true) {
                 if(includeStyle) extension = createMapExtension(edge)
                 clazz = IOTypeMapper.getGlyphClazz(edge)
                 val pathGeom = edge.style.renderer.getPathGeometry(edge, edge.style)
-                val cursor = pathGeom.path.createCursor()
-                cursor.moveNext()
-                val startPoint = cursor.currentEndPoint
-                start = Arc.Start().apply {
-                    x = startPoint.x.toFloat()
-                    y = startPoint.y.toFloat()
+                if(pathGeom.path.count > 0) {
+                    val cursor = pathGeom.path.createCursor()
+                    cursor.moveNext()
+                    val startPoint = cursor.currentEndPoint
+                    start = Arc.Start().apply {
+                        x = startPoint.x.toFloat()
+                        y = startPoint.y.toFloat()
+                    }
+                    cursor.toLast()
+                    val endPoint = cursor.currentEndPoint
+                    end = Arc.End().apply {
+                        x = endPoint.x.toFloat()
+                        y = endPoint.y.toFloat()
+                    }
                 }
-                cursor.toLast()
-                val endPoint = cursor.currentEndPoint
-                end = Arc.End().apply {
-                    x = endPoint.x.toFloat()
-                    y = endPoint.y.toFloat()
-                }
+
                 source = portMap[edge.sourcePort]
                 target = portMap[edge.targetPort]
 
