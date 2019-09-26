@@ -137,6 +137,7 @@ object SbgnBuilder {
                 when(node.type) {
                     SbgnType.COMPARTMENT -> {
                         graph.setStyle(label, DefaultStyleableLabelStyle().apply { isTextClippingEnabled = false; font = this.font.deriveFont(Font.PLAIN, 16f)})
+                        graph.adjustLabelPreferredSize(label)
                         val model = AnchoredNodeLabelModel(InteriorConstraint())
                         val param = if(layout != null) {
                             model.findBestParameter(label, model, OrientedRectangle(RectD.fromCenter(layout.center, label.preferredSize)))
