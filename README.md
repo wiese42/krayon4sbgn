@@ -20,7 +20,7 @@ Features include
 * Many keyboard-shortcuts for the power-users
 * Easy-to-enter special characters (subscripts, superscripts, greek letters) 
 * SBGN strict mode that helps you to create valid SBGN diagram quickly
-* [SBGN bricks](http://sbgn.github.io/sbgn/sbgnbricks)
+* [SBGN bricks](https://sbgnbricks.org)
 * Different UI Styles
 
 ### Predefined Diagram Styles
