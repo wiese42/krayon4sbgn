@@ -275,8 +275,10 @@ object SbgnConstraintManager : IModelConstraintManager<SbgnType> {
 
     override fun isValidChild(graph: IGraph, groupNodeType:SbgnType, node: INode): Boolean {
         val x =  when {
-            constraintLevel == ConstraintLevel.NONE -> true
+            //even ContraintLEvel.NONE shouldn't make compartment nesting possible
+            //since this will potentially confuse SBGN readers.
             groupNodeType == SbgnType.COMPARTMENT -> node.type != SbgnType.COMPARTMENT
+            constraintLevel == ConstraintLevel.NONE -> true
             groupNodeType.isComplex() -> node.type.canBeContainedInComplex() && graph.inDegree(node) == 0 && graph.outEdgesAt(node).all { it.type == SbgnType.MODULATION }
             else -> true
         }
