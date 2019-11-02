@@ -424,6 +424,10 @@ object KrayonForSbgn {
             menu.add(createStyleMenu())
         }
 
+        if(selection.selectedEdges.any() || selection.selectedLabels.any()) {
+            menu.add(EditLabel.action)
+        }
+
         //can act on multiple nodes
         if(selection.selectedNodes.any()) {
             menu.add(EditLabel.action)

@@ -348,6 +348,13 @@ object SbgnBuilder {
         return label
     }
 
+    fun addCardinalityLabel(graph: IGraph, edge:IEdge):ILabel {
+        val label = graph.addLabel(edge,"")
+        label.type = SbgnType.CARDINALITY
+        SbgnBuilder.configure(graph, label)
+        return label
+    }
+
     fun assignType(graph: IGraph, node: INode, type: SbgnType) {
         node.type = type
         val center = node.layout.center.toPointD()

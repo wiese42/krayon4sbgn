@@ -23,12 +23,26 @@ object EditLabel : SbgnCommand("EDIT_LABEL") {
                 SbgnBuilder.addNameLabel(graph, node)
             }
         }
-        val label = getUniqueLabel(param) ?: getUniqueNode(param)?.labels?.firstOrNull { it.type == SbgnType.NAME_LABEL }
+        getUniqueEdge(param)?.let { edge ->
+            if (sbgnGraphComponent.constraintManager.isEdgeAcceptingLabel(edge, SbgnType.CARDINALITY) &&
+                    edge.labels.none()) {
+                val label = SbgnBuilder.addCardinalityLabel(graph, edge)
+                graphComponent.selection.apply {
+                    clear()
+                    setSelected(label, true)
+                }
+            }
+        }
+        val label = getUniqueLabel(param)
+                ?: getUniqueNode(param)?.labels?.firstOrNull { it.type == SbgnType.NAME_LABEL }
+                ?: getUniqueEdge(param)?.labels?.firstOrNull { it.type == SbgnType.CARDINALITY }
         if(label != null) graphComponent.geim.editLabel(label)
     }
 
     override fun canExecute(param: Any?): Boolean {
         return (getUniqueLabel(param)
-                ?: getUniqueNode(param)?.labels?.firstOrNull { it.type == SbgnType.NAME_LABEL }) != null
+                ?: getUniqueNode(param)
+                ?: getUniqueEdge(param)
+                ) != null
     }
 }
