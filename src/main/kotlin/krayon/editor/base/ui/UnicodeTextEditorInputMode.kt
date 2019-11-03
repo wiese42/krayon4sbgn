@@ -85,7 +85,7 @@ class UnicodeTextEditorInputMode : TextEditorInputMode() {
         val ConvertToSuperscript = object : CharConversionCommand("CONVERT_TO_SUPERSCRIPT") {
             val superscriptMap = mapOf('0' to '\u2070', '1' to '\u00B9', '2' to '\u00B2', '3' to '\u00B3', '4' to '\u2074', '5' to '\u2075',
                     '6' to '\u2076', '7' to '\u2077', '8' to '\u2078', '9' to '\u2079', '+' to '\u207A', '-' to '\u207B',
-                    '=' to '\u207C', '(' to '\u207D', ')' to '\u207E', 'n' to '\u207F')
+                    '=' to '\u207C', '(' to '\u207D', ')' to '\u207E', 'n' to '\u207F', '.' to '\u2022')
 
             override fun translateChar(c: Char): Char? {
                 return superscriptMap[c]
