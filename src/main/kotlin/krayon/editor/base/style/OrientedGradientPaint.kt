@@ -61,7 +61,7 @@ class OrientedGradientPaint(val degAngle:Double, val fractions:FloatArray, val c
         if(other !is OrientedGradientPaint) return false
         if(other.degAngle != degAngle || other.colors.size != colors.size) return false
         for(i in 0..colors.lastIndex) {
-            if(other.colors[i] != other.colors[i] || other.fractions[i] != fractions[i]) return false
+            if(other.colors[i] != colors[i] || other.fractions[i] != fractions[i]) return false
         }
         return true
     }
