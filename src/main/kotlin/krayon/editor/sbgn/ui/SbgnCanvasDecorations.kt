@@ -166,7 +166,7 @@ object SbgnDecorations {
                     else {
                         ValidatingPortCandidateProvider(IPortCandidateProvider.fromExistingPorts(node),
                         { spc -> when {
-                            spc.port == null -> true
+                            spc.port == null || SbgnConstraintManager.constraintLevel == SbgnConstraintManager.ConstraintLevel.NONE -> true
                             spc.owner.type == SbgnType.DISSOCIATION -> graph.inDegree(spc.port) < 1
                             spc.owner.type == SbgnType.ASSOCIATION -> graph.outDegree(spc.port) < 1
                             spc.owner.type == SbgnType.NOT -> graph.outDegree(spc.port) < 1 && graph.inDegree(spc.port) < 1
