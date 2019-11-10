@@ -126,16 +126,25 @@ class DragNodesManager {
         }
     }
 
-    private fun updateActiveParents(context: IInputModeContext, affectedNodesGraph:IGraph, affectedNodeSet:Set<INode>, affectedNodeOffset: IPoint) {
+    private fun updateActiveParents(context: IInputModeContext, affectedNodesGraph:IGraph, affectedNodeSet:Set<INode>, affectedNodesOffset: IPoint) {
         activeParents.clear()
-        val hitTester = context.lookup(INodeHitTester::class.java)
-        affectedNodeSet.forEach { node ->
-            val hitPoint = PointD(node.center.x+affectedNodeOffset.x, node.center.y+affectedNodeOffset.y)
-            hitTester.enumerateHits(context, hitPoint).firstOrNull { groupNode ->
-                (!affectedNodesGraph.isGroupNode(node) || !context.graph.isAncestor(groupNode, node)) &&
-                context.graph.isGroupNode(groupNode) && !affectedNodeSet.contains(groupNode) &&
-                        affectedNodeSet.all { context.sbgnConstraintManager.isValidChild(affectedNodesGraph, groupNode.type, it) }
-            }?.let(activeParents::add)
+
+        val affectedBounds = affectedNodesGraph.getBounds({ node -> affectedNodeSet.contains(node)}, false, false).translate(affectedNodesOffset.toPointD())
+        val unaffectedNodes = context.graph.nodes.filter { node ->
+            !affectedNodeSet.contains(node) && affectedBounds.intersects(node.layout.toRectD())
+        }
+
+        if(unaffectedNodes.isEmpty()) return
+
+        affectedNodeSet.forEach { aNode ->
+            val aPoint = aNode.center + affectedNodesOffset.toPointD()
+            unaffectedNodes
+                    .firstOrNull { groupNode ->
+                        groupNode.layout.contains(aPoint) &&
+                                (!affectedNodesGraph.isGroupNode(aNode) || !context.graph.isAncestor(groupNode, aNode)) &&
+                                context.graph.isGroupNode(groupNode) && !affectedNodeSet.contains(groupNode) &&
+                                affectedNodeSet.all { context.sbgnConstraintManager.isValidChild(affectedNodesGraph, groupNode.type, it) }
+                    }?.let(activeParents::add)
         }
     }
 

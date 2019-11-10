@@ -20,7 +20,6 @@ import com.yworks.yfiles.graph.IPort
 import com.yworks.yfiles.graph.styles.ILabelStyle
 import com.yworks.yfiles.utils.ICloneable
 import com.yworks.yfiles.view.input.IInputModeContext
-import com.yworks.yfiles.view.input.INodeHitTester
 import krayon.editor.base.util.*
 import krayon.editor.sbgn.style.SbgnBuilder
 
@@ -157,20 +156,28 @@ object SbgnMergeManager {
         }
     }
 
-    fun findMergePair(context: IInputModeContext, affectedGraph:IGraph, affectedNodeSet:Set<INode>, focusPoint:PointD, affectedNodesOffset: IPoint = PointD.ORIGIN):Pair<INode, INode>? {
+    fun findMergePair(context: IInputModeContext, affectedNodesGraph:IGraph, affectedNodeSet:Set<INode>, focusPoint:PointD, affectedNodesOffset: IPoint = PointD.ORIGIN):Pair<INode, INode>? {
 
         var bestANode: INode? = null
         var bestHitNode: INode? = null
         var minDistSqr = Double.MAX_VALUE
 
-        val hitTester = context.lookup(INodeHitTester::class.java)
-        for (aNode in affectedNodeSet) {
-            val hitNode = hitTester.enumerateHits(context, aNode.center + affectedNodesOffset.toPointD()).filter {
-                !affectedNodeSet.contains(it) && !affectedGraph.isAncestor(aNode, it) && !context.graph.isAncestor(it, aNode)}.minBy {
-                (it as INode).layout.center.distanceToSqr(focusPoint)
-            }
+        val affectedBounds = affectedNodesGraph.getBounds({ node -> affectedNodeSet.contains(node)}, false, false).translate(affectedNodesOffset.toPointD())
+        val unaffectedNodes = context.graph.nodes.filter { node ->
+            !affectedNodeSet.contains(node) && affectedBounds.intersects(node.layout.toRectD())
+        }
 
-            if (hitNode != null && context.sbgnConstraintManager.isMergeable(affectedGraph, aNode, context.graph, hitNode)) {
+        if(unaffectedNodes.isEmpty()) return null
+
+        for (aNode in affectedNodeSet) {
+            val aPoint = aNode.center + affectedNodesOffset.toPointD()
+            val hitNode = unaffectedNodes
+                .filter {
+                    it.layout.contains(aPoint) && !affectedNodesGraph.isAncestor(aNode,it) && !context.graph.isAncestor(it, aNode)
+                }
+                .minBy { (it as INode).layout.center.distanceToSqr(focusPoint) }
+
+            if (hitNode != null && context.sbgnConstraintManager.isMergeable(affectedNodesGraph, aNode, context.graph, hitNode)) {
                 val distSqr = hitNode.layout.center.distanceToSqr(focusPoint)
                 if (distSqr < minDistSqr) {
                     bestANode = aNode
