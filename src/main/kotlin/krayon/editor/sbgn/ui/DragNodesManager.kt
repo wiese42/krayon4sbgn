@@ -15,12 +15,14 @@ import com.yworks.yfiles.geometry.SizeD
 import com.yworks.yfiles.graph.IGraph
 import com.yworks.yfiles.graph.IModelItem
 import com.yworks.yfiles.graph.INode
+import com.yworks.yfiles.view.ICanvasObjectGroup
 import com.yworks.yfiles.view.ModifierKeys
 import com.yworks.yfiles.view.input.IInputModeContext
 import com.yworks.yfiles.view.input.INodeHitTester
 import krayon.editor.base.style.HighlightNodesManager
 import krayon.editor.base.util.*
 import krayon.editor.sbgn.model.SbgnMergeManager
+import krayon.editor.sbgn.model.SbgnType
 import krayon.editor.sbgn.model.sbgnConstraintManager
 import krayon.editor.sbgn.model.type
 
@@ -31,11 +33,15 @@ class DragNodesManager {
     private lateinit var draggedNodeOffset: IPoint
     private var activeParents = mutableSetOf<INode>()
 
+    private val groupNodeIndex = HashMap<INode,Int>()
+    private var traverseIndex:Int = 0
+
     fun startDrag(context:IInputModeContext, affectedGraph: IGraph, affectedItems: Iterable<IModelItem>, affectedNodeOffset: IPoint = PointD.ORIGIN) {
         cleanup(context)
         this.draggedNodeSetGraph = affectedGraph
         draggedNodeSet = affectedItems.mapNotNull { it as? INode }.toSet()
         this.draggedNodeOffset = affectedNodeOffset
+        prepareGroupNodeIndices(context)
     }
 
     fun onDrag(context: IInputModeContext, location: PointD) {
@@ -116,6 +122,7 @@ class DragNodesManager {
         val highlightNodesSupport = context.graphComponent.lookup(HighlightNodesManager::class.java)
         highlightNodesSupport.clearHighlights()
         draggedNodeSet = null
+        groupNodeIndex.clear()
     }
 
     private fun getParentAtMouseLocation(context: IInputModeContext, affectedNodesGraph:IGraph, affectedNodeSet:Set<INode>, location: PointD): INode? {
@@ -138,15 +145,41 @@ class DragNodesManager {
 
         affectedNodeSet.forEach { aNode ->
             val aPoint = aNode.center + affectedNodesOffset.toPointD()
+
             unaffectedNodes
-                    .firstOrNull { groupNode ->
-                        groupNode.layout.contains(aPoint) &&
-                                (!affectedNodesGraph.isGroupNode(aNode) || !context.graph.isAncestor(groupNode, aNode)) &&
-                                context.graph.isGroupNode(groupNode) && !affectedNodeSet.contains(groupNode) &&
-                                affectedNodeSet.all { context.sbgnConstraintManager.isValidChild(affectedNodesGraph, groupNode.type, it) }
-                    }?.let(activeParents::add)
+                .filter { groupNode ->
+                    groupNode.layout.contains(aPoint) &&
+                            (!affectedNodesGraph.isGroupNode(aNode) || !context.graph.isAncestor(groupNode, aNode)) &&
+                            context.graph.isGroupNode(groupNode) && !affectedNodeSet.contains(groupNode) &&
+                            affectedNodeSet.all { context.sbgnConstraintManager.isValidChild(affectedNodesGraph, groupNode.type, it) }
+                }
+                .maxBy {
+                    groupNodeIndex.getOrDefault(it,0)
+                }
+                ?.let {
+                    activeParents.add(it)
+                }
         }
     }
 
+    private fun traverseCanvasTree(canvasGroup:ICanvasObjectGroup) {
+        for(iter in canvasGroup) {
+            if(iter.userObject is INode) {
+                val node = iter.userObject as INode
+                if(node.type.isComplex() || node.type == SbgnType.COMPARTMENT) {
+                    groupNodeIndex[node] = traverseIndex++
+                }
+            }
+            if(iter is ICanvasObjectGroup) {
+                traverseCanvasTree(iter)
+            }
+        }
+    }
+
+    private fun prepareGroupNodeIndices(context:IInputModeContext) {
+        traverseIndex = 0
+        groupNodeIndex.clear()
+        traverseCanvasTree(context.graphComponent.graphModelManager.contentGroup)
+    }
 }
 
