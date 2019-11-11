@@ -90,11 +90,11 @@
     "mouse_gesture": "Drag an SBGN-ML file with file suffix .sbgn from the file system onto the application while pressing the CTRL / COMMAND key."
   },
   { "id": "MIRROR_HORIZONTALLY",
-    "name": "Mirror Horizontally",
+    "name": "Mirror Left/Right",
     "description": "Mirror selected nodes and arcs connecting these nodes on a horizontal axis, so that left and right sides get switched."
   },
   { "id": "MIRROR_VERTICALLY",
-    "name": "Mirror Vertically",
+    "name": "Mirror Up/Down",
     "description": "Mirror selected nodes and arcs connecting these nodes on a vertical axis, so that top and bottom sides get switched."
   },
   { "id": "NEXT_STYLE_IN_USE",
